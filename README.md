@@ -1,2 +1,3 @@
-# my-utils
-Extends iOS frameworks.
+# My Utils.
+
+Framework, that extends iOS frameworks.
