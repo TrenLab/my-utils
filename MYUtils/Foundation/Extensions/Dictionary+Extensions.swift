@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Operators
 
-public func ==<Key: Equatable, Value: Equatable>(lhs: [Key: Value], rhs: [Key: Value]) -> Bool {
+public func ==<Key: Any, Value: Any>(lhs: [Key: Value], rhs: [Key: Value]) -> Bool {
     return NSDictionary(dictionary: lhs).isEqual(to: rhs)
 }
 

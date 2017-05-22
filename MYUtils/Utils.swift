@@ -8,16 +8,10 @@
 
 import UIKit
 
+// MARK: - Init
+
 func InitUtils() {
-    InitReachability()
     InitCaches()
-}
-
-// MARK: - Reachability
-
-func InitReachability() {
-    let shared = Reachability.shared
-    try? shared.startNotifier()
 }
 
 // MARK: - Caches

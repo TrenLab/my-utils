@@ -12,9 +12,6 @@
 		91044B6A1EBA4097009824AD /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91044B751EBA4135009824AD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91044B741EBA4135009824AD /* Info.plist */; };
 		91044BD41EBA41A3009824AD /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044B781EBA41A3009824AD /* Cache.swift */; };
-		91044BD51EBA41A3009824AD /* JSON+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044B7A1EBA41A3009824AD /* JSON+Extensions.swift */; };
-		91044BD61EBA41A3009824AD /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044B7B1EBA41A3009824AD /* JSON.swift */; };
-		91044BD71EBA41A3009824AD /* JSONOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044B7C1EBA41A3009824AD /* JSONOperators.swift */; };
 		91044C011EBA41A4009824AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BAF1EBA41A3009824AD /* Result.swift */; };
 		91044C021EBA41A4009824AD /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BB11EBA41A3009824AD /* Array+Extensions.swift */; };
 		91044C031EBA41A4009824AD /* AVAsset+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BB21EBA41A3009824AD /* AVAsset+Extensions.swift */; };
@@ -45,7 +42,7 @@
 		91044C1D1EBA41A4009824AD /* UIStoryboard+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BD01EBA41A3009824AD /* UIStoryboard+Extensions.swift */; };
 		91044C1E1EBA41A4009824AD /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BD11EBA41A3009824AD /* UIView+Extensions.swift */; };
 		91044C1F1EBA41A4009824AD /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BD21EBA41A3009824AD /* UIViewController+Extensions.swift */; };
-		91044C201EBA41A4009824AD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BD31EBA41A3009824AD /* Utils.swift */; };
+		91044C281EBB9392009824AD /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044C271EBB9392009824AD /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,9 +63,6 @@
 		91044B691EBA4097009824AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91044B741EBA4135009824AD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91044B781EBA41A3009824AD /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
-		91044B7A1EBA41A3009824AD /* JSON+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Extensions.swift"; sourceTree = "<group>"; };
-		91044B7B1EBA41A3009824AD /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		91044B7C1EBA41A3009824AD /* JSONOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONOperators.swift; sourceTree = "<group>"; };
 		91044BAF1EBA41A3009824AD /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		91044BB11EBA41A3009824AD /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		91044BB21EBA41A3009824AD /* AVAsset+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAsset+Extensions.swift"; sourceTree = "<group>"; };
@@ -99,7 +93,7 @@
 		91044BD01EBA41A3009824AD /* UIStoryboard+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extensions.swift"; sourceTree = "<group>"; };
 		91044BD11EBA41A3009824AD /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		91044BD21EBA41A3009824AD /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		91044BD31EBA41A3009824AD /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		91044C271EBB9392009824AD /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				91044B5C1EBA4096009824AD /* MYUtils.h */,
-				91044BD31EBA41A3009824AD /* Utils.swift */,
-				91044B761EBA41A3009824AD /* Foundation */,
+				91044C271EBB9392009824AD /* Utils.swift */,
 				91044BBF1EBA41A3009824AD /* UIKit */,
+				91044B761EBA41A3009824AD /* Foundation */,
 				91044B731EBA4135009824AD /* SupportedFiles */,
 			);
 			path = MYUtils;
@@ -182,19 +176,8 @@
 			children = (
 				91044B781EBA41A3009824AD /* Cache.swift */,
 				91044BAF1EBA41A3009824AD /* Result.swift */,
-				91044B791EBA41A3009824AD /* JSON */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		91044B791EBA41A3009824AD /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				91044B7B1EBA41A3009824AD /* JSON.swift */,
-				91044B7C1EBA41A3009824AD /* JSONOperators.swift */,
-				91044B7A1EBA41A3009824AD /* JSON+Extensions.swift */,
-			);
-			path = JSON;
 			sourceTree = "<group>";
 		};
 		91044BB01EBA41A3009824AD /* Extensions */ = {
@@ -326,7 +309,6 @@
 				TargetAttributes = {
 					91044B581EBA4096009824AD = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = TC63A5A779;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -378,7 +360,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91044BD61EBA41A3009824AD /* JSON.swift in Sources */,
 				91044C031EBA41A4009824AD /* AVAsset+Extensions.swift in Sources */,
 				91044C041EBA41A4009824AD /* AVPlayer+Extensions.swift in Sources */,
 				91044C1B1EBA41A4009824AD /* UINavigationController+Extensions.swift in Sources */,
@@ -391,10 +372,9 @@
 				91044C1E1EBA41A4009824AD /* UIView+Extensions.swift in Sources */,
 				91044C0D1EBA41A4009824AD /* URL+Extensions.swift in Sources */,
 				91044C0C1EBA41A4009824AD /* Timer+Extensions.swift in Sources */,
+				91044C281EBB9392009824AD /* Utils.swift in Sources */,
 				91044BD41EBA41A3009824AD /* Cache.swift in Sources */,
 				91044C091EBA41A4009824AD /* NSObject+Extensions.swift in Sources */,
-				91044BD51EBA41A3009824AD /* JSON+Extensions.swift in Sources */,
-				91044BD71EBA41A3009824AD /* JSONOperators.swift in Sources */,
 				91044C021EBA41A4009824AD /* Array+Extensions.swift in Sources */,
 				91044C081EBA41A4009824AD /* NSNumber+Extensions.swift in Sources */,
 				91044C1F1EBA41A4009824AD /* UIViewController+Extensions.swift in Sources */,
@@ -410,7 +390,6 @@
 				91044C1D1EBA41A4009824AD /* UIStoryboard+Extensions.swift in Sources */,
 				91044C131EBA41A4009824AD /* ShowStoryboardSegue.swift in Sources */,
 				91044C161EBA41A4009824AD /* UIActivityViewController+Extensions.swift in Sources */,
-				91044C201EBA41A4009824AD /* Utils.swift in Sources */,
 				91044C0F1EBA41A4009824AD /* UserDefaults+Extensions.swift in Sources */,
 				91044C0A1EBA41A4009824AD /* OperationQueue+Extensions.swift in Sources */,
 			);
@@ -541,16 +520,18 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = TC63A5A779;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MYUtils/Info.plist;
+				INFOPLIST_FILE = MYUtils/SupportedFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trenlab.MYUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -562,16 +543,18 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = TC63A5A779;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = MYUtils/Info.plist;
+				INFOPLIST_FILE = MYUtils/SupportedFiles/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trenlab.MYUtils;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};

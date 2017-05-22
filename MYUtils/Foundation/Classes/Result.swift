@@ -16,23 +16,31 @@ public enum Result<T, Error>: CustomStringConvertible, CustomDebugStringConverti
     
     // MARK: - Setup / Teardown
     
-    public init(value: T) {self = .success(value)}
+    public init(value: T) {
+        self = .success(value)
+    }
     
-    public init(error: Error) {self = .failure(error)}
+    public init(error: Error) {
+        self = .failure(error)
+    }
     
     // MARK: - Properties
     
     public var isSuccess: Bool {
         switch self {
-        case .success(_): return true
-        case .failure(_): return false
+        case .success(_):
+            return true
+        case .failure(_):
+            return false
         }
     }
     
     public var isFailure: Bool {
         switch self {
-        case .success(_): return false
-        case .failure(_): return true
+        case .success(_):
+            return false
+        case .failure(_):
+            return true
         }
     }
     
@@ -40,22 +48,26 @@ public enum Result<T, Error>: CustomStringConvertible, CustomDebugStringConverti
     
     public func handle<Result>(success: (T) -> Result, failure: (Error) -> Result) -> Result {
         switch self {
-        case let .success(value): return success(value)
-        case let .failure(value): return failure(value)
+        case let .success(value):
+            return success(value)
+        case let .failure(value):
+            return failure(value)
         }
     }
     
     public func handleSuccess(completion: (T) -> Void) {
         switch self {
-        case let .success(value): completion(value)
-        case     .failure(_): break
+        case .success(let value):
+            completion(value)
+        case .failure(_):
+            break
         }
     }
     
     public func handleFailure(completion: (Error) -> Void) {
         switch self {
-        case     .success(_): break
-        case let .failure(value): completion(value)
+        case .success(_): break
+        case .failure(let value): completion(value)
         }
     }
     
@@ -63,10 +75,15 @@ public enum Result<T, Error>: CustomStringConvertible, CustomDebugStringConverti
     
     public var description: String {
         return handle(
-            success: { ".success(\($0))" },
-            failure: { ".failure(\($0))" }
+            success: {
+                ".SUCCESS(\($0))"
+            }, failure: {
+                ".FAILURE(\($0))"
+            }
         )
     }
     
-    public var debugDescription: String {return description}
+    public var debugDescription: String {
+        return description
+    }
 }
