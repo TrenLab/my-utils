@@ -6,14 +6,24 @@
 //  Copyright © 2016 Tren Lab. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import Cocoa
+#endif
+
+// MARK: - HideStoryboardSegue
 
 @objc(HideStoryboardSegue)
-class HideStoryboardSegue: UIStoryboardSegue {
+class HideStoryboardSegue: MY_STORY_BOARD_SEGUE {
     
     // MARK: - Pepform
     
-    override func perform() {
-        destination.removeFromSuperViewController()
+    override open func perform() {
+        #if os(iOS)
+            destination.removeFromSuperViewController()
+        #elseif os(OSX)
+            (destinationController as! NSViewController).removeFromParentViewController()
+        #endif
     }
 }

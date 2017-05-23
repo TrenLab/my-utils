@@ -6,14 +6,24 @@
 //  Copyright © 2017 Tren Lab. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import Cocoa
+#endif
+
+// MARK: - DismissStoryboardSegue
 
 @objc(DismissStoryboardSegue)
-class DismissStoryboardSegue: UIStoryboardSegue {
+open class DismissStoryboardSegue: MY_STORY_BOARD_SEGUE {
     
     // MARK: - Pepform
     
-    override func perform() {
-        source.dismiss(animated: true, completion: nil)
+    override open func perform() {
+        #if os(iOS)
+            source.dismiss(animated: true, completion: nil)
+        #elseif os(OSX)
+            (sourceController as! NSViewController).dismissViewController((destinationController as! NSViewController))
+        #endif
     }
 }

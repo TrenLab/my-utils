@@ -6,11 +6,11 @@
 //  Copyright © 2017 Tren Lab. All rights reserved.
 //
 
-import UIKit
+import CoreGraphics
 
 // MARK: - Operators
 
-// MARK: -- Minus
+// MARK: - Minus
 
 public func -(lhs: CGRect, rhs: CGRect) -> CGRect {
     return rectCalculation(lhs, rhs, -)
@@ -24,7 +24,7 @@ public func -(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, -)
 }
 
-// MARK: -- Plus
+// MARK: - Plus
 
 public func +(lhs: CGRect, rhs: CGRect) -> CGRect {
     return rectCalculation(lhs, rhs, +)
@@ -38,7 +38,7 @@ public func +(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, +)
 }
 
-// MARK: -- Multiplication
+// MARK: - Multiplication
 
 public func *(lhs: CGRect, rhs: CGRect) -> CGRect {
     return rectCalculation(lhs, rhs, *)
@@ -52,7 +52,7 @@ public func *(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, *)
 }
 
-// MARK: -- Division
+// MARK: - Division
 
 public func /(lhs: CGRect, rhs: CGRect) -> CGRect {
     return rectCalculation(lhs, rhs, /)
@@ -66,7 +66,7 @@ public func /(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, /)
 }
 
-// MARK: -- Calculations
+// MARK: - Calculations
 
 fileprivate func rectCalculation(_ lhs: CGRect,_ rhs: CGRect,_ fun: (CGFloat, CGFloat) -> CGFloat) -> CGRect {
     return CGRect(origin: pointCalculation(lhs.origin, rhs.origin, fun), size: sizeCalculation(lhs.size, rhs.size, fun))

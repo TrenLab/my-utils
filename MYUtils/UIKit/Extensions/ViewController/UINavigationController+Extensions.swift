@@ -6,7 +6,11 @@
 //  Copyright © 2017 Tren Lab. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import Cocoa
+#endif
 
 public extension UINavigationController {
     public var rootViewController: UIViewController? {

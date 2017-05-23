@@ -10,42 +10,32 @@ import Foundation
 
 open class Cache {
     
-    open internal(set) static var caches = [String: Cache]()
-
-    open internal(set) var cache: NSCache = NSCache<NSString, AnyObject>()
+    private static var caches = [String: Cache]()
     
-    open let name: String
+    private let cache: NSCache = NSCache<NSString, AnyObject>()
     
     // MARK: - Object LifeCycle
     
-    public class func createCache(withName name: String) -> Cache {
-        if Cache.caches[name] != nil {
+    public static func createCache(withName name: String) -> Cache {
+        if let _ = Cache.caches[name] {
             return Cache.caches[name]!
         }
         
-        let cache = Cache(name: name)
-        Cache.caches[name] = cache
+        Cache.caches[name] = Cache()
         return Cache.caches[name]!
-    }
-    
-    public init(name: String) {
-        self.name = name
     }
     
     deinit {
         clear()
     }
     
-    open func clear() {
+    public func clear() {
         cache.removeAllObjects()
     }
     
-    // MARK: - Control 
-
-    
     // MARK: - Get
     
-    open class func withName(_ name: String) -> Cache? {
+    public static func withName(_ name: String) -> Cache? {
         return Cache.caches[name]
     }
     

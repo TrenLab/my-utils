@@ -6,8 +6,6 @@
 //  Copyright © 2016 Tren Lab. All rights reserved.
 //
 
-import UIKit
-
 // MARK: - Init
 
 func InitUtils() {

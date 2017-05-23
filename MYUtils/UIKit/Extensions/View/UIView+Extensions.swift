@@ -6,9 +6,14 @@
 //  Copyright © 2016 Tren Lab. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import Cocoa
+#endif
 
 // MARK: - Draw
+
 public func UIImageDraw(size: CGSize, draw: ((_ size: CGSize, _ context: CGContext)-> ())?) -> UIImage {
     UIGraphicsBeginImageContextWithOptions(size, false, 1)
     
@@ -20,6 +25,7 @@ public func UIImageDraw(size: CGSize, draw: ((_ size: CGSize, _ context: CGConte
 }
 
 // MARK: - Layer
+
 @IBDesignable
 public extension UIView {
     @IBInspectable public var borderColor: UIColor? {

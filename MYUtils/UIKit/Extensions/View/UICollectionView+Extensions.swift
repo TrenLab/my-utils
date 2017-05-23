@@ -6,11 +6,26 @@
 //  Copyright © 2017 Tren Lab. All rights reserved.
 //
 
-import UIKit
-import Foundation
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import Cocoa
+#endif
 
-public extension UICollectionView {
-    
+// MARK: - Typealias
+
+#if os(iOS)
+    public typealias MY_COLLECTION_VIEW = UICollectionView
+    public typealias MY_COLLECTION_VIEW_FLOW_LAYOUT = UICollectionViewFlowLayout
+#elseif os(OSX)
+    public typealias MY_COLLECTION_VIEW = NSCollectionView
+    public typealias MY_COLLECTION_VIEW_FLOW_LAYOUT = NSCollectionViewFlowLayout
+#endif
+
+// MARK: - Collection
+
+public extension MY_COLLECTION_VIEW {
+    @available(OSX 10.11, *)
     public var numberOfCellsPerRow: UInt {
         set {
             guard let layout = flowLayout else {
@@ -32,7 +47,8 @@ public extension UICollectionView {
         }
     }
     
-    public var flowLayout: UICollectionViewFlowLayout? {
-        return collectionViewLayout as? UICollectionViewFlowLayout
+    @available(OSX 10.11, *)
+    public var flowLayout: MY_COLLECTION_VIEW_FLOW_LAYOUT? {
+        return collectionViewLayout as? MY_COLLECTION_VIEW_FLOW_LAYOUT
     }
 }

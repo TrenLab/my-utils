@@ -6,33 +6,38 @@
 //  Copyright © 2016 Tren Lab. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import Cocoa
+#endif
 
-// MARK: - Form
+// MARK: - MYImageOrientation
 
-public extension UIImage {
+public enum MYImageOrientation {
     
-    public enum Form {
-        
-        case portret
-        
-        case album
-        
-        case square
-        
-        fileprivate init(size: CGSize) {
-            if size.width < size.height {
-                self = .portret
-            } else if size.width > size.height {
-                self = .album
-            } else {
-                self = .square
-            }
+    case portret
+    
+    case album
+    
+    case square
+    
+    fileprivate init(size: CGSize) {
+        if size.width < size.height {
+            self = .portret
+        } else if size.width > size.height {
+            self = .album
+        } else {
+            self = .square
         }
     }
-    
-    public var proportions: Form {
-        return Form(size: size)
+}
+
+// MARK: - Image Orientation
+
+public extension MY_IMAGE {
+    public var proportions: MYImageOrientation {
+        return MYImageOrientation(size: size)
     }
     
     public var isPortret: Bool {
@@ -50,15 +55,12 @@ public extension UIImage {
 
 // MARK: - Load
 
-public extension UIImage {
-    
-    typealias ImageDownloadCompletion = ((_ image: UIImage?) -> Void)
-    
-    public static func from(URLString string: String, completion: ImageDownloadCompletion?) {
+public extension MY_IMAGE {
+    public static func from(URLString string: String, completion: MYImageDownloadCompletion? = nil) {
         from(URL: URL(string: string)!, completion: completion)
     }
     
-    public static func from(URL url: URL, completion: ImageDownloadCompletion?) {
+    public static func from(URL url: URL, completion: MYImageDownloadCompletion? = nil) {
         if let cachedImageData = ImageCache()[url.absoluteString] {
             completion?(UIImage(data: cachedImageData as! Data))
             return

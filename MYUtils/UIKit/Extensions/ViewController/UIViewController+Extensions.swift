@@ -6,7 +6,11 @@
 //  Copyright © 2016 Tren Lab. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(OSX)
+    import Cocoa
+#endif
 
 public extension UIViewController {
     public var currentViewController: UIViewController? {return childViewControllers.last}
@@ -16,7 +20,6 @@ public extension UIViewController {
 }
 
 public extension UIViewController {
-    
     // MARK: - Add
     
     public func addChild(viewController vc: UIViewController, closure: ((Void) -> Void)? = nil) {

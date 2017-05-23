@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91044B581EBA4096009824AD"
-               BuildableName = "MYUtils.framework"
-               BlueprintName = "MYUtils"
+               BlueprintIdentifier = "4E93053B1ED461AE0039510B"
+               BuildableName = "MYUtils-watchOS.framework"
+               BlueprintName = "MYUtils-watchOS"
                ReferencedContainer = "container:MYUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "91044B611EBA4097009824AD"
-               BuildableName = "MYUtilsTests.xctest"
-               BlueprintName = "MYUtilsTests"
-               ReferencedContainer = "container:MYUtils.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "91044B581EBA4096009824AD"
-            BuildableName = "MYUtils.framework"
-            BlueprintName = "MYUtils"
-            ReferencedContainer = "container:MYUtils.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "91044B581EBA4096009824AD"
-            BuildableName = "MYUtils.framework"
-            BlueprintName = "MYUtils"
+            BlueprintIdentifier = "4E93053B1ED461AE0039510B"
+            BuildableName = "MYUtils-watchOS.framework"
+            BlueprintName = "MYUtils-watchOS"
             ReferencedContainer = "container:MYUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "91044B581EBA4096009824AD"
-            BuildableName = "MYUtils.framework"
-            BlueprintName = "MYUtils"
+            BlueprintIdentifier = "4E93053B1ED461AE0039510B"
+            BuildableName = "MYUtils-watchOS.framework"
+            BlueprintName = "MYUtils-watchOS"
             ReferencedContainer = "container:MYUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

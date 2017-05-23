@@ -8,8 +8,9 @@
 
 import Foundation
 
+// MARK: - Is 
+
 public extension NSNumber {
-    
     public var isBool: Bool {
         return CFBooleanGetTypeID() == CFGetTypeID(self)
     }
