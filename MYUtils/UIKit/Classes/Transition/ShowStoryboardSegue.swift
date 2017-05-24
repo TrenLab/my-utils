@@ -8,6 +8,8 @@
 
 #if os(iOS)
     import UIKit
+#elseif os(tvOS)
+    import UIKit
 #elseif os(OSX)
     import Cocoa
 #endif
@@ -15,12 +17,14 @@
 // MARK: - ShowStoryboardSegue
 
 @objc(ShowStoryboardSegue)
-class ShowStoryboardSegue: MY_STORY_BOARD_SEGUE {
+class ShowStoryboardSegue: MYStoryboardSegue {
 
     // MARK: - Pepform
     
-    override func perform() {
+    override open func perform() {
         #if os(iOS)
+            source.removeFromSuperViewController()
+        #elseif os(tvOS)
             source.removeFromSuperViewController()
         #elseif os(OSX)
             (sourceController as! NSViewController).removeFromParentViewController()

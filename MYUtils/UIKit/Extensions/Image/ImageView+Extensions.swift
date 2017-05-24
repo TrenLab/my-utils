@@ -8,13 +8,10 @@
 
 #if os(iOS)
     import UIKit
-#elseif os(OSX)
-    import Cocoa
-#endif
-
-// MARK: - Types
-
-#if os(iOS)
+#elseif os(watchOS)
+    import UIKit
+    import WatchKit
+#elseif os(tvOS)
     import UIKit
 #elseif os(OSX)
     import Cocoa
@@ -22,20 +19,28 @@
 
 // MARK: - Load
 
-public extension UIImageView {
-    
+public extension MYImageView {
     public func imageFrom(URLString string: String, completion: MYImageDownloadCompletion? = nil) {
         imageFrom(URL: URL(string: string)!, completion: completion)
     }
     
     public func imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil) {
-        UIImage.from(URL: url) {image in
+        MYImage.from(URL: url) {image in
             guard let img = image else {
                 completion?(nil)
                 return
             }
             
-            self.image = img
+            #if os(iOS)
+                self.image = img
+            #elseif os(watchOS)
+                self.setImage(img)
+            #elseif os(tvOS)
+                self.image = img
+            #elseif os(OSX)
+                self.image = img
+            #endif
+
             completion?(img)
         }
     }

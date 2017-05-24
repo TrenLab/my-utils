@@ -8,6 +8,8 @@
 
 #if os(iOS)
     import UIKit
+#elseif os(tvOS)
+    import UIKit
 #elseif os(OSX)
     import Cocoa
 #endif
@@ -15,7 +17,9 @@
 // MARK: - Cross platform typealias
 
 #if os(iOS)
-    public typealias MY_STORY_BOARD_SEGUE = UIStoryboardSegue
+    public typealias MYStoryboardSegue = UIStoryboardSegue
+#elseif os(tvOS)
+    public typealias MYStoryboardSegue = UIStoryboardSegue
 #elseif os(OSX)
-    public typealias MY_STORY_BOARD_SEGUE = NSStoryboardSegue
+    public typealias MYStoryboardSegue = NSStoryboardSegue
 #endif

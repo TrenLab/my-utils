@@ -8,6 +8,8 @@
 
 #if os(iOS)
     import UIKit
+#elseif os(tvOS)
+    import UIKit
 #elseif os(OSX)
     import Cocoa
 #endif
@@ -15,12 +17,14 @@
 // MARK: - DismissStoryboardSegue
 
 @objc(DismissStoryboardSegue)
-open class DismissStoryboardSegue: MY_STORY_BOARD_SEGUE {
+open class DismissStoryboardSegue: MYStoryboardSegue {
     
     // MARK: - Pepform
     
     override open func perform() {
         #if os(iOS)
+            source.dismiss(animated: true, completion: nil)
+        #elseif os(tvOS)
             source.dismiss(animated: true, completion: nil)
         #elseif os(OSX)
             (sourceController as! NSViewController).dismissViewController((destinationController as! NSViewController))

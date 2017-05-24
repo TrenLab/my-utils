@@ -8,8 +8,8 @@
 
 #if os(iOS)
     import UIKit
-#elseif os(OSX)
-    import Cocoa
+#elseif os(tvOS)
+    import UIKit
 #endif
 
 public extension UINavigationController {

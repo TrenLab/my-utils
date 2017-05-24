@@ -8,6 +8,8 @@
 
 #if os(iOS)
     import UIKit
+#elseif os(tvOS)
+    import UIKit
 #elseif os(OSX)
     import Cocoa
 #endif
@@ -17,8 +19,13 @@
 #if os(iOS)
     public typealias MY_COLLECTION_VIEW = UICollectionView
     public typealias MY_COLLECTION_VIEW_FLOW_LAYOUT = UICollectionViewFlowLayout
+#elseif os(tvOS)
+    public typealias MY_COLLECTION_VIEW = UICollectionView
+    public typealias MY_COLLECTION_VIEW_FLOW_LAYOUT = UICollectionViewFlowLayout
 #elseif os(OSX)
     public typealias MY_COLLECTION_VIEW = NSCollectionView
+    
+    @available(OSX 10.11, *)
     public typealias MY_COLLECTION_VIEW_FLOW_LAYOUT = NSCollectionViewFlowLayout
 #endif
 

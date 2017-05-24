@@ -10,18 +10,31 @@ import Foundation
 
 #if os(iOS)
     import UIKit
+#elseif os(watchOS)
+    import UIKit
+    import WatchKit
+#elseif os(tvOS)
+    import UIKit
 #elseif os(OSX)
     import Cocoa
 #endif
 
-// MARK: - Image typealias
+// MARK: - Typealias
 
 #if os(iOS)
-    public typealias MY_IMAGE = UIImage
+    public typealias MYImage = UIImage
+    public typealias MYImageView = UIImageView
+#elseif os(watchOS)
+    public typealias MYImage = UIImage
+    public typealias MYImageView = WKInterfaceImage
+#elseif os(tvOS)
+    public typealias MYImage = UIImage
+    public typealias MYImageView = UIImageView
 #elseif os(OSX)
-    public typealias MY_IMAGE = NSImage
+    public typealias MYImage = NSImage
+    public typealias MYImageView = NSImageView
 #endif
 
 // MARK: - Image Download Completion
 
-public typealias MYImageDownloadCompletion = ((_ image: UIImage?) -> Void)
+public typealias MYImageDownloadCompletion = ((_ image: MYImage?) -> Void)

@@ -6,13 +6,29 @@
 //  Copyright © 2016 Tren Lab. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(tvOS)
+    import UIKit
+#endif
+
+// MARK: - Typealias
+
+#if os(iOS)
+    public typealias MYAlertAction = UIAlertAction
+    public typealias MYAlertControllerStyle = UIAlertControllerStyle
+    public typealias MYAlertController = UIAlertController
+#elseif os(tvOS)
+    public typealias MYAlertAction = UIAlertAction
+    public typealias MYAlertControllerStyle = UIAlertControllerStyle
+    public typealias MYAlertController = UIAlertController
+#endif
 
 // MARK: - Alert Show
 
-public func UIAlertShow(title: String? = nil, message: String, actions: [UIAlertAction] = [UIAlertActionMakeCancel(title: "OK", handler: nil)], style: UIAlertControllerStyle = .alert, vc: UIViewController) {
+public func UIAlertShow(title: String? = nil, message: String, actions: [MYAlertAction] = [UIAlertActionMakeCancel(title: "OK", handler: nil)], style: MYAlertControllerStyle = .alert, vc: MYViewController) {
     
-    let ctrl = UIAlertController(title: title, message: message, preferredStyle: style)
+    let ctrl = MYAlertController(title: title, message: message, preferredStyle: style)
     for action in actions {
         ctrl.addAction(action)
     }

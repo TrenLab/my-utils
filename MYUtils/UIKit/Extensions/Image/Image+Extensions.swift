@@ -8,9 +8,16 @@
 
 #if os(iOS)
     import UIKit
+#elseif os(watchOS)
+    import UIKit
+    import WatchKit
+#elseif os(tvOS)
+    import UIKit
 #elseif os(OSX)
     import Cocoa
 #endif
+
+import CoreGraphics
 
 // MARK: - MYImageOrientation
 
@@ -35,42 +42,42 @@ public enum MYImageOrientation {
 
 // MARK: - Image Orientation
 
-public extension MY_IMAGE {
-    public var proportions: MYImageOrientation {
-        return MYImageOrientation(size: size)
-    }
-    
+public extension MYImage {
     public var isPortret: Bool {
-        return proportions == .portret
+        return orientation == .portret
     }
     
     public var isAlbum: Bool {
-        return proportions == .album
+        return orientation == .album
     }
     
     public var isSquare: Bool {
-        return proportions == .square
+        return orientation == .square
+    }
+    
+    public var orientation: MYImageOrientation {
+        return MYImageOrientation(size: size)
     }
 }
 
-// MARK: - Load
+// MARK: - Image Load
 
-public extension MY_IMAGE {
+public extension MYImage {
     public static func from(URLString string: String, completion: MYImageDownloadCompletion? = nil) {
         from(URL: URL(string: string)!, completion: completion)
     }
     
     public static func from(URL url: URL, completion: MYImageDownloadCompletion? = nil) {
         if let cachedImageData = ImageCache()[url.absoluteString] {
-            completion?(UIImage(data: cachedImageData as! Data))
+            completion?(MYImage(data: cachedImageData as! Data))
             return
         }
         
         DispatchQueue.global().async {
-            var img: UIImage? = nil
+            var img: MYImage? = nil
             
             if let imgData = try? Data(contentsOf: url) {
-                img = UIImage(data: imgData)
+                img = MYImage(data: imgData)
                 ImageCache()[url.absoluteString] = imgData as AnyObject?
             }
             
@@ -79,4 +86,64 @@ public extension MY_IMAGE {
             }
         }
     }
+}
+
+// MARK: - WKImage Orientation
+
+#if os(watchOS)
+public extension WKImage {
+    var orientation: MYImageOrientation? {
+        return image?.orientation
+    }
+}
+#endif
+
+// MARK: - WKImage Load
+
+#if os(watchOS)
+public extension WKImage {
+    public static func from(URLString string: String, completion: MYImageDownloadCompletion? = nil) {
+        from(URL: URL(string: string)!, completion: completion)
+    }
+    
+    public static func from(URL url: URL, completion: MYImageDownloadCompletion? = nil) {
+        MYImage.from(URL: url, completion: completion)
+    }
+}
+#endif
+
+
+// MARK: - Draw
+
+public func MYImageDraw(size: CGSize, draw: ((_ size: CGSize, _ context: CGContext)-> ())?) -> MYImage {
+    
+    #if os(iOS) || os(watchOS) || os(tvOS)
+        UIGraphicsBeginImageContextWithOptions(size, false, 1)
+    
+        draw?(size, UIGraphicsGetCurrentContext()!)
+        let image: MYImage = UIGraphicsGetImageFromCurrentImageContext()!
+    
+        UIGraphicsEndImageContext()
+        return image
+    #elseif os(macOS)
+        let image = MYImage.init(size: size)
+        
+        let rep = NSBitmapImageRep.init(bitmapDataPlanes: nil,
+                                        pixelsWide: Int(size.width),
+                                        pixelsHigh: Int(size.height),
+                                        bitsPerSample: 8,
+                                        samplesPerPixel: 4,
+                                        hasAlpha: true,
+                                        isPlanar: false,
+                                        colorSpaceName: NSCalibratedRGBColorSpace,
+                                        bytesPerRow: 0,
+                                        bitsPerPixel: 0)
+        
+        image.addRepresentation(rep!)
+        image.lockFocus()
+        let ctx = NSGraphicsContext.current()?.cgContext
+        draw?(size, ctx!)
+        image.unlockFocus()
+        return image
+    #endif
 }

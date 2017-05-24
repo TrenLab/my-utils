@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "91044B581EBA4096009824AD"
-               BuildableName = "MYUtils.framework"
-               BlueprintName = "MYUtils"
+               BuildableName = "MYUtils-iOS.framework"
+               BlueprintName = "MYUtils-iOS"
                ReferencedContainer = "container:MYUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91044B581EBA4096009824AD"
-            BuildableName = "MYUtils.framework"
-            BlueprintName = "MYUtils"
+            BuildableName = "MYUtils-iOS.framework"
+            BlueprintName = "MYUtils-iOS"
             ReferencedContainer = "container:MYUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "91044B581EBA4096009824AD"
-            BuildableName = "MYUtils.framework"
-            BlueprintName = "MYUtils"
+            BuildableName = "MYUtils-iOS.framework"
+            BlueprintName = "MYUtils-iOS"
             ReferencedContainer = "container:MYUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

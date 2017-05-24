@@ -8,28 +8,41 @@
 
 #if os(iOS)
     import UIKit
+#elseif os(tvOS)
+    import UIKit
 #elseif os(OSX)
     import Cocoa
 #endif
 
-// MARK: - Position
+// MARK: - Typealias
 
-public extension UIScrollView {
+#if os(iOS)
+    public typealias MYScrollView = UIScrollView
+#elseif os(tvOS)
+    public typealias MYScrollView = UIScrollView
+#elseif os(OSX)
+    public typealias MYScrollView = NSScrollView
+#endif
+
+// MARK: - MYScrollViewPosition
+
+public enum MYScrollViewPosition: Int {
     
-    enum Position {
-        
-        case top
-        
-        case right
-        
-        case bottom
-        
-        case left
-        
-        case center
-    }
+    case top   = 0
     
-    public var position: Position {
+    case right
+    
+    case bottom
+    
+    case left
+    
+    case center
+}
+
+// MARK: - ScrollView Scroll Position
+
+public extension MYScrollView {
+    public var position: MYScrollViewPosition {
         switch direction {
         case   .vertical:
             if contentOffset.y <= 0.0 {
@@ -69,20 +82,27 @@ public extension UIScrollView {
     public var inCenter: Bool {
         return position == .center
     }
+    
+    #if os(OSX)
+    public var contentOffset: CGPoint {
+        return documentVisibleRect.origin
+    }
+    #endif
 }
 
-// MARK: - Direction
+// MARK: - MYScrollViewDirection
 
-public extension UIScrollView {
+public enum MYScrollViewDirection: Int {
     
-    enum Direction {
-        
-        case vertical
-        
-        case horizontal
-    }
+    case vertical    = 0
     
-    public var direction: Direction {
+    case horizontal
+}
+
+// MARK: - ScrollView Scroll Direction
+
+public extension MYScrollView {
+    public var direction: MYScrollViewDirection {
         return contentSize.height > contentSize.width ? .vertical : .horizontal;
     }
     
@@ -97,8 +117,7 @@ public extension UIScrollView {
 
 // MARK: - Size
 
-public extension UIScrollView {
-    
+public extension MYScrollView {
     public var size: CGSize {
         return CGSize(width: contentSize.width - frame.size.width,
                      height: contentSize.height - frame.size.height)
