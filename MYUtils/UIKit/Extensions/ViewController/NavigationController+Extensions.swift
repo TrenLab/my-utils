@@ -12,6 +12,8 @@
     import UIKit
 #endif
 
+// MARK: - UINavigationController
+
 public extension UINavigationController {
     public var rootViewController: UIViewController? {
         return viewControllers.first

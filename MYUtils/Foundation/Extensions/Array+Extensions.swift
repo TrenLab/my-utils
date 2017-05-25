@@ -23,7 +23,6 @@ public func + <V>(left: [V], right: [V]) -> [V] {
 // MARK: - Enumerate
 
 public extension Array {
-
     public func make<T>(_ provider: (_ idx: UInt,_ object: Element) -> T?) -> [T] {
         var array = [T]()
         
@@ -49,7 +48,6 @@ public extension Array {
 // MARK: - Add / Remove
 
 public extension Array where Element: Equatable {
-    
     public mutating func remove(object: Element) {
         if let index = index(of: object) {
             remove(at: index)

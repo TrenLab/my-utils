@@ -15,9 +15,9 @@ func InitUtils() {
 // MARK: - Caches
 
 func InitCaches() {
-    let _ = Cache.createCache(withName: "image")
+    let _ = Cache.create(withName: "image")
 }
 
 func ImageCache() -> Cache {
-    return Cache.withName("image")!
+    return Cache.with(name: "image")!
 }

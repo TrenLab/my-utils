@@ -30,7 +30,6 @@ public func + <K, V> (left: [K: V], right: [K: V]) -> [K: V] {
 // MARK: - Enumerate
 
 public extension Dictionary where Key: Any, Value: Any {
-    
     public func make<T>(_ provider: (_ key: Key,_ value: Value) -> T?) -> [Key: T] {
         var dictionary = [Key: T]()
         

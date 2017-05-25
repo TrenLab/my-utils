@@ -8,8 +8,9 @@
 
 import Foundation
 
+// MARK: - NSCoding
+
 public extension UserDefaults {
-    
     public func set<T: NSCoding>(_ object: T, forKey key: String) {
         set(NSKeyedArchiver.archivedData(withRootObject: object), forKey: key)
     }
@@ -20,7 +21,11 @@ public extension UserDefaults {
         }
         return nil
     }
-    
+}
+
+// MARK: - Subscript
+
+public extension UserDefaults {
     public subscript(key: String) -> Any? {
         set {
             set(newValue, forKey: key)

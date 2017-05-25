@@ -8,8 +8,9 @@
 
 import Foundation
 
+// MARK: - Convert
+
 public extension String {
-    
     public var int: Int? {
         return Int(self)
     }
@@ -27,8 +28,9 @@ public extension String {
     }
 }
 
+// MARK: - Random
+
 public extension String {
-    
     public static func random(wihtLength length: Int) -> String {
         let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         var randomString = ""
@@ -43,23 +45,21 @@ public extension String {
     }
 }
 
+// MARK: - Modify
+
 public extension String {
-    
     public func dropLast() -> String {
         return substring(to: index(before: endIndex))
     }
 }
 
-public extension String {
+// MARK: - Encode
 
+public extension String {
     public var URLEncodedString: String {
         var new = encodedString(with: .urlQueryAllowed)
         new = new.replacingOccurrences(of: "?", with: "")
         return new
-    }
-    
-    public var URLDecodedString: String {
-        return self.removingPercentEncoding!
     }
     
     public func encodedString(with characterSet: CharacterSet) -> String {
@@ -67,5 +67,13 @@ public extension String {
             return ""
         }
         return rez
+    }
+}
+
+// MARK: - Decode
+
+public extension String {
+    public var URLDecodedString: String {
+        return self.removingPercentEncoding!
     }
 }

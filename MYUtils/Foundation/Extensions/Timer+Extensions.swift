@@ -8,8 +8,9 @@
 
 import Foundation
 
+// MARK: - Closure Timer
+
 public extension Timer {
-    
     public class func schedule(delay: TimeInterval, handler: @escaping (Timer?) -> Void) -> Timer {
         let fireDate = delay + CFAbsoluteTimeGetCurrent()
         let timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, fireDate, 0, 0, 0, handler)

@@ -84,9 +84,9 @@ public extension MYScrollView {
     }
     
     #if os(OSX)
-    public var contentOffset: CGPoint {
-        return documentVisibleRect.origin
-    }
+        public var contentOffset: CGPoint {
+            return documentVisibleRect.origin
+        }
     #endif
 }
 
