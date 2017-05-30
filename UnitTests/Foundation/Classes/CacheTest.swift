@@ -11,98 +11,137 @@ import XCTest
 
 class CacheTest: XCTestCase {
     
-    var cache: Cache!
-    
-    var cacheNames: [String] = ["image", "storyboard", "view", "resources", "any"]
-    
-    var nonexistentCacheNames: [String] = ["code", "html", "java", "nib", "xib"]
-    
-    var cachesData: [String: [String]] = [:]
-    
     // MARK: - SetUp / TearDown
     
     override func setUp() {
         super.setUp()
         
-        for name in cacheNames {
-            _ = Cache.create(withName: name)
-        }
-
-        let dataPerCacheCount = 10
-        for name in cacheNames {
-            let cache = Cache.with(name: name)
-            var cacheData: [String] = []
-            for dataIdx in 0...(dataPerCacheCount - 1) {
-                let randomData = String.random(wihtLength: 10)
-                cacheData.append(randomData)
-                cache!["\(dataIdx)"] = randomData as AnyObject
-            }
-            cachesData[name] = cacheData
-        }
+        createCaches()
     }
 
     // MARK: - Instance
     
     func testInstance() {
-        for name in cacheNames {
+        for mock in getData() {
+            let name = mock.name
             let cache = Cache.with(name: name)
+
             XCTAssertNotNil(cache)
-            XCTAssertEqual(cache?.name, name)
-            XCTAssertEqual(cache?.cache.name, name)
+            XCTAssertEqual(cache!.name, name)
+            XCTAssertEqual(cache!.cache.name, name)
         }
     }
 
     // MARK: - Get
     
     func testGet() {
-        for name in cacheNames {
-            let cache = Cache.with(name: name)
-            XCTAssertNotNil(cache)
-        }
-        
-        for name in nonexistentCacheNames {
-            let cache = Cache.with(name: name)
-            XCTAssertNil(cache)
+        for mock in getData() {
+            let createdCache = Cache.create(withName: mock.name)
+            let obtainedCache = Cache.with(name: mock.name)!
+
+            XCTAssertEqual(createdCache, obtainedCache)
         }
     }
     
     // MARK: - Data
     
     func testData() {
-        for name in cacheNames {
-            let cache = Cache.with(name: name)
-            let cacheData  = cachesData[name]
-            for (idx, value) in cacheData!.enumerated() {
-                let cacheValue = cache!["\(idx)"] as! String
-                XCTAssertNotNil(cacheValue)
-                XCTAssertEqual(cacheValue, value)
+        for mock in getData() {
+            let cache = Cache.with(name: mock.name)
+            
+            for (key, value) in mock.data {
+                let cachedValue = cache?[key] as? String
+                XCTAssertNotNil(cachedValue)
+                XCTAssertEqual(cachedValue, value)
             }
         }
     }
     
     // MARK: - Clear
     
-    func testClearAll() {
-        for name in cacheNames {
-            let cache = Cache.with(name: name)
-            cache?.clear()
-            let cacheData = cachesData[name]
-            for (idx, _) in cacheData!.enumerated() {
-                let cacheValue = cache!["\(idx)"] as? String
+    func testClearAllCaches() {
+        for mock in getData() {
+            let cache = Cache.with(name: mock.name)
+            for (key, _) in mock.data {
+                let cacheValue = cache?[key] as? String
+                XCTAssertNotNil(cacheValue)
+            }
+        }
+        
+        Cache.clear()
+        
+        for mock in getData() {
+            let cache = Cache.with(name: mock.name)
+            for (key, _) in mock.data {
+                let cacheValue = cache?[key] as? String
                 XCTAssertNil(cacheValue)
             }
         }
     }
     
-    func testClear() {
-        for name in cacheNames {
-            let cache = Cache.with(name: name)
-            let cacheData = cachesData[name]
-            for (idx, _) in cacheData!.enumerated() {
-                cache!["\(idx)"] = nil
-                let cacheValue = cache!["\(idx)"] as? String
+    func testClearCache() {
+        for mock in getData() {
+            let cache = Cache.with(name: mock.name)
+            
+            for (key, _) in mock.data {
+                let cacheValue = cache?[key] as? String
+                XCTAssertNotNil(cacheValue)
+            }
+            
+            cache?.clear()
+            
+            for (key, _) in mock.data {
+                let cacheValue = cache?[key] as? String
                 XCTAssertNil(cacheValue)
             }
         }
+    }
+    
+    func testClearCacheValues() {
+        for mock in getData() {
+            let cache = Cache.with(name: mock.name)
+            for (key, _) in mock.data {
+                XCTAssertNotNil(cache?[key])
+                
+                cache?[key] = nil
+                
+                XCTAssertNil(cache?[key])
+            }
+        }
+    }
+
+    
+    // MARK: - Data
+    
+    func createCaches() {
+        for mock in getData() {
+            let cache: Cache = Cache.create(withName: mock.name)
+            for (key, value) in mock.data {
+                cache[key] = value as AnyObject
+            }
+        }
+    }
+    
+    func getData() -> [(name: String, data: [String: String])] {
+        return getExistedCacheNames().map {name -> (name: String, data: [String: String]) in
+            var data: (name: String, data: [String: String])
+            data.name = name
+            data.data = [:]
+            
+            let dataPerCacheCount: Int = 10
+            
+            for dataIdx in 0...(dataPerCacheCount - 1) {
+                data.data["\(dataIdx)"] = "\(dataIdx) cache value"
+            }
+            return data
+        }
+    }
+    
+    func getExistedCacheNames() -> [String] {
+        return ["image", "storyboard", "view", "resources", "any"]
+    }
+    
+    func getNonexistentCacheNames() -> [String] {
+        return ["code", "html", "java", "nib", "xib"]
     }
 }

@@ -25,7 +25,7 @@ public enum Result<T, Error>: CustomStringConvertible, CustomDebugStringConverti
     public init(error: Error) {
         self = .failure(error)
     }
-    
+
     // MARK: - Properties
     
     public var isSuccess: Bool {
@@ -50,9 +50,9 @@ public enum Result<T, Error>: CustomStringConvertible, CustomDebugStringConverti
     
     public func handle<Result>(success: (T) -> Result, failure: (Error) -> Result) -> Result {
         switch self {
-        case let .success(value):
+        case .success(let value):
             return success(value)
-        case let .failure(value):
+        case .failure(let value):
             return failure(value)
         }
     }

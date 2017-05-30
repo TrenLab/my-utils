@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Cache
 
-open class Cache {
+open class Cache: Equatable {
     
     internal static var caches = [String: Cache]()
     
@@ -58,7 +58,7 @@ open class Cache {
     
     // MARK: - Subscript
     
-    public subscript(key: String) -> AnyObject? {
+    open subscript(key: String) -> AnyObject? {
         set {
             guard let new = newValue else {
                 cache.removeObject(forKey: key.ns_string)
@@ -69,5 +69,11 @@ open class Cache {
         get {
             return cache.object(forKey: key.ns_string)
         }
+    }
+    
+    // MARK: - Equatable
+    
+    public static func ==(lhs: Cache, rhs: Cache) -> Bool {
+        return lhs.name == rhs.name
     }
 }

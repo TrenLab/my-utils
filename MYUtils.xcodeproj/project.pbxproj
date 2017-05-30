@@ -120,6 +120,9 @@
 		4E9308C51ED712AF0039510B /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93079C1ED62BC10039510B /* CacheTest.swift */; };
 		4E9308C61ED712B50039510B /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93079C1ED62BC10039510B /* CacheTest.swift */; };
 		4E9308C71ED712B80039510B /* CacheTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93079C1ED62BC10039510B /* CacheTest.swift */; };
+		4E9308C91ED730FE0039510B /* ResultTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9308C81ED730FE0039510B /* ResultTest.swift */; };
+		4E9308CA1ED730FE0039510B /* ResultTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9308C81ED730FE0039510B /* ResultTest.swift */; };
+		4E9308CB1ED730FE0039510B /* ResultTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9308C81ED730FE0039510B /* ResultTest.swift */; };
 		91044B6A1EBA4097009824AD /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91044BD41EBA41A3009824AD /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044B781EBA41A3009824AD /* Cache.swift */; };
 		91044C011EBA41A4009824AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BAF1EBA41A3009824AD /* Result.swift */; };
@@ -307,6 +310,7 @@
 		4E9308881ED6FD470039510B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		4E9308891ED6FD470039510B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E93088A1ED6FD470039510B /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		4E9308C81ED730FE0039510B /* ResultTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTest.swift; sourceTree = "<group>"; };
 		91044B591EBA4096009824AD /* MYUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MYUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91044B5C1EBA4096009824AD /* MYUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUtils.h; sourceTree = "<group>"; };
 		91044B781EBA41A3009824AD /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -522,6 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				4E93079C1ED62BC10039510B /* CacheTest.swift */,
+				4E9308C81ED730FE0039510B /* ResultTest.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1146,14 +1151,14 @@
 				4E9305481ED461CB0039510B /* MYUtils-tvOS */,
 				4E9305641ED461F80039510B /* MYUtils-macOS */,
 				4E93071F1ED5DE2E0039510B /* iOS-TestApp */,
+				4E9307C81ED6E7EC0039510B /* iOS-UITests */,
+				4E9307AA1ED62CE60039510B /* iOS-UnitTests */,
 				4E9308451ED6FCCD0039510B /* watchOS-TestApp */,
 				4E9308511ED6FCCE0039510B /* watchOS-TestApp Extension */,
 				4E9308211ED6FC680039510B /* tvOS-TestApp */,
-				4E9308341ED6FC880039510B /* macOS-TestApp */,
-				4E9307C81ED6E7EC0039510B /* iOS-UITests */,
-				4E9307AA1ED62CE60039510B /* iOS-UnitTests */,
 				4E9307D61ED6E8140039510B /* tvOS-UITests */,
 				4E9307E21ED6E84E0039510B /* tvOS-UnitTests */,
+				4E9308341ED6FC880039510B /* macOS-TestApp */,
 				4E9307F11ED6E8670039510B /* macOS-UITests */,
 				4E9307FD1ED6E8760039510B /* macOS-UnitTests */,
 			);
@@ -1384,6 +1389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9308C91ED730FE0039510B /* ResultTest.swift in Sources */,
 				4E9308C51ED712AF0039510B /* CacheTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1406,6 +1412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9308CA1ED730FE0039510B /* ResultTest.swift in Sources */,
 				4E9308C61ED712B50039510B /* CacheTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1421,6 +1428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9308CB1ED730FE0039510B /* ResultTest.swift in Sources */,
 				4E9308C71ED712B80039510B /* CacheTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2298,6 +2306,7 @@
 				4E9307D21ED6E7EC0039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9307DC1ED6E8140039510B /* Build configuration list for PBXNativeTarget "tvOS-UITests" */ = {
 			isa = XCConfigurationList;
@@ -2306,6 +2315,7 @@
 				4E9307DE1ED6E8140039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9307EB1ED6E84E0039510B /* Build configuration list for PBXNativeTarget "tvOS-UnitTests" */ = {
 			isa = XCConfigurationList;
@@ -2314,6 +2324,7 @@
 				4E9307ED1ED6E84E0039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9307F71ED6E8670039510B /* Build configuration list for PBXNativeTarget "macOS-UITests" */ = {
 			isa = XCConfigurationList;
@@ -2322,6 +2333,7 @@
 				4E9307F91ED6E8670039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9308061ED6E8760039510B /* Build configuration list for PBXNativeTarget "macOS-UnitTests" */ = {
 			isa = XCConfigurationList;
@@ -2330,6 +2342,7 @@
 				4E9308081ED6E8760039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E93082E1ED6FC680039510B /* Build configuration list for PBXNativeTarget "tvOS-TestApp" */ = {
 			isa = XCConfigurationList;
@@ -2338,6 +2351,7 @@
 				4E9308301ED6FC680039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9308411ED6FC880039510B /* Build configuration list for PBXNativeTarget "macOS-TestApp" */ = {
 			isa = XCConfigurationList;
@@ -2346,6 +2360,7 @@
 				4E9308431ED6FC880039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9308621ED6FCCE0039510B /* Build configuration list for PBXNativeTarget "watchOS-TestApp Extension" */ = {
 			isa = XCConfigurationList;
@@ -2354,6 +2369,7 @@
 				4E9308641ED6FCCE0039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E9308661ED6FCCE0039510B /* Build configuration list for PBXNativeTarget "watchOS-TestApp" */ = {
 			isa = XCConfigurationList;
@@ -2362,6 +2378,7 @@
 				4E9308681ED6FCCE0039510B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91044B531EBA4096009824AD /* Build configuration list for PBXProject "MYUtils" */ = {
 			isa = XCConfigurationList;
