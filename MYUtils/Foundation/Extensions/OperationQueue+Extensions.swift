@@ -24,14 +24,14 @@ public func PerformOnMainThreadAsync(_ code: @escaping () -> Swift.Void) {
     OperationQueue.main.addOperation(code)
 }
 
-// MARK: - Perform on background thread async
-
-public func PerformOnBackgroundThreadAsync(_ code: @escaping () -> Swift.Void) {
-    DispatchQueue.global(qos: DispatchQoS.default.qosClass).async(execute: code)
-}
-
 // MARK: - Perform on background thread sync
 
 public func PerformOnBackgroundThreadSync(_ code: @escaping () -> Swift.Void) {
-    DispatchQueue.global(qos: DispatchQoS.default.qosClass).sync(execute: code)
+    DispatchQueue.global(qos: .background).sync(execute: code)
+}
+
+// MARK: - Perform on background thread async
+
+public func PerformOnBackgroundThreadAsync(_ code: @escaping () -> Swift.Void) {
+    DispatchQueue.global(qos: .background).async(execute: code)
 }

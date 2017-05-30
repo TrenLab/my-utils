@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3887831EDD85CE007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
+		4E3887841EDD85D0007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
+		4E3887851EDD85D3007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
+		4E3887871EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887861EDD9BE3007502E0 /* DictionaryExtensionsTest.swift */; };
+		4E3887881EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887861EDD9BE3007502E0 /* DictionaryExtensionsTest.swift */; };
+		4E3887891EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887861EDD9BE3007502E0 /* DictionaryExtensionsTest.swift */; };
+		4E38878B1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38878A1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift */; };
+		4E38878C1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38878A1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift */; };
+		4E38878D1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38878A1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift */; };
+		4E38878F1EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38878E1EDDB82E007502E0 /* NumberExtensionsTest.swift */; };
+		4E3887901EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38878E1EDDB82E007502E0 /* NumberExtensionsTest.swift */; };
+		4E3887911EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E38878E1EDDB82E007502E0 /* NumberExtensionsTest.swift */; };
+		4E3887931EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887921EDDBB05007502E0 /* OperationQueueExtensionsTest.swift */; };
+		4E3887941EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887921EDDBB05007502E0 /* OperationQueueExtensionsTest.swift */; };
+		4E3887951EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887921EDDBB05007502E0 /* OperationQueueExtensionsTest.swift */; };
+		4E3887971EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887961EDDD5C1007502E0 /* StringExtensionsTest.swift */; };
+		4E3887981EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887961EDDD5C1007502E0 /* StringExtensionsTest.swift */; };
+		4E3887991EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887961EDDD5C1007502E0 /* StringExtensionsTest.swift */; };
 		4E9305981ED4633B0039510B /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E9305991ED463470039510B /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E93059A1ED463500039510B /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,12 +111,10 @@
 		4E9307481ED5DEFF0039510B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93073D1ED5DE4A0039510B /* SecondViewController.swift */; };
 		4E93074A1ED5DF6B0039510B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9307391ED5DE490039510B /* Main.storyboard */; };
 		4E93074B1ED5DF7B0039510B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9307371ED5DE490039510B /* LaunchScreen.storyboard */; };
-		4E9307B01ED62CE60039510B /* MYUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91044B591EBA4096009824AD /* MYUtils.framework */; };
 		4E9307E81ED6E84E0039510B /* MYUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9305491ED461CB0039510B /* MYUtils.framework */; };
 		4E9308031ED6E8760039510B /* MYUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9305651ED461F80039510B /* MYUtils.framework */; };
 		4E9308531ED6FCCE0039510B /* watchOS-TestApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4E9308521ED6FCCE0039510B /* watchOS-TestApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4E9308611ED6FCCE0039510B /* watchOS-TestApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4E9308461ED6FCCD0039510B /* watchOS-TestApp.app */; };
-		4E93089F1ED6FD470039510B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9308871ED6FD470039510B /* Assets.xcassets */; };
 		4E9308A31ED7017B0039510B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9308741ED6FD470039510B /* AppDelegate.swift */; };
 		4E9308A41ED701800039510B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9308751ED6FD470039510B /* Assets.xcassets */; };
 		4E9308A51ED7018A0039510B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9308761ED6FD470039510B /* Main.storyboard */; };
@@ -120,6 +136,12 @@
 		4E9308C91ED730FE0039510B /* ResultTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9308C81ED730FE0039510B /* ResultTest.swift */; };
 		4E9308CA1ED730FE0039510B /* ResultTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9308C81ED730FE0039510B /* ResultTest.swift */; };
 		4E9308CB1ED730FE0039510B /* ResultTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9308C81ED730FE0039510B /* ResultTest.swift */; };
+		4ECCF4F71EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4F61EDE05BF00A80933 /* TimerExtensionsTest.swift */; };
+		4ECCF4F81EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4F61EDE05BF00A80933 /* TimerExtensionsTest.swift */; };
+		4ECCF4F91EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4F61EDE05BF00A80933 /* TimerExtensionsTest.swift */; };
+		4ECCF4FB1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */; };
+		4ECCF4FC1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */; };
+		4ECCF4FD1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */; };
 		91044B6A1EBA4097009824AD /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91044BD41EBA41A3009824AD /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044B781EBA41A3009824AD /* Cache.swift */; };
 		91044C011EBA41A4009824AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BAF1EBA41A3009824AD /* Result.swift */; };
@@ -244,6 +266,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTest.swift; sourceTree = "<group>"; };
+		4E3887861EDD9BE3007502E0 /* DictionaryExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTest.swift; sourceTree = "<group>"; };
+		4E38878A1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtensionsTest.swift; sourceTree = "<group>"; };
+		4E38878E1EDDB82E007502E0 /* NumberExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberExtensionsTest.swift; sourceTree = "<group>"; };
+		4E3887921EDDBB05007502E0 /* OperationQueueExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationQueueExtensionsTest.swift; sourceTree = "<group>"; };
+		4E3887961EDDD5C1007502E0 /* StringExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionsTest.swift; sourceTree = "<group>"; };
 		4E93051C1ED45D0E0039510B /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		4E93051D1ED45D0E0039510B /* Info-macOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		4E93051E1ED45D0E0039510B /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
@@ -308,6 +336,8 @@
 		4E9308891ED6FD470039510B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E93088A1ED6FD470039510B /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		4E9308C81ED730FE0039510B /* ResultTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTest.swift; sourceTree = "<group>"; };
+		4ECCF4F61EDE05BF00A80933 /* TimerExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerExtensionsTest.swift; sourceTree = "<group>"; };
+		4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensionsTest.swift; sourceTree = "<group>"; };
 		91044B591EBA4096009824AD /* MYUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MYUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91044B5C1EBA4096009824AD /* MYUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUtils.h; sourceTree = "<group>"; };
 		91044B781EBA41A3009824AD /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -360,7 +390,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9307B01ED62CE60039510B /* MYUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +461,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E3887791EDD840F007502E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */,
+				4E3887861EDD9BE3007502E0 /* DictionaryExtensionsTest.swift */,
+				4E38878A1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift */,
+				4E38878E1EDDB82E007502E0 /* NumberExtensionsTest.swift */,
+				4E3887921EDDBB05007502E0 /* OperationQueueExtensionsTest.swift */,
+				4E3887961EDDD5C1007502E0 /* StringExtensionsTest.swift */,
+				4ECCF4F61EDE05BF00A80933 /* TimerExtensionsTest.swift */,
+				4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4E38877A1EDD8440007502E0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4E38877B1EDD8440007502E0 /* Classes */,
+				4E38877C1EDD8440007502E0 /* Extensions */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		4E38877B1EDD8440007502E0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4E38877C1EDD8440007502E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4E93052C1ED45E460039510B /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,7 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				4E9306711ED5D2410039510B /* Foundation */,
-				4E9306751ED5D2410039510B /* UI */,
+				4E38877A1EDD8440007502E0 /* UI */,
 				4E9307A61ED62CBF0039510B /* SupportedFiles */,
 			);
 			path = UnitTests;
@@ -479,18 +546,9 @@
 			isa = PBXGroup;
 			children = (
 				4E93079B1ED62BC10039510B /* Classes */,
-				4E93079D1ED62BC10039510B /* Extensions */,
+				4E3887791EDD840F007502E0 /* Extensions */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		4E9306751ED5D2410039510B /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				4E9307A41ED62CB70039510B /* Classes */,
-				4E9307A51ED62CB70039510B /* Extensions */,
-			);
-			path = UI;
 			sourceTree = "<group>";
 		};
 		4E9306B61ED5D5F90039510B /* TestApps */ = {
@@ -526,27 +584,6 @@
 				4E9308C81ED730FE0039510B /* ResultTest.swift */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		4E93079D1ED62BC10039510B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4E9307A41ED62CB70039510B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		4E9307A51ED62CB70039510B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4E9307A61ED62CBF0039510B /* SupportedFiles */ = {
@@ -1277,7 +1314,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E93089F1ED6FD470039510B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1384,7 +1420,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9308C91ED730FE0039510B /* ResultTest.swift in Sources */,
+				4E3887831EDD85CE007502E0 /* ArrayExtensionsTest.swift in Sources */,
+				4ECCF4F71EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */,
 				4E9308C51ED712AF0039510B /* CacheTest.swift in Sources */,
+				4ECCF4FB1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */,
+				4E3887871EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */,
+				4E3887971EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */,
+				4E38878F1EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */,
+				4E38878B1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */,
+				4E3887931EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1407,7 +1451,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9308CA1ED730FE0039510B /* ResultTest.swift in Sources */,
+				4E3887841EDD85D0007502E0 /* ArrayExtensionsTest.swift in Sources */,
+				4ECCF4F81EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */,
 				4E9308C61ED712B50039510B /* CacheTest.swift in Sources */,
+				4ECCF4FC1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */,
+				4E3887881EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */,
+				4E3887981EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */,
+				4E3887901EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */,
+				4E38878C1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */,
+				4E3887941EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1423,7 +1475,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9308CB1ED730FE0039510B /* ResultTest.swift in Sources */,
+				4E3887851EDD85D3007502E0 /* ArrayExtensionsTest.swift in Sources */,
+				4ECCF4F91EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */,
 				4E9308C71ED712B80039510B /* CacheTest.swift in Sources */,
+				4ECCF4FD1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */,
+				4E3887891EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */,
+				4E3887991EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */,
+				4E3887911EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */,
+				4E38878D1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */,
+				4E3887951EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

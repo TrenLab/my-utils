@@ -12,12 +12,13 @@ import Foundation
 
 public extension UserDefaults {
     public func set<T: NSCoding>(_ object: T, forKey key: String) {
-        set(NSKeyedArchiver.archivedData(withRootObject: object), forKey: key)
+        let archivedData = NSKeyedArchiver.archivedData(withRootObject: object)
+        set(archivedData, forKey: key)
     }
     
     public func object<T: NSCoding>(forKey: String) -> T? {
         if let data = object(forKey: forKey) as? Data {
-            return NSKeyedUnarchiver(forReadingWith: data) as? T
+            return NSKeyedUnarchiver.unarchiveObject(with: data) as? T
         }
         return nil
     }

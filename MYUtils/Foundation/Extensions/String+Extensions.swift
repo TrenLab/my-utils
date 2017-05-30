@@ -22,34 +22,38 @@ public extension String {
     public var ns_string: NSString {
         return NSString(string: self)
     }
-    
-    public var length: UInt {
-        return UInt(characters.count)
-    }
 }
 
 // MARK: - Random
 
 public extension String {
     public static func random(wihtLength length: Int) -> String {
-        let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return random(wihtLength: length, fromLetters: standardAlphabet())
+    }
+    
+    public static func random(wihtLength length: Int, fromLetters letters: String) -> String {
         var randomString = ""
-        
+
+        let ns_stringLetters = letters.ns_string
         for _ in 0 ..< length {
-            let randNum   = arc4random_uniform(UInt32(letters.length))
-            var nextChar  = letters.character(at: Int(randNum))
+            let randNum = arc4random_uniform(UInt32(letters.length))
+            var nextChar = ns_stringLetters.character(at: Int(randNum))
             randomString += NSString(characters: &nextChar, length: 1) as String
         }
         
         return randomString
     }
+    
+    public static func standardAlphabet() -> String {
+        return "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    }
 }
 
-// MARK: - Modify
+// MARK: - Size
 
 public extension String {
-    public func dropLast() -> String {
-        return substring(to: index(before: endIndex))
+    public var length: Int {
+        return characters.count
     }
 }
 
@@ -57,12 +61,10 @@ public extension String {
 
 public extension String {
     public var URLEncodedString: String {
-        var new = encodedString(with: .urlQueryAllowed)
-        new = new.replacingOccurrences(of: "?", with: "")
-        return new
+        return URLEncodedString(with: .urlQueryAllowed)
     }
     
-    public func encodedString(with characterSet: CharacterSet) -> String {
+    public func URLEncodedString(with characterSet: CharacterSet) -> String {
         guard let rez = addingPercentEncoding(withAllowedCharacters: characterSet) else {
             return ""
         }
