@@ -23,11 +23,11 @@ class ShowStoryboardSegue: MYStoryboardSegue {
     
     override open func perform() {
         #if os(iOS)
-            source.removeFromSuperViewController()
+            source.addChild(viewController: destination)
         #elseif os(tvOS)
-            source.removeFromSuperViewController()
+            source.addChild(viewController: destination)
         #elseif os(OSX)
-            (sourceController as! NSViewController).removeFromParentViewController()
+            (sourceController as! NSViewController).addChild(viewController: (destination as! NSViewController))
         #endif
     }
 }

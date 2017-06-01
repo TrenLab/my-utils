@@ -107,8 +107,6 @@
 		4E93065D1ED5C2AB0039510B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9306531ED5C22B0039510B /* View+Extensions.swift */; };
 		4E9307451ED5DEEC0039510B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9307361ED5DE490039510B /* Assets.xcassets */; };
 		4E9307461ED5DEF10039510B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9307351ED5DE490039510B /* AppDelegate.swift */; };
-		4E9307471ED5DEFB0039510B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93073B1ED5DE4A0039510B /* FirstViewController.swift */; };
-		4E9307481ED5DEFF0039510B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E93073D1ED5DE4A0039510B /* SecondViewController.swift */; };
 		4E93074A1ED5DF6B0039510B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9307391ED5DE490039510B /* Main.storyboard */; };
 		4E93074B1ED5DF7B0039510B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9307371ED5DE490039510B /* LaunchScreen.storyboard */; };
 		4E9307E81ED6E84E0039510B /* MYUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9305491ED461CB0039510B /* MYUtils.framework */; };
@@ -142,6 +140,23 @@
 		4ECCF4FB1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */; };
 		4ECCF4FC1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */; };
 		4ECCF4FD1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */; };
+		4ECCF5041EDF372400A80933 /* StoryboardSegueMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5031EDF372400A80933 /* StoryboardSegueMenuViewController.swift */; };
+		4ECCF5051EDF373C00A80933 /* TestMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5011EDF367C00A80933 /* TestMenuViewController.swift */; };
+		4ECCF5061EDF376300A80933 /* StoryboardSegueMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF4FE1EDF364100A80933 /* StoryboardSegueMenu.storyboard */; };
+		4ECCF5081EDF37AC00A80933 /* ViewControllerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5071EDF37AC00A80933 /* ViewControllerMenuViewController.swift */; };
+		4ECCF50A1EDF37CE00A80933 /* ViewMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5091EDF37CE00A80933 /* ViewMenuViewController.swift */; };
+		4ECCF50C1EDF37E300A80933 /* ImageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF50B1EDF37E300A80933 /* ImageMenuViewController.swift */; };
+		4ECCF5181EDF395200A80933 /* ViewControllerMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF5161EDF395200A80933 /* ViewControllerMenu.storyboard */; };
+		4ECCF51B1EDF396D00A80933 /* ViewMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF5191EDF396D00A80933 /* ViewMenu.storyboard */; };
+		4ECCF51D1EDF398600A80933 /* ImageMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF51C1EDF398600A80933 /* ImageMenu.storyboard */; };
+		4ECCF5201EE039BB00A80933 /* DismissStoryboardSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF51F1EE039BB00A80933 /* DismissStoryboardSegueViewController.swift */; };
+		4ECCF5221EE03A5F00A80933 /* ShowHideStoryboardSegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5211EE03A5F00A80933 /* ShowHideStoryboardSegueViewController.swift */; };
+		4ECCF5271EE03AD200A80933 /* DismissStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF5251EE03AD200A80933 /* DismissStoryboard.storyboard */; };
+		4ECCF52A1EE03AE300A80933 /* ShowHideStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF5281EE03AE300A80933 /* ShowHideStoryboard.storyboard */; };
+		4ECCF52E1EE0437300A80933 /* MYUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91044B591EBA4096009824AD /* MYUtils.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		4ECCF52F1EE0437300A80933 /* MYUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91044B591EBA4096009824AD /* MYUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4ECCF5341EE055CE00A80933 /* PopStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5331EE055CE00A80933 /* PopStoryboardSegue.swift */; };
+		4ECCF5351EE055CE00A80933 /* PopStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5331EE055CE00A80933 /* PopStoryboardSegue.swift */; };
 		91044B6A1EBA4097009824AD /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91044BD41EBA41A3009824AD /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044B781EBA41A3009824AD /* Cache.swift */; };
 		91044C011EBA41A4009824AD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91044BAF1EBA41A3009824AD /* Result.swift */; };
@@ -238,6 +253,13 @@
 			remoteGlobalIDString = 4E9308211ED6FC680039510B;
 			remoteInfo = "tvOS-TestApp";
 		};
+		4ECCF5301EE0437300A80933 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91044B501EBA4096009824AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91044B581EBA4096009824AD;
+			remoteInfo = "MYUtils-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -261,6 +283,17 @@
 				4E9308531ED6FCCE0039510B /* watchOS-TestApp Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ECCF5321EE0437300A80933 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4ECCF52F1EE0437300A80933 /* MYUtils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -297,9 +330,7 @@
 		4E9307361ED5DE490039510B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9307381ED5DE490039510B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E93073A1ED5DE490039510B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4E93073B1ED5DE4A0039510B /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4E93073C1ED5DE4A0039510B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E93073D1ED5DE4A0039510B /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4E93079C1ED62BC10039510B /* CacheTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTest.swift; sourceTree = "<group>"; };
 		4E9307AB1ED62CE60039510B /* iOS-UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-UnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9307BE1ED6316B0039510B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -338,6 +369,20 @@
 		4E9308C81ED730FE0039510B /* ResultTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTest.swift; sourceTree = "<group>"; };
 		4ECCF4F61EDE05BF00A80933 /* TimerExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerExtensionsTest.swift; sourceTree = "<group>"; };
 		4ECCF4FA1EDE232100A80933 /* UserDefaultsExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensionsTest.swift; sourceTree = "<group>"; };
+		4ECCF4FF1EDF364100A80933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/StoryboardSegueMenu.storyboard; sourceTree = "<group>"; };
+		4ECCF5011EDF367C00A80933 /* TestMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestMenuViewController.swift; sourceTree = "<group>"; };
+		4ECCF5031EDF372400A80933 /* StoryboardSegueMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardSegueMenuViewController.swift; sourceTree = "<group>"; };
+		4ECCF5071EDF37AC00A80933 /* ViewControllerMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMenuViewController.swift; sourceTree = "<group>"; };
+		4ECCF5091EDF37CE00A80933 /* ViewMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMenuViewController.swift; sourceTree = "<group>"; };
+		4ECCF50B1EDF37E300A80933 /* ImageMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMenuViewController.swift; sourceTree = "<group>"; };
+		4ECCF5171EDF395200A80933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ViewControllerMenu.storyboard; sourceTree = "<group>"; };
+		4ECCF51A1EDF396D00A80933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ViewMenu.storyboard; sourceTree = "<group>"; };
+		4ECCF51C1EDF398600A80933 /* ImageMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ImageMenu.storyboard; path = Base.lproj/ImageMenu.storyboard; sourceTree = "<group>"; };
+		4ECCF51F1EE039BB00A80933 /* DismissStoryboardSegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissStoryboardSegueViewController.swift; sourceTree = "<group>"; };
+		4ECCF5211EE03A5F00A80933 /* ShowHideStoryboardSegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowHideStoryboardSegueViewController.swift; sourceTree = "<group>"; };
+		4ECCF5261EE03AD200A80933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DismissStoryboard.storyboard; sourceTree = "<group>"; };
+		4ECCF5291EE03AE300A80933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ShowHideStoryboard.storyboard; sourceTree = "<group>"; };
+		4ECCF5331EE055CE00A80933 /* PopStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopStoryboardSegue.swift; sourceTree = "<group>"; };
 		91044B591EBA4096009824AD /* MYUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MYUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91044B5C1EBA4096009824AD /* MYUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUtils.h; sourceTree = "<group>"; };
 		91044B781EBA41A3009824AD /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -383,6 +428,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECCF52E1EE0437300A80933 /* MYUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,12 +612,9 @@
 		4E9307341ED5DE490039510B /* iOS-TestApp */ = {
 			isa = PBXGroup;
 			children = (
-				4E9307351ED5DE490039510B /* AppDelegate.swift */,
-				4E93073B1ED5DE4A0039510B /* FirstViewController.swift */,
-				4E93073D1ED5DE4A0039510B /* SecondViewController.swift */,
+				4ECCF51E1EDF3A3D00A80933 /* Classes */,
+				4ECCF5121EDF38D000A80933 /* Storyboards */,
 				4E9307361ED5DE490039510B /* Assets.xcassets */,
-				4E9307371ED5DE490039510B /* LaunchScreen.storyboard */,
-				4E9307391ED5DE490039510B /* Main.storyboard */,
 				4E93073C1ED5DE4A0039510B /* Info.plist */,
 			);
 			path = "iOS-TestApp";
@@ -650,6 +693,100 @@
 				4E9308891ED6FD470039510B /* Info.plist */,
 			);
 			path = "watchOS-TestApp Extension";
+			sourceTree = "<group>";
+		};
+		4ECCF50D1EDF384100A80933 /* StoryboardSegue */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCF4FE1EDF364100A80933 /* StoryboardSegueMenu.storyboard */,
+				4ECCF5251EE03AD200A80933 /* DismissStoryboard.storyboard */,
+				4ECCF5281EE03AE300A80933 /* ShowHideStoryboard.storyboard */,
+			);
+			name = StoryboardSegue;
+			sourceTree = "<group>";
+		};
+		4ECCF50E1EDF386600A80933 /* StoryboardSegue */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCF5031EDF372400A80933 /* StoryboardSegueMenuViewController.swift */,
+				4ECCF51F1EE039BB00A80933 /* DismissStoryboardSegueViewController.swift */,
+				4ECCF5211EE03A5F00A80933 /* ShowHideStoryboardSegueViewController.swift */,
+			);
+			name = StoryboardSegue;
+			sourceTree = "<group>";
+		};
+		4ECCF50F1EDF387A00A80933 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCF5071EDF37AC00A80933 /* ViewControllerMenuViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		4ECCF5101EDF388B00A80933 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCF5091EDF37CE00A80933 /* ViewMenuViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4ECCF5111EDF389300A80933 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCF50B1EDF37E300A80933 /* ImageMenuViewController.swift */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		4ECCF5121EDF38D000A80933 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4E9307371ED5DE490039510B /* LaunchScreen.storyboard */,
+				4E9307391ED5DE490039510B /* Main.storyboard */,
+				4ECCF50D1EDF384100A80933 /* StoryboardSegue */,
+				4ECCF5131EDF38EB00A80933 /* ViewController */,
+				4ECCF5141EDF38FB00A80933 /* View */,
+				4ECCF5151EDF391700A80933 /* Image */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		4ECCF5131EDF38EB00A80933 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCF5161EDF395200A80933 /* ViewControllerMenu.storyboard */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		4ECCF5141EDF38FB00A80933 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCF5191EDF396D00A80933 /* ViewMenu.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4ECCF5151EDF391700A80933 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCF51C1EDF398600A80933 /* ImageMenu.storyboard */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		4ECCF51E1EDF3A3D00A80933 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4E9307351ED5DE490039510B /* AppDelegate.swift */,
+				4ECCF5011EDF367C00A80933 /* TestMenuViewController.swift */,
+				4ECCF50E1EDF386600A80933 /* StoryboardSegue */,
+				4ECCF50F1EDF387A00A80933 /* ViewController */,
+				4ECCF5101EDF388B00A80933 /* View */,
+				4ECCF5111EDF389300A80933 /* Image */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		91044B4F1EBA4096009824AD = {
@@ -763,8 +900,9 @@
 			children = (
 				4E9305EB1ED464D90039510B /* StoryboardSegueTypes.swift */,
 				91044BC31EBA41A3009824AD /* DismissStoryboardSegue.swift */,
-				91044BC41EBA41A3009824AD /* HideStoryboardSegue.swift */,
 				91044BC51EBA41A3009824AD /* ShowStoryboardSegue.swift */,
+				91044BC41EBA41A3009824AD /* HideStoryboardSegue.swift */,
+				4ECCF5331EE055CE00A80933 /* PopStoryboardSegue.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -880,11 +1018,13 @@
 				4E93071D1ED5DE2E0039510B /* Frameworks */,
 				4E93071E1ED5DE2E0039510B /* Resources */,
 				4E9308601ED6FCCE0039510B /* Embed Watch Content */,
+				4ECCF5321EE0437300A80933 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				4E93085F1ED6FCCE0039510B /* PBXTargetDependency */,
+				4ECCF5311EE0437300A80933 /* PBXTargetDependency */,
 			);
 			name = "iOS-TestApp";
 			productName = "iOS-TestApp";
@@ -1225,9 +1365,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ECCF52A1EE03AE300A80933 /* ShowHideStoryboard.storyboard in Resources */,
+				4ECCF5271EE03AD200A80933 /* DismissStoryboard.storyboard in Resources */,
 				4E93074A1ED5DF6B0039510B /* Main.storyboard in Resources */,
+				4ECCF51D1EDF398600A80933 /* ImageMenu.storyboard in Resources */,
 				4E93074B1ED5DF7B0039510B /* LaunchScreen.storyboard in Resources */,
+				4ECCF51B1EDF396D00A80933 /* ViewMenu.storyboard in Resources */,
 				4E9307451ED5DEEC0039510B /* Assets.xcassets in Resources */,
+				4ECCF5061EDF376300A80933 /* StoryboardSegueMenu.storyboard in Resources */,
+				4ECCF5181EDF395200A80933 /* ViewControllerMenu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1363,6 +1509,7 @@
 				4E9306191ED5AF140039510B /* Cache.swift in Sources */,
 				4E93061A1ED5AF140039510B /* Result.swift in Sources */,
 				4E93061B1ED5AF140039510B /* Array+Extensions.swift in Sources */,
+				4ECCF5351EE055CE00A80933 /* PopStoryboardSegue.swift in Sources */,
 				4E93061C1ED5AF140039510B /* Dictionary+Extensions.swift in Sources */,
 				4E93061D1ED5AF140039510B /* NotificationCenter+Extensions.swift in Sources */,
 				4E93061E1ED5AF140039510B /* NSNumber+Extensions.swift in Sources */,
@@ -1409,9 +1556,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9307481ED5DEFF0039510B /* SecondViewController.swift in Sources */,
+				4ECCF5081EDF37AC00A80933 /* ViewControllerMenuViewController.swift in Sources */,
+				4ECCF5051EDF373C00A80933 /* TestMenuViewController.swift in Sources */,
+				4ECCF50A1EDF37CE00A80933 /* ViewMenuViewController.swift in Sources */,
+				4ECCF5041EDF372400A80933 /* StoryboardSegueMenuViewController.swift in Sources */,
+				4ECCF50C1EDF37E300A80933 /* ImageMenuViewController.swift in Sources */,
+				4ECCF5221EE03A5F00A80933 /* ShowHideStoryboardSegueViewController.swift in Sources */,
+				4ECCF5201EE039BB00A80933 /* DismissStoryboardSegueViewController.swift in Sources */,
 				4E9307461ED5DEF10039510B /* AppDelegate.swift in Sources */,
-				4E9307471ED5DEFB0039510B /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1523,6 +1675,7 @@
 				4E9306581ED5C2430039510B /* ViewTypes.swift in Sources */,
 				4E9306411ED5B6760039510B /* ActivityViewController+Extensions.swift in Sources */,
 				91044C071EBA41A4009824AD /* NotificationCenter+Extensions.swift in Sources */,
+				4ECCF5341EE055CE00A80933 /* PopStoryboardSegue.swift in Sources */,
 				91044C0C1EBA41A4009824AD /* Timer+Extensions.swift in Sources */,
 				4E9306421ED5B6760039510B /* Alert+Extensions.swift in Sources */,
 				4E9305DA1ED464280039510B /* ImageTypes.swift in Sources */,
@@ -1607,6 +1760,11 @@
 			target = 4E9308211ED6FC680039510B /* tvOS-TestApp */;
 			targetProxy = 4E9308AE1ED70FD80039510B /* PBXContainerItemProxy */;
 		};
+		4ECCF5311EE0437300A80933 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91044B581EBA4096009824AD /* MYUtils-iOS */;
+			targetProxy = 4ECCF5301EE0437300A80933 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1650,6 +1808,46 @@
 			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
+		4ECCF4FE1EDF364100A80933 /* StoryboardSegueMenu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ECCF4FF1EDF364100A80933 /* Base */,
+			);
+			name = StoryboardSegueMenu.storyboard;
+			sourceTree = "<group>";
+		};
+		4ECCF5161EDF395200A80933 /* ViewControllerMenu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ECCF5171EDF395200A80933 /* Base */,
+			);
+			name = ViewControllerMenu.storyboard;
+			sourceTree = "<group>";
+		};
+		4ECCF5191EDF396D00A80933 /* ViewMenu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ECCF51A1EDF396D00A80933 /* Base */,
+			);
+			name = ViewMenu.storyboard;
+			sourceTree = "<group>";
+		};
+		4ECCF5251EE03AD200A80933 /* DismissStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ECCF5261EE03AD200A80933 /* Base */,
+			);
+			name = DismissStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		4ECCF5281EE03AE300A80933 /* ShowHideStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ECCF5291EE03AE300A80933 /* Base */,
+			);
+			name = ShowHideStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1662,6 +1860,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MYUtils/SupportedFiles/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1684,6 +1883,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/MYUtils/SupportedFiles/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1706,6 +1906,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MYUtils/SupportedFiles/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1728,6 +1929,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/MYUtils/SupportedFiles/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1751,6 +1953,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/MYUtils/SupportedFiles/Info-macOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1774,6 +1977,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/MYUtils/SupportedFiles/Info-macOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1790,6 +1994,7 @@
 		4E9307321ED5DE2E0039510B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/TestApps/iOS-TestApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1804,6 +2009,7 @@
 		4E9307331ED5DE2E0039510B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/TestApps/iOS-TestApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2264,7 +2470,6 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2289,10 +2494,10 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/MYUtils/SupportedFiles/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

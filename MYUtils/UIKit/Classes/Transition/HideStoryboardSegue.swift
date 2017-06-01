@@ -23,11 +23,11 @@ class HideStoryboardSegue: MYStoryboardSegue {
     
     override open func perform() {
         #if os(iOS)
-            destination.removeFromSuperViewController()
+            source.removeFromSuperViewController()
         #elseif os(tvOS)
-            destination.removeFromSuperViewController()
+            source.removeFromSuperViewController()
         #elseif os(OSX)
-            (destinationController as! NSViewController).removeFromParentViewController()
+            (sourceController as! NSViewController).removeFromParentViewController()
         #endif
     }
 }
