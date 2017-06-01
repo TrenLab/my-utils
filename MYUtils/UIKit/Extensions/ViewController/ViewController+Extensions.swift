@@ -40,17 +40,17 @@ public extension MYViewController {
     public func addChild(viewController vc: MYViewController, closure: ((Void) -> Void)? = nil) {
         addChildViewController(vc)
         vc.view.frame = view.bounds
-        if closure == nil {
-            view.addSubview(vc.view)
-        }
+        
         closure?()
+        view.addSubview(vc.view)
+        
         #if os(iOS) || os(tvOS)
             vc.didMove(toParentViewController: self)
         #endif
     }
     
     // MARK: - Remove Child
-    
+
     func removeChild(viewController vc: MYViewController, closure: ((Void) -> Void)? = nil) {
         vc.removeFromSuperViewController(closure: closure)
     }
@@ -59,6 +59,7 @@ public extension MYViewController {
         #if os(iOS) || os(tvOS)
             willMove(toParentViewController: nil)
         #endif
+        
         view.removeFromSuperview()
         removeFromParentViewController()
         closure?()

@@ -27,7 +27,7 @@ class ShowStoryboardSegue: MYStoryboardSegue {
         #elseif os(tvOS)
             source.addChild(viewController: destination)
         #elseif os(OSX)
-            (sourceController as! NSViewController).addChild(viewController: (destination as! NSViewController))
+            (sourceController as! NSViewController).addChild(viewController: (destinationController as! NSViewController))
         #endif
     }
 }

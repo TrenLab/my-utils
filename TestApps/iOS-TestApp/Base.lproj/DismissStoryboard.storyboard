@@ -28,7 +28,7 @@
         <!--Dismiss-->
         <scene sceneID="UeT-CW-ixu">
             <objects>
-                <viewController id="Ccz-kV-Kb8" customClass="DismissStoryboardSegueViewController" customModule="iOS_TestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ccz-kV-Kb8" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UxK-Te-aay"/>
                         <viewControllerLayoutGuide type="bottom" id="MFs-vT-kf2"/>
@@ -39,9 +39,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dismiss" id="Jms-VD-PK3">
-                        <barButtonItem key="leftBarButtonItem" title="Dismiss" id="CFe-cz-JhQ">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="CFe-cz-JhQ">
                             <connections>
-                                <segue destination="Ccz-kV-Kb8" kind="custom" identifier="dismiss" customClass="DismissStoryboardSegue" id="SsO-DH-VQT"/>
+                                <segue destination="Ccz-kV-Kb8" kind="custom" identifier="" customClass="DismissStoryboardSegue" id="SsO-DH-VQT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
