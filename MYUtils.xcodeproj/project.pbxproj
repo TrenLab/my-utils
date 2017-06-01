@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E06422B1EE086BD001B9784 /* PopStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0642291EE086BD001B9784 /* PopStoryboard.storyboard */; };
+		4E06422C1EE0D8B0001B9784 /* MYUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91044B591EBA4096009824AD /* MYUtils.framework */; };
+		4E06422D1EE0D8B0001B9784 /* MYUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91044B591EBA4096009824AD /* MYUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E3887831EDD85CE007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
 		4E3887841EDD85D0007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
 		4E3887851EDD85D3007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
@@ -147,8 +149,6 @@
 		4ECCF51D1EDF398600A80933 /* ImageMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF51C1EDF398600A80933 /* ImageMenu.storyboard */; };
 		4ECCF5271EE03AD200A80933 /* DismissStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF5251EE03AD200A80933 /* DismissStoryboard.storyboard */; };
 		4ECCF52A1EE03AE300A80933 /* ShowHideStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ECCF5281EE03AE300A80933 /* ShowHideStoryboard.storyboard */; };
-		4ECCF52E1EE0437300A80933 /* MYUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91044B591EBA4096009824AD /* MYUtils.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		4ECCF52F1EE0437300A80933 /* MYUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91044B591EBA4096009824AD /* MYUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4ECCF5341EE055CE00A80933 /* PopStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5331EE055CE00A80933 /* PopStoryboardSegue.swift */; };
 		4ECCF5351EE055CE00A80933 /* PopStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5331EE055CE00A80933 /* PopStoryboardSegue.swift */; };
 		4ECCF5381EE0587000A80933 /* StoryboardSegueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCF5371EE0587000A80933 /* StoryboardSegueTests.swift */; };
@@ -171,6 +171,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4E06422E1EE0D8B0001B9784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91044B501EBA4096009824AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91044B581EBA4096009824AD;
+			remoteInfo = "MYUtils-iOS";
+		};
 		4E9307B11ED62CE60039510B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91044B501EBA4096009824AD /* Project object */;
@@ -248,16 +255,20 @@
 			remoteGlobalIDString = 4E9308211ED6FC680039510B;
 			remoteInfo = "tvOS-TestApp";
 		};
-		4ECCF5301EE0437300A80933 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91044B501EBA4096009824AD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 91044B581EBA4096009824AD;
-			remoteInfo = "MYUtils-iOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4E0642301EE0D8B0001B9784 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4E06422D1EE0D8B0001B9784 /* MYUtils.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E9308601ED6FCCE0039510B /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,17 +289,6 @@
 				4E9308531ED6FCCE0039510B /* watchOS-TestApp Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4ECCF5321EE0437300A80933 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4ECCF52F1EE0437300A80933 /* MYUtils.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -418,7 +418,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECCF52E1EE0437300A80933 /* MYUtils.framework in Frameworks */,
+				4E06422C1EE0D8B0001B9784 /* MYUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,7 +788,7 @@
 			children = (
 				91044B5C1EBA4096009824AD /* MYUtils.h */,
 				91044C271EBB9392009824AD /* Utils.swift */,
-				91044BBF1EBA41A3009824AD /* UIKit */,
+				91044BBF1EBA41A3009824AD /* UI */,
 				91044B761EBA41A3009824AD /* Foundation */,
 				91044B731EBA4135009824AD /* SupportedFiles */,
 			);
@@ -839,13 +839,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		91044BBF1EBA41A3009824AD /* UIKit */ = {
+		91044BBF1EBA41A3009824AD /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				91044BC01EBA41A3009824AD /* Classes */,
 				91044BC61EBA41A3009824AD /* Extensions */,
 			);
-			path = UIKit;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		91044BC01EBA41A3009824AD /* Classes */ = {
@@ -979,13 +979,13 @@
 				4E93071D1ED5DE2E0039510B /* Frameworks */,
 				4E93071E1ED5DE2E0039510B /* Resources */,
 				4E9308601ED6FCCE0039510B /* Embed Watch Content */,
-				4ECCF5321EE0437300A80933 /* Embed Frameworks */,
+				4E0642301EE0D8B0001B9784 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				4E93085F1ED6FCCE0039510B /* PBXTargetDependency */,
-				4ECCF5311EE0437300A80933 /* PBXTargetDependency */,
+				4E06422F1EE0D8B0001B9784 /* PBXTargetDependency */,
 			);
 			name = "iOS-TestApp";
 			productName = "iOS-TestApp";
@@ -1662,6 +1662,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4E06422F1EE0D8B0001B9784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91044B581EBA4096009824AD /* MYUtils-iOS */;
+			targetProxy = 4E06422E1EE0D8B0001B9784 /* PBXContainerItemProxy */;
+		};
 		4E9307B21ED62CE60039510B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 91044B581EBA4096009824AD /* MYUtils-iOS */;
@@ -1716,11 +1721,6 @@
 			isa = PBXTargetDependency;
 			target = 4E9308211ED6FC680039510B /* tvOS-TestApp */;
 			targetProxy = 4E9308AE1ED70FD80039510B /* PBXContainerItemProxy */;
-		};
-		4ECCF5311EE0437300A80933 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 91044B581EBA4096009824AD /* MYUtils-iOS */;
-			targetProxy = 4ECCF5301EE0437300A80933 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
