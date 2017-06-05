@@ -7,8 +7,6 @@
 //
 
 import XCTest
-import Foundation
-@testable import MYUtils
 
 class NotificationCenterExtensionsTest: XCTestCase {
     

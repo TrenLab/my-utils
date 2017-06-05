@@ -15,6 +15,9 @@
 // MARK: - UINavigationController
 
 public extension UINavigationController {
+    
+    // MARK: - Root View Controller
+    
     public var rootViewController: UIViewController? {
         return viewControllers.first
     }

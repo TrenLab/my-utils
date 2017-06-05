@@ -30,6 +30,18 @@
 		4E06424A1EE17A54001B9784 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0642481EE17A54001B9784 /* CGFloat+Extensions.swift */; };
 		4E06424B1EE17A54001B9784 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0642481EE17A54001B9784 /* CGFloat+Extensions.swift */; };
 		4E06424C1EE17A54001B9784 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0642481EE17A54001B9784 /* CGFloat+Extensions.swift */; };
+		4E1B59C51EE575C6002F3D1A /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59C41EE575C6002F3D1A /* DoubleExtensionsTests.swift */; };
+		4E1B59C61EE575C6002F3D1A /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59C41EE575C6002F3D1A /* DoubleExtensionsTests.swift */; };
+		4E1B59C71EE575C6002F3D1A /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59C41EE575C6002F3D1A /* DoubleExtensionsTests.swift */; };
+		4E1B59C91EE57F48002F3D1A /* FloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59C81EE57F48002F3D1A /* FloatExtensionsTests.swift */; };
+		4E1B59CA1EE57F48002F3D1A /* FloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59C81EE57F48002F3D1A /* FloatExtensionsTests.swift */; };
+		4E1B59CB1EE57F48002F3D1A /* FloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59C81EE57F48002F3D1A /* FloatExtensionsTests.swift */; };
+		4E1B59CD1EE580E4002F3D1A /* IntExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59CC1EE580E4002F3D1A /* IntExtensionsTests.swift */; };
+		4E1B59CE1EE580E4002F3D1A /* IntExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59CC1EE580E4002F3D1A /* IntExtensionsTests.swift */; };
+		4E1B59CF1EE580E4002F3D1A /* IntExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59CC1EE580E4002F3D1A /* IntExtensionsTests.swift */; };
+		4E1B59D41EE585ED002F3D1A /* CGFloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59D01EE58453002F3D1A /* CGFloatExtensionsTests.swift */; };
+		4E1B59D51EE585F8002F3D1A /* CGFloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59D01EE58453002F3D1A /* CGFloatExtensionsTests.swift */; };
+		4E1B59D61EE585FE002F3D1A /* CGFloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B59D01EE58453002F3D1A /* CGFloatExtensionsTests.swift */; };
 		4E3887831EDD85CE007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
 		4E3887841EDD85D0007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
 		4E3887851EDD85D3007502E0 /* ArrayExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */; };
@@ -312,6 +324,10 @@
 		4E06423D1EE1798B001B9784 /* Float+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Extensions.swift"; sourceTree = "<group>"; };
 		4E0642431EE17A3C001B9784 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		4E0642481EE17A54001B9784 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		4E1B59C41EE575C6002F3D1A /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
+		4E1B59C81EE57F48002F3D1A /* FloatExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtensionsTests.swift; sourceTree = "<group>"; };
+		4E1B59CC1EE580E4002F3D1A /* IntExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionsTests.swift; sourceTree = "<group>"; };
+		4E1B59D01EE58453002F3D1A /* CGFloatExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CGFloatExtensionsTests.swift; path = UnitTests/UI/Extensions/CGFloatExtensionsTests.swift; sourceTree = SOURCE_ROOT; };
 		4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTest.swift; sourceTree = "<group>"; };
 		4E3887861EDD9BE3007502E0 /* DictionaryExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTest.swift; sourceTree = "<group>"; };
 		4E38878A1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtensionsTest.swift; sourceTree = "<group>"; };
@@ -526,6 +542,9 @@
 			children = (
 				4E3887811EDD85C4007502E0 /* ArrayExtensionsTest.swift */,
 				4E3887861EDD9BE3007502E0 /* DictionaryExtensionsTest.swift */,
+				4E1B59C41EE575C6002F3D1A /* DoubleExtensionsTests.swift */,
+				4E1B59C81EE57F48002F3D1A /* FloatExtensionsTests.swift */,
+				4E1B59CC1EE580E4002F3D1A /* IntExtensionsTests.swift */,
 				4E38878A1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift */,
 				4E38878E1EDDB82E007502E0 /* NumberExtensionsTest.swift */,
 				4E3887921EDDBB05007502E0 /* OperationQueueExtensionsTest.swift */,
@@ -557,6 +576,7 @@
 			isa = PBXGroup;
 			children = (
 				4E0642311EE16FBC001B9784 /* CGRectExtensionsTests.swift */,
+				4E1B59D01EE58453002F3D1A /* CGFloatExtensionsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -844,10 +864,10 @@
 			isa = PBXGroup;
 			children = (
 				91044BB11EBA41A3009824AD /* Array+Extensions.swift */,
-				4E0642331EE175EC001B9784 /* Int+Extensions.swift */,
 				4E0642381EE1772E001B9784 /* Double+Extensions.swift */,
-				4E06423D1EE1798B001B9784 /* Float+Extensions.swift */,
 				91044BB51EBA41A3009824AD /* Dictionary+Extensions.swift */,
+				4E06423D1EE1798B001B9784 /* Float+Extensions.swift */,
+				4E0642331EE175EC001B9784 /* Int+Extensions.swift */,
 				91044BB61EBA41A3009824AD /* NotificationCenter+Extensions.swift */,
 				91044BB71EBA41A3009824AD /* NSNumber+Extensions.swift */,
 				91044BB91EBA41A3009824AD /* OperationQueue+Extensions.swift */,
@@ -1245,6 +1265,7 @@
 					};
 					4E9307D61ED6E8140039510B = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4E9308211ED6FC680039510B;
 					};
@@ -1255,6 +1276,7 @@
 					};
 					4E9307F11ED6E8670039510B = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4E9308341ED6FC880039510B;
 					};
@@ -1569,13 +1591,17 @@
 				4E9308C91ED730FE0039510B /* ResultTest.swift in Sources */,
 				4E3887831EDD85CE007502E0 /* ArrayExtensionsTest.swift in Sources */,
 				4ECCF4F71EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */,
+				4E1B59C91EE57F48002F3D1A /* FloatExtensionsTests.swift in Sources */,
+				4E1B59CD1EE580E4002F3D1A /* IntExtensionsTests.swift in Sources */,
 				4E9308C51ED712AF0039510B /* CacheTest.swift in Sources */,
 				4ECCF4FB1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */,
 				4E3887871EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */,
 				4E3887971EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */,
+				4E1B59C51EE575C6002F3D1A /* DoubleExtensionsTests.swift in Sources */,
 				4E38878F1EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */,
 				4E38878B1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */,
 				4E3887931EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */,
+				4E1B59D41EE585ED002F3D1A /* CGFloatExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1590,15 +1616,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1B59CE1EE580E4002F3D1A /* IntExtensionsTests.swift in Sources */,
 				4E9308CA1ED730FE0039510B /* ResultTest.swift in Sources */,
 				4E3887841EDD85D0007502E0 /* ArrayExtensionsTest.swift in Sources */,
 				4ECCF4F81EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */,
 				4E9308C61ED712B50039510B /* CacheTest.swift in Sources */,
 				4ECCF4FC1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */,
+				4E1B59D51EE585F8002F3D1A /* CGFloatExtensionsTests.swift in Sources */,
 				4E3887881EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */,
 				4E3887981EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */,
+				4E1B59C61EE575C6002F3D1A /* DoubleExtensionsTests.swift in Sources */,
 				4E3887901EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */,
 				4E38878C1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */,
+				4E1B59CA1EE57F48002F3D1A /* FloatExtensionsTests.swift in Sources */,
 				4E3887941EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1614,15 +1644,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1B59CF1EE580E4002F3D1A /* IntExtensionsTests.swift in Sources */,
 				4E9308CB1ED730FE0039510B /* ResultTest.swift in Sources */,
 				4E3887851EDD85D3007502E0 /* ArrayExtensionsTest.swift in Sources */,
 				4ECCF4F91EDE05BF00A80933 /* TimerExtensionsTest.swift in Sources */,
 				4E9308C71ED712B80039510B /* CacheTest.swift in Sources */,
 				4ECCF4FD1EDE232100A80933 /* UserDefaultsExtensionsTest.swift in Sources */,
+				4E1B59D61EE585FE002F3D1A /* CGFloatExtensionsTests.swift in Sources */,
 				4E3887891EDD9BE3007502E0 /* DictionaryExtensionsTest.swift in Sources */,
 				4E3887991EDDD5C1007502E0 /* StringExtensionsTest.swift in Sources */,
+				4E1B59C71EE575C6002F3D1A /* DoubleExtensionsTests.swift in Sources */,
 				4E3887911EDDB82E007502E0 /* NumberExtensionsTest.swift in Sources */,
 				4E38878D1EDDABDF007502E0 /* NotificationCenterExtensionsTest.swift in Sources */,
+				4E1B59CB1EE57F48002F3D1A /* FloatExtensionsTests.swift in Sources */,
 				4E3887951EDDBB05007502E0 /* OperationQueueExtensionsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2078,12 +2112,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/UnitTests/SupportedFiles/Info-tvOSUITests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.damonthecricket.tvOS-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "tvOS-TestApp";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -2095,6 +2131,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/UnitTests/SupportedFiles/Info-tvOSUITests.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.damonthecricket.tvOS-UITests";
@@ -2146,6 +2183,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/UnitTests/SupportedFiles/Info-macOSUITests.plist";
@@ -2154,6 +2192,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.damonthecricket.macOS-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "macOS-TestApp";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -2165,6 +2204,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/UnitTests/SupportedFiles/Info-macOSUITests.plist";

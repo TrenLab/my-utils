@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import MYUtils
 
 class NumberExtensionsTest: XCTestCase {
     
