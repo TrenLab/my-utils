@@ -26,15 +26,26 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E93056C1ED461F80039510B"
-               BuildableName = "MYUtils-macOSTests.xctest"
-               BlueprintName = "MYUtils-macOSTests"
+               BlueprintIdentifier = "4E9307F11ED6E8670039510B"
+               BuildableName = "macOS-UITests.xctest"
+               BlueprintName = "macOS-UITests"
+               ReferencedContainer = "container:MYUtils.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E9307FD1ED6E8760039510B"
+               BuildableName = "macOS-UnitTests.xctest"
+               BlueprintName = "macOS-UnitTests"
                ReferencedContainer = "container:MYUtils.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -79,15 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E9305641ED461F80039510B"
-            BuildableName = "MYUtils.framework"
-            BlueprintName = "MYUtils-macOS"
+            BlueprintIdentifier = "4E9308341ED6FC880039510B"
+            BuildableName = "macOS-TestApp.app"
+            BlueprintName = "macOS-TestApp"
             ReferencedContainer = "container:MYUtils.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

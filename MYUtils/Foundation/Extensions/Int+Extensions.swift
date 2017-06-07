@@ -11,12 +11,6 @@ import Foundation
 // MARK: - Random
 
 public extension Int {
-    
-    // MARK: - ... Int.max
-    
-    public static var random: Int {
-        return Int.random(n: Int.max)
-    }
 
     // MARK: - min ... max
     

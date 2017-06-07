@@ -58,7 +58,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="jCd-LZ-LSb" kind="show" id="bQi-UZ-aqw"/>
+                                            <segue destination="jCd-LZ-LSb" kind="show" identifier="storyboard.segue" id="bQi-UZ-aqw"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="view.controller.cell" id="m6b-xp-JZa">
@@ -83,7 +83,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="sV7-lp-WuB" kind="show" id="aiR-vP-t8C"/>
+                                            <segue destination="sV7-lp-WuB" kind="show" identifier="view.controller" id="aiR-vP-t8C"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="view.cell" id="exo-mn-nwe">
@@ -108,7 +108,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="ViA-gA-GJj" kind="show" id="Qvr-h4-CIJ"/>
+                                            <segue destination="ViA-gA-GJj" kind="show" identifier="view" id="Qvr-h4-CIJ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="image.cell" id="69o-FB-vBT">
@@ -133,7 +133,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="t3a-cH-R9V" kind="show" id="BoD-ag-Ael"/>
+                                            <segue destination="t3a-cH-R9V" kind="show" identifier="image" id="BoD-ag-Ael"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

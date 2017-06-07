@@ -25,7 +25,7 @@ class HideStoryboardSegue: MYStoryboardSegue {
         #if os(iOS)
             destination.removeChild(viewController: source)
         #elseif os(tvOS)
-            destination.removeChild(viewController: source)
+            source.dismiss(animated: true, completion: nil)
         #elseif os(OSX)
             (destinationController as! NSViewController).removeChild(viewController: (sourceController as! NSViewController))
         #endif

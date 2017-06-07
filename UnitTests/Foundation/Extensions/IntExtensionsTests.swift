@@ -14,8 +14,7 @@ class IntExtensionsTests: XCTestCase {
     
     func testRandom() {
         for mock in getRandomData() {
-            XCTAssertTrue(Int.random <= Int.max)
-            
+
             let randomMinMax = Int.random(min: mock.min, max: mock.max)
             XCTAssertTrue(randomMinMax >= mock.min && randomMinMax <= mock.max)
 

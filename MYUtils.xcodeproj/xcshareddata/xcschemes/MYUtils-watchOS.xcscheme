@@ -20,15 +20,73 @@
                ReferencedContainer = "container:MYUtils.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E90468B1EE1A89900B950D5"
+               BuildableName = "iOS-UITests.xctest"
+               BlueprintName = "iOS-UITests"
+               ReferencedContainer = "container:MYUtils.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E9307AA1ED62CE60039510B"
+               BuildableName = "iOS-UnitTests.xctest"
+               BlueprintName = "iOS-UnitTests"
+               ReferencedContainer = "container:MYUtils.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E90468B1EE1A89900B950D5"
+               BuildableName = "iOS-UITests.xctest"
+               BlueprintName = "iOS-UITests"
+               ReferencedContainer = "container:MYUtils.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4E9307AA1ED62CE60039510B"
+               BuildableName = "iOS-UnitTests.xctest"
+               BlueprintName = "iOS-UnitTests"
+               ReferencedContainer = "container:MYUtils.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4E93053B1ED461AE0039510B"
+            BuildableName = "MYUtils.framework"
+            BlueprintName = "MYUtils-watchOS"
+            ReferencedContainer = "container:MYUtils.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -60,12 +118,24 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/iOS-TestApp">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4E9308451ED6FCCD0039510B"
+            BuildableName = "watchOS-TestApp.app"
+            BlueprintName = "watchOS-TestApp"
+            ReferencedContainer = "container:MYUtils.xcodeproj">
+         </BuildableReference>
+      </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E93053B1ED461AE0039510B"
-            BuildableName = "MYUtils.framework"
-            BlueprintName = "MYUtils-watchOS"
+            BlueprintIdentifier = "4E9308451ED6FCCD0039510B"
+            BuildableName = "watchOS-TestApp.app"
+            BlueprintName = "watchOS-TestApp"
             ReferencedContainer = "container:MYUtils.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

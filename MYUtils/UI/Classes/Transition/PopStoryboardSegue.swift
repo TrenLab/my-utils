@@ -23,7 +23,11 @@ class PopStoryboardSegue: MYStoryboardSegue {
         #if os(iOS)
             source.navigationController?.popViewController(animated: true)
         #elseif os(tvOS)
-            source.navigationController?.popViewController(animated: true)
+            if let navigationController = source.navigationController {
+                navigationController.popViewController(animated: true)
+            } else {
+                source.dismiss(animated: true)
+            }
         #endif
     }
 }

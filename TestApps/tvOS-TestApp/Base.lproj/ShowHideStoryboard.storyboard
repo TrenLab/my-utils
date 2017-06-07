@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Yt-OQ-ieZ">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="FAe-pA-OfR">
+            <objects>
+                <navigationController id="8Yt-OQ-ieZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k5a-lg-ICh">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1iA-6l-ugN" kind="relationship" relationship="rootViewController" id="hDV-Wl-LBr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6h-xQ-ubI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2345" y="14"/>
+        </scene>
+        <!--Show / Hide-->
+        <scene sceneID="l6w-3m-UbP">
+            <objects>
+                <viewController id="1iA-6l-ugN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HOV-pe-aCS"/>
+                        <viewControllerLayoutGuide type="bottom" id="FtY-pv-mDw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ONC-vn-FQM">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Show / Hide" id="TYy-bH-1sQ">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="Gic-bn-rLh">
+                            <connections>
+                                <segue destination="1iA-6l-ugN" kind="custom" identifier="hide" customClass="HideStoryboardSegue" id="EJH-Oc-uhe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="preferredFocusedView" destination="ONC-vn-FQM" id="go7-iJ-3qF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbx-N2-MIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="14"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hDV-Wl-LBr"/>
+    </inferredMetricsTieBreakers>
+</document>
