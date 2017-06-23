@@ -11,26 +11,26 @@
 #elseif os(tvOS)
     import UIKit
 #elseif os(OSX)
-    import Cocoa
+    import AppKit
 #endif
 
 // MARK: - Typealias
 
 #if os(iOS)
-    public typealias MYView  = UIView
-    public typealias MYColor = UIColor
+    public typealias MYViewType  = UIView
+    public typealias MYColorType = UIColor
 #elseif os(tvOS)
-    public typealias MYView  = UIView
-    public typealias MYColor = UIColor
+    public typealias MYViewType  = UIView
+    public typealias MYColorType = UIColor
 #elseif os(OSX)
-    public typealias MYView  = NSView
-    public typealias MYColor = NSColor
+    public typealias MYViewType  = NSView
+    public typealias MYColorType = NSColor
 #endif
 
 // MARK: - Layer
 
-@IBDesignable public extension MYView {
-    @IBInspectable public var borderColor: MYColor? {
+@IBDesignable public extension MYViewType {
+    @IBInspectable public var borderColor: MYColorType? {
         set {
             #if os(iOS) || os(tvOS)
                 layer.borderColor = newValue?.cgColor
@@ -40,9 +40,9 @@
         }
         get {
             #if os(iOS) || os(tvOS)
-                return MYColor(cgColor: layer.borderColor!)
+                return layer != nil ? MYColorType(cgColor: layer!.borderColor!) : nil
             #elseif os(OSX)
-                return layer != nil ? MYColor(cgColor: layer!.borderColor!) : nil
+                return layer != nil ? MYColorType(cgColor: layer!.borderColor!) : nil
             #endif
         }
     }

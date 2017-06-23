@@ -11,29 +11,29 @@
 #elseif os(tvOS)
     import UIKit
 #elseif os(OSX)
-    import Cocoa
+    import AppKit
 #endif
 
 // MARK: - Typealias
 
 #if os(iOS)
-    public typealias MY_COLLECTION_VIEW = UICollectionView
-    public typealias MY_COLLECTION_VIEW_FLOW_LAYOUT = UICollectionViewFlowLayout
+    public typealias MYCollectionViewType = UICollectionView
+    public typealias MYCollectionViewFlowLayoutType = UICollectionViewFlowLayout
 #elseif os(tvOS)
-    public typealias MY_COLLECTION_VIEW = UICollectionView
-    public typealias MY_COLLECTION_VIEW_FLOW_LAYOUT = UICollectionViewFlowLayout
+    public typealias MYCollectionViewType = UICollectionView
+    public typealias MYCollectionViewFlowLayoutType = UICollectionViewFlowLayout
 #elseif os(OSX)
-    public typealias MY_COLLECTION_VIEW = NSCollectionView
+    public typealias MYCollectionViewType = NSCollectionView
     
     @available(OSX 10.11, *)
-    public typealias MY_COLLECTION_VIEW_FLOW_LAYOUT = NSCollectionViewFlowLayout
+    public typealias MYCollectionViewFlowLayoutType = NSCollectionViewFlowLayout
 #endif
 
 // MARK: - Collection
 
-public extension MY_COLLECTION_VIEW {
+@IBDesignable public extension MYCollectionViewType {
     @available(OSX 10.11, *)
-    public var numberOfCellsPerRow: UInt {
+    @IBInspectable public var numberOfCellsPerRow: UInt {
         set {
             guard let layout = flowLayout else {
                 return
@@ -55,7 +55,7 @@ public extension MY_COLLECTION_VIEW {
     }
     
     @available(OSX 10.11, *)
-    public var flowLayout: MY_COLLECTION_VIEW_FLOW_LAYOUT? {
-        return collectionViewLayout as? MY_COLLECTION_VIEW_FLOW_LAYOUT
+    public var flowLayout: MYCollectionViewFlowLayoutType? {
+        return collectionViewLayout as? MYCollectionViewFlowLayoutType
     }
 }

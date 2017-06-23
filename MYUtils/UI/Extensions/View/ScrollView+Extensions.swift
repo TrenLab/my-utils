@@ -11,24 +11,24 @@
 #elseif os(tvOS)
     import UIKit
 #elseif os(OSX)
-    import Cocoa
+    import AppKit
 #endif
 
 // MARK: - Typealias
 
 #if os(iOS)
-    public typealias MYScrollView = UIScrollView
+    public typealias MYScrollViewType = UIScrollView
 #elseif os(tvOS)
-    public typealias MYScrollView = UIScrollView
+    public typealias MYScrollViewType = UIScrollView
 #elseif os(OSX)
-    public typealias MYScrollView = NSScrollView
+    public typealias MYScrollViewType = NSScrollView
 #endif
 
 // MARK: - MYScrollViewPosition
 
 public enum MYScrollViewPosition: Int {
     
-    case top   = 0
+    case top = 0
     
     case right
     
@@ -41,7 +41,8 @@ public enum MYScrollViewPosition: Int {
 
 // MARK: - ScrollView Scroll Position
 
-public extension MYScrollView {
+public extension MYScrollViewType {
+    
     public var position: MYScrollViewPosition {
         switch direction {
         case   .vertical:
@@ -101,7 +102,7 @@ public enum MYScrollViewDirection: Int {
 
 // MARK: - ScrollView Scroll Direction
 
-public extension MYScrollView {
+public extension MYScrollViewType {
     public var direction: MYScrollViewDirection {
         return contentSize.height > contentSize.width ? .vertical : .horizontal;
     }
@@ -117,7 +118,7 @@ public extension MYScrollView {
 
 // MARK: - Size
 
-public extension MYScrollView {
+public extension MYScrollViewType {
     public var size: CGSize {
         return CGSize(width: contentSize.width - frame.size.width,
                      height: contentSize.height - frame.size.height)
