@@ -11,21 +11,47 @@ import Cocoa
 // MARK: - ContentViewController
 
 class ContentViewController: NSViewController {
+    @IBOutlet fileprivate var presenter: ContentPresenter! {
+        didSet {
+            presenter.view = self
+        }
+    }
+    
+    // MARK: - Object LifeCycle
+    
+    deinit {
+        presenter = nil
+    }
     
     // MARK: - ViewController LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         showStartViewController()
+        
+        _ = NotificationCenter.default.addObserver(forName: SideBarDidSelectTestNodeNotification) {notification in
+            let item = notification.object as! Test
+            self.presenter.show(testItem: item)
+        }
     }
     
     // MARK: - Presentation
     
     func showStartViewController() {
-        performSegue(withIdentifier: "start.storyboard.segue", sender: nil)
+        perform(testItem: presenter.start)
     }
     
-    func show(item: TestItem) {
-        performSegue(withIdentifier: item.identifier, sender: nil)
+    func perform(testItem item: Test) {
+        removeChildViewControllers()
+        presenter.show(testItem: item)
+    }
+}
+
+// MARK: - ContentViewController ContentPresenterView
+
+extension ContentViewController: ContentPresenterView {
+    func display(test tst: Test) {
+        performSegue(withIdentifier: tst.identifier, sender: nil)
     }
 }

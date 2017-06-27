@@ -14,7 +14,7 @@ protocol SideBarPresenterView: NSObjectProtocol {
 
     func display(initialNodeList list: [SideBarNode])
 
-    func display(testType type: TestType)
+    func display(testType type: Test)
     
     func display(nodeList list: [SideBarNode])
 }

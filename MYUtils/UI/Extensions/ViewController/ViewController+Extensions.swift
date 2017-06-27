@@ -51,7 +51,13 @@ public extension MYViewController {
     
     // MARK: - Remove Child
 
-    func removeChild(viewController vc: MYViewController, closure: ((Void) -> Void)? = nil) {
+    public func removeChildViewControllers() {
+        for ctrl in childViewControllers {
+            ctrl.removeFromSuperViewController()
+        }
+    }
+    
+    public func removeChild(viewController vc: MYViewController, closure: ((Void) -> Void)? = nil) {
         vc.removeFromSuperViewController(closure: closure)
     }
     

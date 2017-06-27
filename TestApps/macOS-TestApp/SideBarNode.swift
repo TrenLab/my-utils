@@ -16,7 +16,7 @@ enum SideBarNodeType {
     
     case parent
     
-    case test(TestType)
+    case test(Test)
 }
 
 // MARK: - SideBarNode
@@ -78,7 +78,7 @@ class SideBarTestNode: SideBarNode {
     
     // MARK: - Object LifeCycle
     
-    convenience init(test: TestType, identifier: String, item: SideBarItem) {
+    convenience init(test: Test, identifier: String, item: SideBarItem) {
         self.init(type: .test(test), identifier: identifier, item: item, childs: [])
     }
 }

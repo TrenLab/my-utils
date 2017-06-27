@@ -11,39 +11,50 @@ import Cocoa
 // MARK: - WindowController
 
 class WindowController: NSWindowController {
+    
+    // MARK: - Buttons
+    
+    @IBOutlet private weak var backButton: NSButton!
+    @IBOutlet private weak var resetButton: NSButton!
 
-    @IBOutlet weak var backButton: NSButton!
+    // MARK: - Items
     
-    @IBOutlet weak var resetButton: NSButton!
-    
-    var rootSplitViewController: RootSplitViewController {
-        return self.contentViewController as! RootSplitViewController
+    private var rootSplitViewController: RootSplitViewController {
+        return contentViewController as! RootSplitViewController
     }
     
-    // MARK: - 
+    // MARK: - ViewController LifeCycle
     
     override func windowDidLoad() {
         super.windowDidLoad()
         
         _ = NotificationCenter.default.addObserver(forName: SideBarDidSelectNodeNotification) {notification in
             self.backButton.isEnabled = true
-            self.resetButton.isEnabled = true
         }
         
         _ =  NotificationCenter.default.addObserver(forName: SideBarDidSelectInitialListNotification) {notification in
-            self.backButton.isEnabled = false
-            self.resetButton.isEnabled = false
+            self.setButtons(enabled: false)
+        }
+        
+        _ = NotificationCenter.default.addObserver(forName: SideBarDidSelectTestNodeNotification) {notification in
+            self.setButtons(enabled: true)
         }
     }
     
     // MARK: - UIActions
     
-    @IBAction func backTap(sender: Any) {
+    @IBAction func backButtonTap(sender: Any) {
         rootSplitViewController.sideBarViewController.back()
+        setButtons(enabled: false)
     }
     
-    @IBAction func resetTap(sender: Any) {
-        rootSplitViewController.sideBarViewController.reset()
-        rootSplitViewController.containerViewController.showStartViewController()
+    @IBAction func resetButtonTap(sender: Any) {
+        rootSplitViewController.contentViewController.showStartViewController()
+        resetButton.isEnabled = false
+    }
+
+    private func setButtons(enabled isEnabled: Bool) {
+        self.backButton.isEnabled  = isEnabled
+        self.resetButton.isEnabled = isEnabled
     }
 }

@@ -19,7 +19,7 @@ class SideBarPresenter: NSObject {
     lazy var nodes: [SideBarNode] = {[unowned self] in
         return [
             SideBarHeaderNode(identifier: "header.cell", item: SideBarItem(title: "Test Menu")),
-            SideBarParentNode(identifier: "item.cell", item: SideBarItem(title: "StroruboardSegue"), childItems: self.storyboardSegueNodes),
+            SideBarParentNode(identifier: "item.cell", item: SideBarItem(title: "StroryboardSegue"), childItems: self.storyboardSegueNodes),
             SideBarParentNode(identifier: "item.cell", item: SideBarItem(title: "ViewController"), childItems: self.viewControllerNodes),
             SideBarParentNode(identifier: "item.cell", item: SideBarItem(title: "View"), childItems: self.viewNodes),
             SideBarParentNode(identifier: "item.cell", item: SideBarItem(title: "Image"), childItems: self.imageNodes)
@@ -29,11 +29,10 @@ class SideBarPresenter: NSObject {
     // MARK: - StoryboardSegue
     
     lazy var storyboardSegueNodes: [SideBarNode] = {
-        
         return [
-            SideBarHeaderNode(identifier: "header.cell",  item: SideBarItem(title: "StroruboardSegue Menu")),
-            SideBarTestNode(test: StoryboardTestType.dismiss.rawValue,  identifier: "item.cell", item: SideBarItem(title: "Dismiss")),
-            SideBarTestNode(test: StoryboardTestType.showHide.rawValue, identifier: "item.cell", item: SideBarItem(title: "Show / Hide"))
+            SideBarHeaderNode(identifier: "header.cell", item: SideBarItem(title: "StroruboardSegue Menu")),
+            SideBarTestNode(test: StoryboardTestGroup.dismiss.rawValue, identifier: "item.cell", item: SideBarItem(title: "Dismiss")),
+            SideBarTestNode(test: StoryboardTestGroup.showHide.rawValue, identifier: "item.cell", item: SideBarItem(title: "Show / Hide"))
         ]
     }()
     
@@ -68,8 +67,8 @@ class SideBarPresenter: NSObject {
             if !childs.isEmpty {
                 view?.display(nodeList: childs)
             }
-        case .test(let testType):
-            view?.display(testType: testType)
+        case .test(let value):
+            view?.display(testType: value)
         default:
             break
         }

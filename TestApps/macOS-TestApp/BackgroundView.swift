@@ -8,10 +8,18 @@
 
 import Cocoa
 
+// MARK: - BackgroundView
+
 @IBDesignable 
 class BackgroundView: NSView {
-    
     @IBInspectable var backgroundColor: NSColor = NSColor.white
+    
+    // MARK: - Object LifeCycle
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        wantsLayer = true
+    }
     
     // MARK: - Layer
     

@@ -27,7 +27,7 @@ open class DismissStoryboardSegue: MYStoryboardSegue {
         #elseif os(tvOS)
             source.dismiss(animated: true, completion: nil)
         #elseif os(OSX)
-            (sourceController as! NSViewController).dismissViewController((destinationController as! NSViewController))
+            (destinationController as! NSViewController).dismissViewController(sourceController as! NSViewController)
         #endif
     }
 }

@@ -98,7 +98,7 @@ extension SideBarViewController: NSOutlineViewDelegate {
 // MARK: - SideBarPresenterView
 
 extension SideBarViewController: SideBarPresenterView {
-    func display(testType type: TestType) {
+    func display(testType type: Test) {
         NotificationCenter.default.post(name: SideBarDidSelectTestNodeNotification, object: type)
     }
     
