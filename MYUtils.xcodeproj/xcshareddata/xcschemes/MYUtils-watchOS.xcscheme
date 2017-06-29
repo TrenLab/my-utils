@@ -28,20 +28,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E90468B1EE1A89900B950D5"
-               BuildableName = "iOS-UITests.xctest"
-               BlueprintName = "iOS-UITests"
-               ReferencedContainer = "container:MYUtils.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E9307AA1ED62CE60039510B"
                BuildableName = "iOS-UnitTests.xctest"
                BlueprintName = "iOS-UnitTests"
@@ -57,16 +43,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E90468B1EE1A89900B950D5"
-               BuildableName = "iOS-UITests.xctest"
-               BlueprintName = "iOS-UITests"
-               ReferencedContainer = "container:MYUtils.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference

@@ -33,16 +33,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E9307F11ED6E8670039510B"
-               BuildableName = "macOS-UITests.xctest"
-               BlueprintName = "macOS-UITests"
-               ReferencedContainer = "container:MYUtils.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E9307FD1ED6E8760039510B"
                BuildableName = "macOS-UnitTests.xctest"
                BlueprintName = "macOS-UnitTests"
@@ -90,16 +80,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E9308341ED6FC880039510B"
-            BuildableName = "macOS-TestApp.app"
-            BlueprintName = "macOS-TestApp"
-            ReferencedContainer = "container:MYUtils.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

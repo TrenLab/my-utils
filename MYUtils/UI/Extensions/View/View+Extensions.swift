@@ -40,7 +40,7 @@
         }
         get {
             #if os(iOS) || os(tvOS)
-                return layer != nil ? MYColorType(cgColor: layer!.borderColor!) : nil
+                return MYColorType(cgColor: layer.borderColor!)
             #elseif os(OSX)
                 return layer != nil ? MYColorType(cgColor: layer!.borderColor!) : nil
             #endif
