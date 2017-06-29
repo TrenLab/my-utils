@@ -23,8 +23,7 @@ public func + <V>(left: [V], right: [V]) -> [V] {
 // MARK: - Enumerate
 
 public extension Array {
-
-    public func make<T>(_ provider: (_ idx: UInt,_ object: Element) -> T?) -> [T] {
+    public func make<T>(_ provider: (_ idx: Int,_ object: Element) -> T?) -> [T] {
         var array = [T]()
         
         enumerate {idx, object in
@@ -36,8 +35,8 @@ public extension Array {
         return array
     }
     
-    public func enumerate(closure: ( _ idx: UInt, _ object: Element) -> Void) {
-        var idx: UInt = 0
+    public func enumerate(closure: ( _ idx: Int, _ object: Element) -> Void) {
+        var idx: Int = 0
         
         for value in self {
             closure(idx, value)
@@ -49,9 +48,8 @@ public extension Array {
 // MARK: - Add / Remove
 
 public extension Array where Element: Equatable {
-    
-    public mutating func remove(object: Element) {
-        if let index = index(of: object) {
+    public mutating func remove(element: Element) {
+        if let index = index(of: element) {
             remove(at: index)
         }
     }
