@@ -397,8 +397,8 @@
 				4E9306571ED5C2430039510B /* ViewTypes.swift */,
 				4E9306511ED5C22B0039510B /* CollectionView+Extensions.swift */,
 				4E9306521ED5C22B0039510B /* ScrollView+Extensions.swift */,
-				4E9306531ED5C22B0039510B /* View+Extensions.swift */,
 				4E37FC891EF061B800F0C42E /* TableView+Extensions.swift */,
+				4E9306531ED5C22B0039510B /* View+Extensions.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
