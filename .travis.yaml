@@ -1,7 +1,7 @@
 osx_image: xcode8
 
 branches:
-  only:
+  	only:
  	- develop
 
 env:
