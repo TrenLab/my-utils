@@ -8,47 +8,72 @@
 
 import Foundation
 
-open class Cache {
+// MARK: - Cache
+
+open class Cache: Equatable {
     
-    private static var caches = [String: Cache]()
+    internal static var caches = [String: Cache]()
     
-    private let cache: NSCache = NSCache<NSString, AnyObject>()
+    open internal(set) var cache: NSCache = NSCache<NSString, AnyObject>()
+
+    open internal(set) var name: String
     
     // MARK: - Object LifeCycle
     
-    public static func createCache(withName name: String) -> Cache {
-        if let _ = Cache.caches[name] {
-            return Cache.caches[name]!
+    open class func create(withName name: String) -> Cache {
+        if let cache = Cache.caches[name] {
+            return cache
         }
-        
-        Cache.caches[name] = Cache()
-        return Cache.caches[name]!
+        let cache = Cache(name: name)
+        Cache.caches[name] = cache
+        return cache
+    }
+    
+    fileprivate init(name: String) {
+        self.name  = name
+        cache.name = name
     }
     
     deinit {
         clear()
     }
     
-    public func clear() {
+    // MARK: - Get
+    
+    open class func with(name nm: String) -> Cache? {
+        return Cache.caches[nm]
+    }
+    
+    // MARK: - Clear
+    
+    open class func clear() {
+        caches.forEach {
+            $0.value.clear()
+        }
+    }
+        
+    open func clear() {
         cache.removeAllObjects()
     }
     
-    // MARK: - Get
+    // MARK: - Subscript
     
-    public static func withName(_ name: String) -> Cache? {
-        return Cache.caches[name]
-    }
-    
-    public subscript(key: String) -> AnyObject? {
+    open subscript(key: String) -> AnyObject? {
         set {
-            let ns_string = key.ns_string
             guard let new = newValue else {
-                cache.removeObject(forKey: ns_string)
+                cache.removeObject(forKey: key.ns_string)
                 return
             }
-            cache.setObject(new, forKey: ns_string)
-        } get {
+            cache.setObject(new, forKey: key.ns_string)
+        }
+        get {
             return cache.object(forKey: key.ns_string)
         }
+    }
+    
+    // MARK: - Equatable
+    
+    public static func ==(lhs: Cache, rhs: Cache) -> Bool {
+        return lhs.name == rhs.name
     }
 }
