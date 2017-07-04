@@ -6,8 +6,8 @@ branches:
 
 env:
   global:
-  - FRAMEWORK_NAME = MYUtils
-  - REPO_NAME = my-utils
+  - "FRAMEWORK_NAME=MYUtils"
+  - "REPO_NAME=my-utils"
 
 before_install:
 - rvm get head
@@ -23,9 +23,9 @@ matrix:
   - language: swift
 
 script:
-- travis_retry xcodebuild -project ${FRAMEWORK_NAME}.xcodeproj -target ${FRAMEWORK_NAME}-iOS 	  -destination "platform=iOS Simulator,name=iPhone 6,OS=10.0"
-- travis_retry xcodebuild -project ${FRAMEWORK_NAME}.xcodeproj -target ${FRAMEWORK_NAME}-macOS"
-- travis_retry xcodebuild -project ${FRAMEWORK_NAME}.xcodeproj -target ${FRAMEWORK_NAME}-tvOS"    -destination "platform=tvOS Simulator,name=Apple TV 1080p"
-- travis_retry xcodebuild -project ${FRAMEWORK_NAME}.xcodeproj -target ${FRAMEWORK_NAME}-watchOS" -destination "platform=watchOS Simulator,name=Apple Watch Series 2 - 42mm"
+- "travis_retry xcodebuild -project ${FRAMEWORK_NAME}.xcodeproj -target ${FRAMEWORK_NAME}-iOS 	 -destination platform=iOS Simulator,name=iPhone 6,OS=10.0"
+- "travis_retry xcodebuild -project ${FRAMEWORK_NAME}.xcodeproj -target ${FRAMEWORK_NAME}-macOS"
+- "travis_retry xcodebuild -project ${FRAMEWORK_NAME}.xcodeproj -target ${FRAMEWORK_NAME}-tvOS  -destination platform=tvOS Simulator,name=Apple TV 1080p"
+- "travis_retry xcodebuild -project ${FRAMEWORK_NAME}.xcodeproj -target ${FRAMEWORK_NAME}-watchOS -destination platform=watchOS Simulator,name=Apple Watch Series 2 - 42mm"
 - pod lib lint --quick
 - carthage build --no-skip-current
