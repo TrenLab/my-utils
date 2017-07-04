@@ -1,27 +1,25 @@
 osx_image: xcode8
 
+language: objective-c
+
+branches:
+  only:
+  - develop
+
 env:
   global:
-  - FRAMEWORK_NAME = MYUtils
-  - REPO_NAME = my-utils
+  - FRAMEWORK_NAME = NYUtils
 
 before_install:
 - rvm get head
 - brew update
-
-install:
 - brew outdated carthage || brew upgrade carthage
 - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 
-matrix:
-  include:
-  - language: objective-c
-  - language: swift
-
 script:
-- travis_retry xcodebuild -project "$FRAMEWORK_NAME.xcodeproj" -target "$FRAMEWORK_NAME-iOS" 	 -destination "platform=iOS Simulator,name=iPhone 6,OS=10.0"
-- travis_retry xcodebuild -project "$FRAMEWORK_NAME.xcodeproj" -target "$FRAMEWORK_NAME-macOS"		
-- travis_retry xcodebuild -project "$FRAMEWORK_NAME.xcodeproj" -target "$FRAMEWORK_NAME-tvOS"     -destination "platform=tvOS Simulator,name=Apple TV 1080p"
-- travis_retry xcodebuild -project "$FRAMEWORK_NAME.xcodeproj" -target "$FRAMEWORK_NAME-watchOS" -destination "platform=watchOS Simulator,name=Apple Watch Series 2 - 42mm"
+- travis_retry xcodebuild -project MYJSON.xcodeproj -target MYJSON-iOS 	   -destination "platform=iOS Simulator,name=iPhone 6,OS=10.0"
+- travis_retry xcodebuild -project MYJSON.xcodeproj -target MYJSON-macOS
+- travis_retry xcodebuild -project MYJSON.xcodeproj -target MYJSON-tvOS    -destination "platform=tvOS Simulator,name=Apple TV 1080p"
+- travis_retry xcodebuild -project MYJSON.xcodeproj -target MYJSON-watchOS -destination "platform=watchOS Simulator,name=Apple Watch Series 2 - 42mm"
 - pod lib lint --quick
 - carthage build --no-skip-current
