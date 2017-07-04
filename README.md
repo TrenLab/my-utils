@@ -6,4 +6,4 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/damonthecricket/my-utils/master/LICENSE)
 ![Platform](https://img.shields.io/badge/platforms-iOS%208.0+%20%7C%20macOS%2010.10+%20%7C%20tvOS%209.0+%20%7C%20watchOS%202.0+-333333.svg)
 
-![MYJSON](https://github.com/damonthecricket/my-utils/master/my-utils-lib.jpg)
+![MYJSON](https://github.com/damonthecricket/my-utils/blob/master/my-utils-lib.jpg)
