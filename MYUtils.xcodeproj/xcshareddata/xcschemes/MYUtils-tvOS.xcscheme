@@ -26,15 +26,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E9307FD1ED6E8760039510B"
-               BuildableName = "macOS-UnitTests.xctest"
-               BlueprintName = "macOS-UnitTests"
+               BlueprintIdentifier = "4E9307E21ED6E84E0039510B"
+               BuildableName = "tvOS-UnitTests.xctest"
+               BlueprintName = "tvOS-UnitTests"
                ReferencedContainer = "container:MYUtils.xcodeproj">
             </BuildableReference>
          </TestableReference>
