@@ -18,8 +18,9 @@ install:
 - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 
 matrix:
-	- include: objective-c
-	- include: swift
+  include:
+  - language: objective-c
+  - language: swift
 
 script:
 - travis_retry xcodebuild -project "$FRAMEWORK_NAME.xcodeproj" -target "$FRAMEWORK_NAME-iOS" 	 -destination "platform=iOS Simulator,name=iPhone 6,OS=10.0"
