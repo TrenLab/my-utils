@@ -14,7 +14,7 @@
     import AppKit
 #endif
 
-// MARK: - Typealias
+// MARK: - MYScrollViewType
 
 #if os(iOS)
     public typealias MYScrollViewType = UIScrollView
@@ -42,7 +42,6 @@ public enum MYScrollViewPosition: Int {
 // MARK: - ScrollView Scroll Position
 
 public extension MYScrollViewType {
-    
     public var position: MYScrollViewPosition {
         switch direction {
         case   .vertical:
@@ -95,7 +94,7 @@ public extension MYScrollViewType {
 
 public enum MYScrollViewDirection: Int {
     
-    case vertical    = 0
+    case vertical = 0
     
     case horizontal
 }
@@ -120,7 +119,6 @@ public extension MYScrollViewType {
 
 public extension MYScrollViewType {
     public var size: CGSize {
-        return CGSize(width: contentSize.width - frame.size.width,
-                     height: contentSize.height - frame.size.height)
+        return CGSize(width: contentSize.width - frame.size.width, height: contentSize.height - frame.size.height)
     }
 }

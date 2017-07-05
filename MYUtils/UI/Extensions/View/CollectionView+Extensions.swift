@@ -14,7 +14,7 @@
     import AppKit
 #endif
 
-// MARK: - Typealias
+// MARK: - MYCollectionViewType / MYCollectionViewFlowLayoutType
 
 #if os(iOS)
     public typealias MYCollectionViewType = UICollectionView
@@ -29,7 +29,7 @@
     public typealias MYCollectionViewFlowLayoutType = NSCollectionViewFlowLayout
 #endif
 
-// MARK: - Collection
+// MARK: - Collection Layout
 
 @IBDesignable public extension MYCollectionViewType {
     @available(OSX 10.11, *)

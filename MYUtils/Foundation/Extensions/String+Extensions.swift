@@ -28,7 +28,7 @@ public extension String {
 
 public extension String {
     public static func random(wihtLength length: Int) -> String {
-        return random(wihtLength: length, fromLetters: standardAlphabet())
+        return random(wihtLength: length, fromLetters: standardAlphabet)
     }
     
     public static func random(wihtLength length: Int, fromLetters letters: String) -> String {
@@ -40,11 +40,10 @@ public extension String {
             var nextChar = ns_stringLetters.character(at: Int(randNum))
             randomString += NSString(characters: &nextChar, length: 1) as String
         }
-        
         return randomString
     }
     
-    public static func standardAlphabet() -> String {
+    public static var standardAlphabet:  String {
         return "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     }
 }

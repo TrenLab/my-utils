@@ -46,7 +46,7 @@ public func /(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return pointCalculation(lhs, rhs, /)
 }
 
-    // MARK: - Minus
+    // MARK: - CGSize
 
 public func +(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, +)

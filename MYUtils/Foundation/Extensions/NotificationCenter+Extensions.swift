@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Observer
+// MARK: - Add Observer
 
 public extension NotificationCenter {
     public func addObserver(forName name: NSNotification.Name, using block: @escaping (Notification) -> Void) -> NSObjectProtocol {

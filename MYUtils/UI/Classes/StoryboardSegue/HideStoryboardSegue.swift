@@ -17,10 +17,7 @@
 // MARK: - HideStoryboardSegue
 
 @objc(HideStoryboardSegue)
-class HideStoryboardSegue: MYStoryboardSegue {
-    
-    // MARK: - Pepform
-    
+class HideStoryboardSegue: MYStoryboardSegueType {
     override open func perform() {
         #if os(iOS)
             destination.removeChild(viewController: source)

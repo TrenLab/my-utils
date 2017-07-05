@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Is 
+// MARK: - Is
 
 public extension NSNumber {
     public var isBool: Bool {

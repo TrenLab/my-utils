@@ -15,10 +15,7 @@
 // MARK: - PopStoryboardSegue
 
 @objc(PopStoryboardSegue)
-class PopStoryboardSegue: MYStoryboardSegue {
-    
-    // MARK: - Pepform
-    
+class PopStoryboardSegue: MYStoryboardSegueType {
     override open func perform() {
         #if os(iOS)
             source.navigationController?.popViewController(animated: true)

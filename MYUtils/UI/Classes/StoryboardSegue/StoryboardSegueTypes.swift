@@ -14,12 +14,12 @@
     import Cocoa
 #endif
 
-// MARK: - Cross platform typealias
+// MARK: - MYStoryboardSegueType
 
 #if os(iOS)
-    public typealias MYStoryboardSegue = UIStoryboardSegue
+    public typealias MYStoryboardSegueType = UIStoryboardSegue
 #elseif os(tvOS)
-    public typealias MYStoryboardSegue = UIStoryboardSegue
+    public typealias MYStoryboardSegueType = UIStoryboardSegue
 #elseif os(OSX)
-    public typealias MYStoryboardSegue = NSStoryboardSegue
+    public typealias MYStoryboardSegueType = NSStoryboardSegue
 #endif

@@ -14,7 +14,7 @@
     import AppKit
 #endif
 
-// MARK: - Typealias
+// MARK: - MYViewType / MYColorType
 
 #if os(iOS)
     public typealias MYViewType  = UIView
@@ -40,7 +40,7 @@
         }
         get {
             #if os(iOS) || os(tvOS)
-                return MYColorType(cgColor: layer.borderColor!)
+                return layer.borderColor != nil ? MYColorType(cgColor: layer.borderColor!) : nil
             #elseif os(OSX)
                 return layer != nil ? MYColorType(cgColor: layer!.borderColor!) : nil
             #endif

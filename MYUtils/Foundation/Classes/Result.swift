@@ -10,23 +10,13 @@ import Foundation
 
 // MARK: - Result
 
-public enum Result<T, Error>: CustomStringConvertible, CustomDebugStringConvertible {
+public enum Result<T, Error> {
     
     case success(T)
     
     case failure(Error)
     
-    // MARK: - Setup / Teardown
-    
-    public init(value: T) {
-        self = .success(value)
-    }
-    
-    public init(error: Error) {
-        self = .failure(error)
-    }
-
-    // MARK: - Properties
+    // MARK: - Is
     
     public var isSuccess: Bool {
         switch self {
@@ -44,6 +34,16 @@ public enum Result<T, Error>: CustomStringConvertible, CustomDebugStringConverti
         case .failure(_):
             return true
         }
+    }
+    
+    // MARK: - Setup / Teardown
+    
+    public init(value: T) {
+        self = .success(value)
+    }
+    
+    public init(error: Error) {
+        self = .failure(error)
     }
     
     // MARK: - Handle
@@ -74,16 +74,18 @@ public enum Result<T, Error>: CustomStringConvertible, CustomDebugStringConverti
             completion(value)
         }
     }
-    
-    // MARK: - Description
-    
+}
+
+// MARK: - CustomStringConvertible, CustomDebugStringConvertible
+
+extension Result: CustomStringConvertible, CustomDebugStringConvertible {
     public var description: String {
         return handle(
             success: {
                 ".success(\($0))"
-            }, failure: {
-                ".failure(\($0))"
-            }
+        }, failure: {
+            ".failure(\($0))"
+        }
         )
     }
     

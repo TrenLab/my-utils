@@ -28,16 +28,6 @@ public enum MYImageOrientation {
     case album
     
     case square
-    
-    fileprivate init(size: CGSize) {
-        if size.width < size.height {
-            self = .portret
-        } else if size.width > size.height {
-            self = .album
-        } else {
-            self = .square
-        }
-    }
 }
 
 // MARK: - Image Orientation
@@ -56,7 +46,13 @@ public extension MYImage {
     }
     
     public var orientation: MYImageOrientation {
-        return MYImageOrientation(size: size)
+        if size.width < size.height {
+            return .portret
+        } else if size.width > size.height {
+            return .album
+        } else {
+            return .square
+        }
     }
 }
 
@@ -112,11 +108,9 @@ public extension WKImage {
 }
 #endif
 
-
 // MARK: - Draw
 
 public func MYImageDraw(size: CGSize, draw: ((_ size: CGSize, _ context: CGContext)-> ())?) -> MYImage {
-    
     #if os(iOS) || os(watchOS) || os(tvOS)
         UIGraphicsBeginImageContextWithOptions(size, false, 1)
     

@@ -17,10 +17,7 @@
 // MARK: - ShowStoryboardSegue
 
 @objc(ShowStoryboardSegue)
-class ShowStoryboardSegue: MYStoryboardSegue {
-
-    // MARK: - Pepform
-    
+class ShowStoryboardSegue: MYStoryboardSegueType {
     override open func perform() {
         #if os(iOS)
             source.addChild(viewController: destination)

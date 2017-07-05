@@ -17,7 +17,7 @@
     import Cocoa
 #endif
 
-// MARK: - Typealias
+// MARK: - MYImage / MYImageView
 
 #if os(iOS)
     public typealias MYImage = UIImage

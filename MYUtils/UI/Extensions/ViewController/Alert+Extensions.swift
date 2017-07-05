@@ -12,23 +12,22 @@
     import UIKit
 #endif
 
-// MARK: - Typealias
+// MARK: - MYAlertActionType / MYAlertActionType / MYAlertControllerType
 
 #if os(iOS)
-    public typealias MYAlertAction = UIAlertAction
-    public typealias MYAlertControllerStyle = UIAlertControllerStyle
-    public typealias MYAlertController = UIAlertController
+    public typealias MYAlertActionType = UIAlertAction
+    public typealias MYAlertControllerStyleType = UIAlertControllerStyle
+    public typealias MYAlertControllerType = UIAlertController
 #elseif os(tvOS)
-    public typealias MYAlertAction = UIAlertAction
-    public typealias MYAlertControllerStyle = UIAlertControllerStyle
-    public typealias MYAlertController = UIAlertController
+    public typealias MYAlertActionType = UIAlertAction
+    public typealias MYAlertControllerStyleType = UIAlertControllerStyle
+    public typealias MYAlertControllerType = UIAlertController
 #endif
 
-// MARK: - Alert Show
+// MARK: - Show
 
-public func UIAlertShow(title: String? = nil, message: String, actions: [MYAlertAction] = [UIAlertActionMakeCancel(title: "OK", handler: nil)], style: MYAlertControllerStyle = .alert, vc: MYViewController) {
-    
-    let ctrl = MYAlertController(title: title, message: message, preferredStyle: style)
+public func UIAlertShow(title: String? = nil, message: String, actions: [MYAlertActionType] = [UIAlertActionMakeCancel(title: "OK", handler: nil)], style: MYAlertControllerStyleType = .alert, vc: MYViewControllerType) {
+    let ctrl = MYAlertControllerType(title: title, message: message, preferredStyle: style)
     for action in actions {
         ctrl.addAction(action)
     }
@@ -37,14 +36,14 @@ public func UIAlertShow(title: String? = nil, message: String, actions: [MYAlert
 
 // MARK: - Make
 
-public func UIAlertActionMake(title: String, handler:((_ object: AnyObject)->())?) -> UIAlertAction {
+public func UIAlertActionMake(title: String, handler:((_ object: AnyObject)->())?) -> MYAlertActionType {
     return UIAlertActionMake(title: title, style: .default, handler: handler)
 }
 
-public func UIAlertActionMakeCancel(title: String, handler:((_ object: AnyObject)->())?) -> UIAlertAction {
+public func UIAlertActionMakeCancel(title: String, handler:((_ object: AnyObject)->())?) -> MYAlertActionType {
     return UIAlertActionMake(title: title, style: .cancel, handler: handler)
 }
 
-public func UIAlertActionMake(title: String, style: UIAlertActionStyle, handler:((_ object: AnyObject)->())?)  -> UIAlertAction {
-    return UIAlertAction(title: title, style: style, handler: handler)
+public func UIAlertActionMake(title: String, style: UIAlertActionStyle, handler:((_ object: AnyObject)->())?)  -> MYAlertActionType {
+    return MYAlertActionType(title: title, style: style, handler: handler)
 }

@@ -14,7 +14,7 @@
     import AppKit
 #endif
 
-// MARK: - Typealias
+// MARK: - MYTableViewType
 
 #if os(iOS)
     public typealias MYTableViewType  = UITableView
@@ -24,17 +24,17 @@
     public typealias MYTableViewType  = NSTableView
 #endif
 
-// MARK: - Uses
+// MARK: - Layout
 
 #if os(OSX)
-    @IBDesignable public extension MYTableViewType {
-        @IBInspectable public var staticCells: Bool {
-            set {
-                usesStaticContents = true
-            }
-            get {
-                return usesStaticContents
-            }
+@IBDesignable public extension MYTableViewType {
+    @IBInspectable public var staticCells: Bool {
+        set {
+            usesStaticContents = true
+        }
+        get {
+            return usesStaticContents
         }
     }
+}
 #endif

@@ -12,12 +12,9 @@
     import UIKit
 #endif
 
-// MARK: - UINavigationController
+// MARK: - Root ViewController
 
 public extension UINavigationController {
-    
-    // MARK: - Root View Controller
-    
     public var rootViewController: UIViewController? {
         return viewControllers.first
     }

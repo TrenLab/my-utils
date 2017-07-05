@@ -10,9 +10,9 @@ import Foundation
 
 // MARK: - Cache
 
-open class Cache: Equatable {
+open class Cache {
     
-    internal static var caches = [String: Cache]()
+    open internal(set) static var caches = [String: Cache]()
     
     open internal(set) var cache: NSCache = NSCache<NSString, AnyObject>()
 
@@ -55,7 +55,7 @@ open class Cache: Equatable {
     open func clear() {
         cache.removeAllObjects()
     }
-    
+
     // MARK: - Subscript
     
     open subscript(key: String) -> AnyObject? {
@@ -70,9 +70,11 @@ open class Cache: Equatable {
             return cache.object(forKey: key.ns_string)
         }
     }
-    
-    // MARK: - Equatable
-    
+}
+
+// MARK: - Equatable
+
+extension Cache: Equatable {
     public static func ==(lhs: Cache, rhs: Cache) -> Bool {
         return lhs.name == rhs.name
     }

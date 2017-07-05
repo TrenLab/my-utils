@@ -8,16 +8,11 @@
 
 #if os(iOS)
     import UIKit
-#elseif os(tvOS)
-    import UIKit
 #endif
 
-// MARK: - UIActivityViewController
+// MARK: - LifeCycle
 
 public extension UIActivityViewController {
-    
-    // MARK: - Init
-    
     public convenience init(activityItems: [Any], applicationActivities: [UIActivity]?, closure:UIActivityViewControllerCompletionWithItemsHandler? = nil) {
         self.init(activityItems: activityItems, applicationActivities: applicationActivities)
         completionWithItemsHandler = closure

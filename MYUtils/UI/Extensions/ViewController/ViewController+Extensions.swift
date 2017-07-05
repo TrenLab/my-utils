@@ -14,30 +14,22 @@
     import Cocoa
 #endif
 
-// MARK: - Childs
+// MARK: - Get Childs
 
-public extension MYViewController {
-    
-    // MARK: - Current
-    
-    public var currentViewController: MYViewController? {
+public extension MYViewControllerType {
+    public var currentViewController: MYViewControllerType? {
         return childViewControllers.last
     }
     
-    // MARK: - Previous
-    
-    public var previousViewController: MYViewController? {
+    public var previousViewController: MYViewControllerType? {
         return childViewControllers.count < 2 ? nil : childViewControllers[childViewControllers.count - 2]
     }
 }
 
-// MARK: Add / Remove Child
+// MARK: - Add / Remove Child
 
-public extension MYViewController {
-    
-    // MARK: - Remove Child
-    
-    public func addChild(viewController vc: MYViewController, closure: ((Void) -> Void)? = nil) {
+public extension MYViewControllerType {
+    public func addChild(viewController vc: MYViewControllerType, closure: ((Void) -> Void)? = nil) {
         addChildViewController(vc)
         vc.view.frame = view.bounds
         
@@ -48,8 +40,6 @@ public extension MYViewController {
             vc.didMove(toParentViewController: self)
         #endif
     }
-    
-    // MARK: - Remove Child
 
     public func removeChildViewControllers() {
         for ctrl in childViewControllers {
@@ -57,7 +47,7 @@ public extension MYViewController {
         }
     }
     
-    public func removeChild(viewController vc: MYViewController, closure: ((Void) -> Void)? = nil) {
+    public func removeChild(viewController vc: MYViewControllerType, closure: ((Void) -> Void)? = nil) {
         vc.removeFromSuperViewController(closure: closure)
     }
     
