@@ -71,7 +71,7 @@ class StringExtensionsTest: XCTestCase {
     
     func getRandomStringData() -> [(length: Int, alphabet: String)] {
         return [
-            (length: 10, alphabet: String.standardAlphabet()),
+            (length: 10, alphabet: String.standardAlphabet),
             (length: 9, alphabet: "0123456789"),
             (length: 5, alphabet: "dfrtblghtynxa"),
             (length: 12, alphabet: "lof'';gty;p")

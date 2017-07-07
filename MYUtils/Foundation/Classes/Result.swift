@@ -10,6 +10,15 @@ import Foundation
 
 // MARK: - Result
 
+/**
+ Used to represent whether a request was successful or encountered an error.
+ - success: The request and all post processing operations were successful resulting in the serialization of the
+            provided associated value.
+ 
+ - failure: The request encountered an error resulting in a failure. The associated values are the original data
+            provided by the server as well as the error that caused the failure.
+ */
+
 public enum Result<T, Error> {
     
     case success(T)
@@ -18,6 +27,9 @@ public enum Result<T, Error> {
     
     // MARK: - Is
     
+    /**
+     Returns `true` if the result is a success, `false` otherwise.
+    */
     public var isSuccess: Bool {
         switch self {
         case .success(_):
@@ -27,6 +39,9 @@ public enum Result<T, Error> {
         }
     }
     
+    /**
+     Returns `true` if the result is a failure, `false` otherwise.
+     */
     public var isFailure: Bool {
         switch self {
         case .success(_):
@@ -36,18 +51,14 @@ public enum Result<T, Error> {
         }
     }
     
-    // MARK: - Setup / Teardown
-    
-    public init(value: T) {
-        self = .success(value)
-    }
-    
-    public init(error: Error) {
-        self = .failure(error)
-    }
-    
     // MARK: - Handle
     
+    /**
+     Handle Result instance.
+     - Parameters:
+        - success: `Closure`, that called if instance contains a `success` and delivers associated `value` value as parameter.
+        - failure: `Closure`, that called if instance contains a `failure`  and delivers associated `error` value as parameter.
+     */
     public func handle<Result>(success: (T) -> Result, failure: (Error) -> Result) -> Result {
         switch self {
         case .success(let value):
@@ -57,21 +68,31 @@ public enum Result<T, Error> {
         }
     }
     
-    public func handleSuccess(completion: (T) -> Void) {
+    /**
+     Handle success Result instance.
+     - Parameters:
+        - closure: `Closure`, that called if instance contains a `success` and delivers associated `value` value as parameter.
+     */
+    public func handleSuccess(closure: (T) -> Void) {
         switch self {
         case .success(let value):
-            completion(value)
+            closure(value)
         case .failure(_):
             break
         }
     }
     
-    public func handleFailure(completion: (Error) -> Void) {
+    /**
+     Handle failure Result instance.
+     - Parameters:
+        - closure: `Closure`, that called if instance contains a `failure` and delivers associated `error` value as parameter.
+     */
+    public func handleFailure(closure: (Error) -> Void) {
         switch self {
         case .success(_):
             break
         case .failure(let value):
-            completion(value)
+            closure(value)
         }
     }
 }
@@ -79,6 +100,11 @@ public enum Result<T, Error> {
 // MARK: - CustomStringConvertible, CustomDebugStringConvertible
 
 extension Result: CustomStringConvertible, CustomDebugStringConvertible {
+    
+    /**
+     The textual representation used when written to an output stream, which includes whether the result was a
+     success or failure.
+     */
     public var description: String {
         return handle(
             success: {
@@ -89,6 +115,10 @@ extension Result: CustomStringConvertible, CustomDebugStringConvertible {
         )
     }
     
+    /**
+     The debug textual representation used when written to an output stream, which includes whether the result was a
+     success or failure in addition to the value or error.
+     */
     public var debugDescription: String {
         return description
     }

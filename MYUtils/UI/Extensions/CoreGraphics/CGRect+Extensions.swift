@@ -10,61 +10,133 @@ import CoreGraphics
 
 // MARK: - Operators
 
-    // MARK: - CGRect
+// MARK: - CGRect
 
+/**
+ Returns the sum of two rectangles.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func +(lhs: CGRect, rhs: CGRect) -> CGRect {
     return rectCalculation(lhs, rhs, +)
 }
 
+/**
+ Returns the difference of two rectangles.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func -(lhs: CGRect, rhs: CGRect) -> CGRect {
     return rectCalculation(lhs, rhs, -)
 }
 
+/**
+ Returns the product of multiplication two rectangles.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func *(lhs: CGRect, rhs: CGRect) -> CGRect {
     return rectCalculation(lhs, rhs, *)
 }
 
+/**
+ Returns the quotient of division two rectangles.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func /(lhs: CGRect, rhs: CGRect) -> CGRect {
     return rectCalculation(lhs, rhs, /)
 }
 
-    // MARK: - CGPoint
+// MARK: - CGPoint
 
+/**
+ Returns the sum of two points.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return pointCalculation(lhs, rhs, +)
 }
 
+/**
+ Returns the difference of two points.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return pointCalculation(lhs, rhs, -)
 }
 
+/**
+ Returns the product of multiplication two points.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func *(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return pointCalculation(lhs, rhs, *)
 }
 
+/**
+ Returns the quotient of division two points.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func /(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
     return pointCalculation(lhs, rhs, /)
 }
 
-    // MARK: - CGSize
+// MARK: - CGSize
 
+/**
+ Returns the sum of two sizes.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func +(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, +)
 }
 
+/**
+ Returns the difference of two sizes.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func -(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, -)
 }
 
+/**
+ Returns the product of multiplication two sizes.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func *(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, *)
 }
 
+/**
+ Returns the quotient of division two points.
+ - Parameters:
+    - lhs: The left value.
+    - rhs: The right value.
+ */
 public func /(lhs: CGSize, rhs: CGSize) -> CGSize {
     return sizeCalculation(lhs, rhs, /)
 }
 
-    // MARK: - Calculations
+// MARK: - Calculations
 
 fileprivate typealias MYCGOperatorClosure = (CGFloat, CGFloat) -> CGFloat
 

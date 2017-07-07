@@ -17,14 +17,34 @@
 // MARK: - MYCollectionViewType / MYCollectionViewFlowLayoutType
 
 #if os(iOS)
+    /**
+     Platform independet CollectionView type.
+    */
     public typealias MYCollectionViewType = UICollectionView
+    
+    /**
+     Platform independet CollectionViewFlowLayout type.
+     */
     public typealias MYCollectionViewFlowLayoutType = UICollectionViewFlowLayout
 #elseif os(tvOS)
+    /**
+     Platform independet CollectionView type.
+     */
     public typealias MYCollectionViewType = UICollectionView
+    
+    /**
+     Platform independet CollectionViewFlowLayout type.
+     */
     public typealias MYCollectionViewFlowLayoutType = UICollectionViewFlowLayout
 #elseif os(OSX)
+    /**
+     Platform independet CollectionView type.
+     */
     public typealias MYCollectionViewType = NSCollectionView
     
+    /**
+     Platform independet CollectionView type.
+     */
     @available(OSX 10.11, *)
     public typealias MYCollectionViewFlowLayoutType = NSCollectionViewFlowLayout
 #endif
@@ -32,6 +52,9 @@
 // MARK: - Collection Layout
 
 @IBDesignable public extension MYCollectionViewType {
+    /**
+     Adjusts lauoyt item size corrensponding the specified number of cell per row.
+     */
     @available(OSX 10.11, *)
     @IBInspectable public var numberOfCellsPerRow: UInt {
         set {
@@ -54,6 +77,9 @@
         }
     }
     
+    /**
+     Current collection view layout.
+     */
     @available(OSX 10.11, *)
     public var flowLayout: MYCollectionViewFlowLayoutType? {
         return collectionViewLayout as? MYCollectionViewFlowLayoutType

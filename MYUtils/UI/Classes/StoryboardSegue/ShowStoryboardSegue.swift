@@ -16,13 +16,16 @@
 
 // MARK: - ShowStoryboardSegue
 
+/**
+ Adds the destination view controller as a child to the source view controller.
+ */
 @objc(ShowStoryboardSegue)
 class ShowStoryboardSegue: MYStoryboardSegueType {
     override open func perform() {
         #if os(iOS)
             source.addChild(viewController: destination)
         #elseif os(tvOS)
-            source.present(destination, animated: true)
+            source.addChild(viewController: destination)
         #elseif os(OSX)
             (sourceController as! NSViewController).addChild(viewController: (destinationController as! NSViewController))
         #endif

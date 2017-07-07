@@ -8,8 +8,13 @@
 
 import Foundation
 
-// MARK: - Perform on main thread sync
+// MARK: - Perform on thread
 
+/**
+ Performs block synchronously on the main thread.
+ - Parameters:
+    - code: The block to execute from the operation object. The block should take no parameters and have no return value.
+ */
 public func PerformOnMainThreadSync(_ code: @escaping () -> Swift.Void) {
     if Thread.isMainThread {
         code()
@@ -18,20 +23,29 @@ public func PerformOnMainThreadSync(_ code: @escaping () -> Swift.Void) {
     }
 }
 
-// MARK: - Perform on main thread async
-
+/**
+ Performs block asynchronously on the main thread.
+ - Parameters:
+    - code: The block to execute from the operation object. The block should take no parameters and have no return value.
+ */
 public func PerformOnMainThreadAsync(_ code: @escaping () -> Swift.Void) {
     OperationQueue.main.addOperation(code)
 }
 
-// MARK: - Perform on background thread sync
-
+/**
+ Performs block synchronously on the background thread.
+ - Parameters:
+    - code: The block to execute from the operation object. The block should take no parameters and have no return value.
+ */
 public func PerformOnBackgroundThreadSync(_ code: @escaping () -> Swift.Void) {
     DispatchQueue.global(qos: .background).sync(execute: code)
 }
 
-// MARK: - Perform on background thread async
-
+/**
+ Performs block asynchronously on the background thread.
+ - Parameters:
+    - code: The block to execute from the operation object. The block should take no parameters and have no return value.
+ */
 public func PerformOnBackgroundThreadAsync(_ code: @escaping () -> Swift.Void) {
     DispatchQueue.global(qos: .background).async(execute: code)
 }

@@ -16,13 +16,16 @@
 
 // MARK: - HideStoryboardSegue
 
+/**
+ Removes the destination view controller from the source view controller.
+ */
 @objc(HideStoryboardSegue)
 class HideStoryboardSegue: MYStoryboardSegueType {
     override open func perform() {
         #if os(iOS)
             destination.removeChild(viewController: source)
         #elseif os(tvOS)
-            source.dismiss(animated: true, completion: nil)
+            destination.removeChild(viewController: source)
         #elseif os(OSX)
             (destinationController as! NSViewController).removeChild(viewController: (sourceController as! NSViewController))
         #endif

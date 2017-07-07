@@ -11,6 +11,11 @@ import Foundation
 // MARK: - Is
 
 public extension NSNumber {
+    
+    /**
+     Returns true if receiver contains bool balue.
+     Otherwise returns false.
+     */
     public var isBool: Bool {
         return CFBooleanGetTypeID() == CFGetTypeID(self)
     }

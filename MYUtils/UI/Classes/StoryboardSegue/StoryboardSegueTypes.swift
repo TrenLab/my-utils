@@ -17,9 +17,18 @@
 // MARK: - MYStoryboardSegueType
 
 #if os(iOS)
+    /**
+     Platform independet StroryboardSegue type.
+     */
     public typealias MYStoryboardSegueType = UIStoryboardSegue
 #elseif os(tvOS)
+    /**
+     Platform independet StroryboardSegue type.
+     */
     public typealias MYStoryboardSegueType = UIStoryboardSegue
 #elseif os(OSX)
+    /**
+     Platform independet StroryboardSegue type.
+     */
     public typealias MYStoryboardSegueType = NSStoryboardSegue
 #endif

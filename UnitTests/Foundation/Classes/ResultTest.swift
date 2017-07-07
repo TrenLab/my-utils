@@ -101,13 +101,13 @@ class ResultTest: XCTestCase {
     
     func successResults() -> [Result<String, Error>] {
         return successData().map() {mock -> Result<String, Error> in
-            return Result(value: mock.data)
+            return .success(mock.data)
         }
     }
     
     func failureResult() -> [Result<String, MYResultTestError>] {
         return failureData().map() {mock -> Result<String, MYResultTestError> in
-            return Result(error: mock.data)
+            return .failure(mock.data)
         }
     }
     

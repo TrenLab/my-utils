@@ -10,10 +10,22 @@ import Foundation
 
 // MARK: - Operators
 
-public func += <V>(left: inout [V], right: [V]) {
-    left = left + right
+/**
+ Concatenates two array and assigns the result to left value.
+ - Parameters:
+    - lhs: Left array.
+    - rhs: Right array.
+*/
+public func += <V>(lhs: inout [V], rhs: [V]) {
+    lhs = lhs + rhs
 }
 
+/**
+ Returns the result of concatenate two array.
+ - Parameters:
+    - lhs: Left array.
+    - rhs: Right array.
+ */
 public func + <V>(left: [V], right: [V]) -> [V] {
     return [left, right].flatMap {(element: [V]) -> [V] in
         return element
@@ -23,9 +35,15 @@ public func + <V>(left: [V], right: [V]) -> [V] {
 // MARK: - Enumerate
 
 public extension Array {
-    public func make<T>(_ provider: (_ idx: Int,_ object: Element) -> T?) -> [T] {
+    
+    /**
+     Returns an array containing the results of mapping the given closure over the sequence’s elements.
+     - Parameters:
+        - provider: A mapping closure. provider accepts an index and an element of this sequence as its parameter and returns a returned value
+                    of the same or of a different type.
+     */
+    public func make<T>(_ provider: (_ idx: Int,_ element: Element) -> T?) -> [T] {
         var array = [T]()
-        
         enumerate {idx, object in
             if let new = provider(idx, object) {
                 array.append(new)
@@ -35,7 +53,12 @@ public extension Array {
         return array
     }
     
-    public func enumerate(closure: ( _ idx: Int, _ object: Element) -> Void) {
+    /**
+     Enumerates an array.
+     - Parameters:
+        - closure: A enumerate closure, provides an index and an element.
+     */
+    public func enumerate(closure: ( _ idx: Int, _ element: Element) -> Void) {
         var idx: Int = 0
         
         for value in self {
@@ -48,6 +71,12 @@ public extension Array {
 // MARK: - Add / Remove
 
 public extension Array where Element: Equatable {
+    
+    /**
+     Removes the specified element.
+     - Parameters:
+        - element: The element to be removed.
+     */
     public mutating func remove(element: Element) {
         if let index = index(of: element) {
             remove(at: index)

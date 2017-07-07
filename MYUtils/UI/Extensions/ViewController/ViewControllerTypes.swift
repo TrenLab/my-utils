@@ -17,9 +17,18 @@
 // MARK: - MYViewControllerType
 
 #if os(iOS)
+    /**
+     Platform independet ViewController type.
+     */
     public typealias MYViewControllerType = UIViewController
 #elseif os(tvOS)
+    /**
+     Platform independet ViewController type.
+     */
     public typealias MYViewControllerType = UIViewController
 #elseif os(macOS)
+    /**
+     Platform independet ViewController type.
+     */
     public typealias MYViewControllerType = NSViewController
 #endif

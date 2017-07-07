@@ -15,6 +15,9 @@
 // MARK: - Root ViewController
 
 public extension UINavigationController {
+    /**
+     Returns the root view controller if it is exists. Otherwise returns `nil`.
+     */
     public var rootViewController: UIViewController? {
         return viewControllers.first
     }
