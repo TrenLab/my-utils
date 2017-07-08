@@ -12,12 +12,12 @@
     import UIKit
 #endif
 
-// MARK: - UINavigationController
+// MARK: - Root ViewController
 
 public extension UINavigationController {
-    
-    // MARK: - Root View Controller
-    
+    /**
+     Returns the root view controller if it is exists. Otherwise returns `nil`.
+     */
     public var rootViewController: UIViewController? {
         return viewControllers.first
     }

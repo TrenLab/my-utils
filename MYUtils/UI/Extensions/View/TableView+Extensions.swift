@@ -14,27 +14,39 @@
     import AppKit
 #endif
 
-// MARK: - Typealias
+// MARK: - MYTableViewType
 
 #if os(iOS)
+    /**
+     Platform independet TableView type.
+     */
     public typealias MYTableViewType  = UITableView
 #elseif os(tvOS)
+    /**
+     Platform independet TableView type.
+     */
     public typealias MYTableViewType  = UITableView
 #elseif os(OSX)
+    /**
+     Platform independet TableView type.
+     */
     public typealias MYTableViewType  = NSTableView
 #endif
 
-// MARK: - Uses
+// MARK: - Layout
 
 #if os(OSX)
-    @IBDesignable public extension MYTableViewType {
-        @IBInspectable public var staticCells: Bool {
-            set {
-                usesStaticContents = true
-            }
-            get {
-                return usesStaticContents
-            }
+@IBDesignable public extension MYTableViewType {
+    /**
+     A Boolean value indicating whether the table uses static data.
+     */
+    @IBInspectable public var staticCells: Bool {
+        set {
+            usesStaticContents = true
+        }
+        get {
+            return usesStaticContents
         }
     }
+}
 #endif

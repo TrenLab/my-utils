@@ -14,11 +14,11 @@
 
 // MARK: - PopStoryboardSegue
 
+/**
+ Pops the top view controller from the navigation stack and updates the display.
+ */
 @objc(PopStoryboardSegue)
-class PopStoryboardSegue: MYStoryboardSegue {
-    
-    // MARK: - Pepform
-    
+class PopStoryboardSegue: MYStoryboardSegueType {
     override open func perform() {
         #if os(iOS)
             source.navigationController?.popViewController(animated: true)

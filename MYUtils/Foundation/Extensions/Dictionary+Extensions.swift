@@ -10,38 +10,63 @@ import Foundation
 
 // MARK: - Operators
 
+/**
+ Returns true if left and right dictionaries are equal. 
+ Otherwise returns false.
+ */
 public func ==<Key: Equatable, Value: Equatable>(lhs: [Key: Value], rhs: [Key: Value]) -> Bool {
     return NSDictionary(dictionary: lhs).isEqual(to: rhs)
 }
 
-public func += <K, V> (left: inout [K: V], right: [K: V]) {
-    left = left + right
+/**
+ Concatenates two dictionaries and assigns the result to left value.
+ - Parameters:
+    - lhs: Left dictionary.
+    - rhs: Right dictionary.
+ */
+public func +=<K, V> (lhs: inout [K: V], rhs: [K: V]) {
+    lhs = lhs + rhs
 }
 
-public func + <K, V> (left: [K: V], right: [K: V]) -> [K: V] {
-    var new = left
-    for (key, value) in right {
+/**
+ Returns the result of concatenate two array.
+ - Parameters:
+    - lhs: Left array.
+    - rhs: Right array.
+ */
+public func +<K, V> (lhs: [K: V], rhs: [K: V]) -> [K: V] {
+    var new = lhs
+    for (key, value) in rhs {
         new[key] = value
     }
-    
     return new
 }
 
 // MARK: - Enumerate
 
 public extension Dictionary where Key: Any, Value: Any {
+    
+    /**
+     Returns a dictionary containing the results of mapping the given closure over the dictionary key value pairs.
+     - Parameters:
+        - provider: A mapping closure. provider accepts a key and a value of this dictionary as its parameter and returns a returned value
+                    of the same or of a different type.
+     */
     public func make<T>(_ provider: (_ key: Key,_ value: Value) -> T?) -> [Key: T] {
         var dictionary = [Key: T]()
-        
         enumerate {key, value in
             if let new = provider(key, value) {
                 dictionary[key] = new
             }
         }
-        
         return dictionary
     }
     
+    /**
+     Enumerates a dictionary.
+     - Parameters:
+        - closure: A enumerate closure, provides a key and a value.
+     */
     public func enumerate(closure: (_ key: Key,_ value: Value) -> Void) {
         for (key, value) in self {
             closure(key, value)
@@ -52,6 +77,10 @@ public extension Dictionary where Key: Any, Value: Any {
 // MARK: - Keys / Values
 
 public extension Dictionary where Key: Any, Value: Any {
+    
+    /**
+     Returns keys, contained in the receiver.
+     */
     public var keys: [Key] {
         var ks = [Key]()
         
@@ -62,6 +91,9 @@ public extension Dictionary where Key: Any, Value: Any {
         return ks
     }
     
+    /**
+     Returns values, contained in the receiver.
+     */
     public var values: [Value] {
         var vls = [Value]()
         

@@ -16,11 +16,11 @@
 
 // MARK: - DismissStoryboardSegue
 
+/**
+ Dismisses the source view controller that was presented modally by the destination view controller.
+ */
 @objc(DismissStoryboardSegue)
-open class DismissStoryboardSegue: MYStoryboardSegue {
-    
-    // MARK: - Pepform
-    
+open class DismissStoryboardSegue: MYStoryboardSegueType {
     override open func perform() {
         #if os(iOS)
             source.dismiss(animated: true, completion: nil)

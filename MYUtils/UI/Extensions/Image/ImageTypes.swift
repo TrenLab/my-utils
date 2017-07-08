@@ -17,19 +17,47 @@
     import Cocoa
 #endif
 
-// MARK: - Typealias
+// MARK: - MYImage / MYImageView
 
 #if os(iOS)
+    /**
+     Platform independet Image type.
+     */
     public typealias MYImage = UIImage
+    
+    /**
+     Platform independet ImageView type.
+     */
     public typealias MYImageView = UIImageView
 #elseif os(watchOS)
+    /**
+     Platform independet Image type.
+     */
     public typealias MYImage = UIImage
+    
+    /**
+     Platform independet ImageView type.
+     */
     public typealias MYImageView = WKInterfaceImage
 #elseif os(tvOS)
+    /**
+     Platform independet Image type.
+     */
     public typealias MYImage = UIImage
+    
+    /**
+     Platform independet ImageView type.
+     */
     public typealias MYImageView = UIImageView
 #elseif os(OSX)
+    /**
+     Platform independet Image type.
+     */
     public typealias MYImage = NSImage
+    
+    /**
+     Platform independet ImageView type.
+     */
     public typealias MYImageView = NSImageView
 #endif
 

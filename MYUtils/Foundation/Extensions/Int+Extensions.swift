@@ -11,21 +11,29 @@ import Foundation
 // MARK: - Random
 
 public extension Int {
-
-    // MARK: - min ... max
     
+    /**
+     Returns a random number in a range between min and max.
+     - Parameters:
+        - min: Minimum value.
+        - max: Maximum value.
+     */
     public static func random(min: Int, max: Int) -> Int {
         return Int.random(n: max - min + 1) + min
     }
-
-    // MARK: - ... n
     
+    /**
+     Returns a random number with upper bound.
+     - Parameters:
+        - n: A upper bound.
+     */
     public static func random(n: Int) -> Int {
         return Int(arc4random_uniform(UInt32(n)))
     }
 
-    // MARK: - -1.0 OR 1.0
-    
+    /**
+     Returns a random sign. +1 or -1.
+     */
     public static var randomSign: Int {
         return (arc4random_uniform(2) == 0) ? 1 : -1
     }

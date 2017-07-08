@@ -11,21 +11,27 @@ import Foundation
 // MARK: - Random 
 
 public extension Double {
-
-    // MARK: - min ... max
     
+    /**
+     Returns a random number in a range between min and max.
+     - Parameters:
+        - min: minimum value.
+        - max: maximum value.
+     */
     public static func random(min: Double, max: Double) -> Double {
         return random * (max - min) + min
     }
 
-    // MARK: - 0.0 ... 1.0
-    
+    /**
+     Returns a random number in a range between 0.0 and 1.0.
+     */
     public static var random: Double {
         return Double(arc4random()) / 0xFFFFFFFF
     }
-    
-    // MARK: - -1.0 OR 1.0
-    
+
+    /**
+     Returns a random sign. Plus or minus.
+     */
     public static var randomSign: Double {
         return (arc4random_uniform(2) == 0) ? 1.0 : -1.0
     }

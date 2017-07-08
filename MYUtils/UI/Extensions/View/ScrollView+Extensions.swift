@@ -14,18 +14,30 @@
     import AppKit
 #endif
 
-// MARK: - Typealias
+// MARK: - MYScrollViewType
 
 #if os(iOS)
+    /**
+     Platform independet ScrollView type.
+     */
     public typealias MYScrollViewType = UIScrollView
 #elseif os(tvOS)
+    /**
+     Platform independet ScrollView type.
+     */
     public typealias MYScrollViewType = UIScrollView
 #elseif os(OSX)
+    /**
+     Platform independet ScrollView type.
+     */
     public typealias MYScrollViewType = NSScrollView
 #endif
 
 // MARK: - MYScrollViewPosition
 
+/**
+ Represents scroll view position.
+ */
 public enum MYScrollViewPosition: Int {
     
     case top = 0
@@ -42,7 +54,44 @@ public enum MYScrollViewPosition: Int {
 // MARK: - ScrollView Scroll Position
 
 public extension MYScrollViewType {
+    /**
+     Returns `true` if current scroll view position is in a top of conten view. Otherwise returns `false`.
+     */
+    public var onTop: Bool {
+        return position == .top
+    }
     
+    /**
+     Returns `true` if current scroll view position is in a right of content view. Otherwise returns `false`.
+     */
+    public var onRight: Bool {
+        return position == .right
+    }
+    
+    /**
+     Returns `true` if current scroll view position is in a bottom of content view. Otherwise returns `false`.
+     */
+    public var onBottom: Bool {
+        return position == .bottom
+    }
+    
+    /**
+     Returns `true` if current scroll view position is in a left of content view. Otherwise returns `false`.
+     */
+    public var onLeft: Bool {
+        return position == .left
+    }
+    
+    /**
+     Returns `true` if current scroll view position is in a center of content view. Otherwise returns `false`.
+     */
+    public var inCenter: Bool {
+        return position == .center
+    }
+    
+    /**
+     Returns current scroll view position.
+     */
     public var position: MYScrollViewPosition {
         switch direction {
         case   .vertical:
@@ -64,27 +113,10 @@ public extension MYScrollViewType {
         }
     }
 
-    public var onTop: Bool {
-        return position == .top
-    }
-    
-    public var onRight: Bool {
-        return position == .right
-    }
-    
-    public var onBottom: Bool {
-        return position == .bottom
-    }
-    
-    public var onLeft: Bool {
-        return position == .left
-    }
-    
-    public var inCenter: Bool {
-        return position == .center
-    }
-    
     #if os(OSX)
+    /**
+     Returns content offset of scroll view.
+     */
         public var contentOffset: CGPoint {
             return documentVisibleRect.origin
         }
@@ -93,9 +125,12 @@ public extension MYScrollViewType {
 
 // MARK: - MYScrollViewDirection
 
-public enum MYScrollViewDirection: Int {
+/**
+ Represents scroll view orientation.
+ */
+public enum MYScrollViewOrientation: Int {
     
-    case vertical    = 0
+    case vertical = 0
     
     case horizontal
 }
@@ -103,14 +138,23 @@ public enum MYScrollViewDirection: Int {
 // MARK: - ScrollView Scroll Direction
 
 public extension MYScrollViewType {
-    public var direction: MYScrollViewDirection {
+    /**
+     Returns current scroll view orientation.
+     */
+    public var direction: MYScrollViewOrientation {
         return contentSize.height > contentSize.width ? .vertical : .horizontal;
     }
     
+    /**
+     Returns `true` if current scroll view orientation is vertical. Otherwise returns `false`.
+     */
     public var isVertical: Bool {
         return direction == .vertical
     }
     
+    /**
+     Returns `true` if current scroll view orientation is horizontal. Otherwise returns `false`.
+     */
     public var isHorizontal: Bool {
         return direction == .horizontal
     }
@@ -119,8 +163,11 @@ public extension MYScrollViewType {
 // MARK: - Size
 
 public extension MYScrollViewType {
+    
+    /**
+     Returns actual content size.
+     */
     public var size: CGSize {
-        return CGSize(width: contentSize.width - frame.size.width,
-                     height: contentSize.height - frame.size.height)
+        return CGSize(width: contentSize.width - frame.size.width, height: contentSize.height - frame.size.height)
     }
 }

@@ -21,52 +21,66 @@ import CoreGraphics
 
 // MARK: - MYImageOrientation
 
-public enum MYImageOrientation {
+/**
+ Represents image orientation.
+ */
+public enum MYImageOrientation: Int {
     
-    case portret
+    case portret = 0
     
     case album
     
     case square
-    
-    fileprivate init(size: CGSize) {
-        if size.width < size.height {
-            self = .portret
-        } else if size.width > size.height {
-            self = .album
-        } else {
-            self = .square
-        }
-    }
 }
 
 // MARK: - Image Orientation
 
 public extension MYImage {
+    /**
+     Returns `true` if an image has a portret orientation. Otherwise returns `false`.
+     */
     public var isPortret: Bool {
         return orientation == .portret
     }
     
+    /**
+     Returns `true` if an image has an album orientation. Otherwise returns `false`.
+     */
     public var isAlbum: Bool {
         return orientation == .album
     }
     
+    /**
+     Returns `true` if an image has a sguare orientation. Otherwise returns `false`.
+     */
     public var isSquare: Bool {
         return orientation == .square
     }
     
+    /**
+     Returns current image orientation.
+     */
     public var orientation: MYImageOrientation {
-        return MYImageOrientation(size: size)
+        if size.width < size.height {
+            return .portret
+        } else if size.width > size.height {
+            return .album
+        } else {
+            return .square
+        }
     }
 }
 
 // MARK: - Image Load
 
 public extension MYImage {
-    public static func from(URLString string: String, completion: MYImageDownloadCompletion? = nil) {
-        from(URL: URL(string: string)!, completion: completion)
-    }
-    
+
+    /**
+     Downloads an image from specified url.
+     - Parameters:
+        - url: Image resource url.
+        - completion: The completion closure to be executed when operation has been completed.
+     */
     public static func from(URL url: URL, completion: MYImageDownloadCompletion? = nil) {
         if let cachedImageData = ImageCache()[url.absoluteString] {
             completion?(MYImage(data: cachedImageData as! Data))
@@ -88,39 +102,19 @@ public extension MYImage {
     }
 }
 
-// MARK: - WKImage Orientation
-
-#if os(watchOS)
-public extension WKImage {
-    var orientation: MYImageOrientation? {
-        return image?.orientation
-    }
-}
-#endif
-
-// MARK: - WKImage Load
-
-#if os(watchOS)
-public extension WKImage {
-    public static func from(URLString string: String, completion: MYImageDownloadCompletion? = nil) {
-        from(URL: URL(string: string)!, completion: completion)
-    }
-    
-    public static func from(URL url: URL, completion: MYImageDownloadCompletion? = nil) {
-        MYImage.from(URL: url, completion: completion)
-    }
-}
-#endif
-
-
 // MARK: - Draw
 
-public func MYImageDraw(size: CGSize, draw: ((_ size: CGSize, _ context: CGContext)-> ())?) -> MYImage {
-    
+/**
+ Draws an image with specified size and adjusted in `draw` closure.
+ - Parameters:
+    - size: A size of image.
+    - draw: A draw closure, accepts the current graphic context.
+ */
+public func MYImageDraw(size: CGSize, draw: ((CGContext) -> Void)? = nil) -> MYImage {
     #if os(iOS) || os(watchOS) || os(tvOS)
         UIGraphicsBeginImageContextWithOptions(size, false, 1)
     
-        draw?(size, UIGraphicsGetCurrentContext()!)
+        draw?(UIGraphicsGetCurrentContext()!)
         let image: MYImage = UIGraphicsGetImageFromCurrentImageContext()!
     
         UIGraphicsEndImageContext()
@@ -128,7 +122,7 @@ public func MYImageDraw(size: CGSize, draw: ((_ size: CGSize, _ context: CGConte
     #elseif os(macOS)
         let image = MYImage.init(size: size)
         
-        let rep = NSBitmapImageRep.init(bitmapDataPlanes: nil,
+        let rep = NSBitmapImageRep(bitmapDataPlanes: nil,
                                         pixelsWide: Int(size.width),
                                         pixelsHigh: Int(size.height),
                                         bitsPerSample: 8,
@@ -142,7 +136,7 @@ public func MYImageDraw(size: CGSize, draw: ((_ size: CGSize, _ context: CGConte
         image.addRepresentation(rep!)
         image.lockFocus()
         let ctx = NSGraphicsContext.current()?.cgContext
-        draw?(size, ctx!)
+        draw?(ctx!)
         image.unlockFocus()
         return image
     #endif

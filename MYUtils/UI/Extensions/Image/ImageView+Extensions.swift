@@ -20,10 +20,12 @@
 // MARK: - Load
 
 public extension MYImageView {
-    public func imageFrom(URLString string: String, completion: MYImageDownloadCompletion? = nil) {
-        imageFrom(URL: URL(string: string)!, completion: completion)
-    }
-    
+    /**
+     Downloads and sets image from specified url.
+     - Parameters:
+        - url: Image resource url.
+        - completion: The completion closure to be executed when operation has been completed.
+     */
     public func imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil) {
         MYImage.from(URL: url) {image in
             guard let img = image else {

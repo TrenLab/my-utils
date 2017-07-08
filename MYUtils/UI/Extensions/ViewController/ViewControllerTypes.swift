@@ -14,12 +14,21 @@
     import Cocoa
 #endif
 
-// MARK: - Typealias
+// MARK: - MYViewControllerType
 
 #if os(iOS)
-    public typealias MYViewController = UIViewController
+    /**
+     Platform independet ViewController type.
+     */
+    public typealias MYViewControllerType = UIViewController
 #elseif os(tvOS)
-    public typealias MYViewController = UIViewController
+    /**
+     Platform independet ViewController type.
+     */
+    public typealias MYViewControllerType = UIViewController
 #elseif os(macOS)
-    public typealias MYViewController = NSViewController
+    /**
+     Platform independet ViewController type.
+     */
+    public typealias MYViewControllerType = NSViewController
 #endif

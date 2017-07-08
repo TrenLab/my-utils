@@ -14,22 +14,31 @@
     import AppKit
 #endif
 
-// MARK: - Typealias
+// MARK: - MYColorType
 
 #if os(iOS)
-    public typealias MYViewType  = UIView
+    /**
+     Platform independet Color type.
+     */
     public typealias MYColorType = UIColor
 #elseif os(tvOS)
-    public typealias MYViewType  = UIView
+    /**
+     Platform independet Color type.
+     */
     public typealias MYColorType = UIColor
 #elseif os(OSX)
-    public typealias MYViewType  = NSView
+    /**
+     Platform independet Color type.
+     */
     public typealias MYColorType = NSColor
 #endif
 
 // MARK: - Layer
 
 @IBDesignable public extension MYViewType {
+    /**
+     The color of the layer’s border. Animatable.
+     */
     @IBInspectable public var borderColor: MYColorType? {
         set {
             #if os(iOS) || os(tvOS)
@@ -40,13 +49,16 @@
         }
         get {
             #if os(iOS) || os(tvOS)
-                return MYColorType(cgColor: layer.borderColor!)
+                return layer.borderColor != nil ? MYColorType(cgColor: layer.borderColor!) : nil
             #elseif os(OSX)
                 return layer != nil ? MYColorType(cgColor: layer!.borderColor!) : nil
             #endif
         }
     }
     
+    /**
+     The width of the layer’s border. Animatable.
+     */
     @IBInspectable public var borderWidth: CGFloat {
         set {
             #if os(iOS) || os(tvOS)
@@ -65,6 +77,9 @@
         }
     }
     
+    /**
+     The radius to use when drawing rounded corners for the layer’s background. Animatable.
+     */
     @IBInspectable public var cornerRadius: CGFloat {
         set {
             #if os(iOS) || os(tvOS)

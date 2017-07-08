@@ -14,30 +14,34 @@
     import Cocoa
 #endif
 
-// MARK: - Childs
+// MARK: - Get Childs
 
-public extension MYViewController {
-    
-    // MARK: - Current
-    
-    public var currentViewController: MYViewController? {
+public extension MYViewControllerType {
+    /**
+     Returns the last child view controller if it is exists. Otherwise returns `nil`.
+     */
+    public var currentViewController: MYViewControllerType? {
         return childViewControllers.last
     }
     
-    // MARK: - Previous
-    
-    public var previousViewController: MYViewController? {
+    /**
+     Returns the previous child view controller if it is exists. Otherwise returns `nil`.
+     */
+    public var previousViewController: MYViewControllerType? {
         return childViewControllers.count < 2 ? nil : childViewControllers[childViewControllers.count - 2]
     }
 }
 
-// MARK: Add / Remove Child
+// MARK: - Add / Remove Child
 
-public extension MYViewController {
-    
-    // MARK: - Remove Child
-    
-    public func addChild(viewController vc: MYViewController, closure: ((Void) -> Void)? = nil) {
+public extension MYViewControllerType {
+    /**
+     Adds the specified view controller as a child of the current view controller.
+     - Parameters:
+        - viewController: The view controller to be added as a child.
+        - closure: Performs after viewController been added to receiver as child view controller.
+     */
+    public func addChild(viewController vc: MYViewControllerType, closure: ((Void) -> Void)? = nil) {
         addChildViewController(vc)
         vc.view.frame = view.bounds
         
@@ -48,19 +52,31 @@ public extension MYViewController {
             vc.didMove(toParentViewController: self)
         #endif
     }
-    
-    // MARK: - Remove Child
 
+    /**
+     Removes child view controllers.
+    */
     public func removeChildViewControllers() {
         for ctrl in childViewControllers {
             ctrl.removeFromSuperViewController()
         }
     }
     
-    public func removeChild(viewController vc: MYViewController, closure: ((Void) -> Void)? = nil) {
+    /**
+     Removes child view controller.
+     - Parameters:
+        - viewController: The view controller to be removed from it's parent view controller.
+        - closure: Performs after viewController been removed from it's parent view controller.
+     */
+    public func removeChild(viewController vc: MYViewControllerType, closure: ((Void) -> Void)? = nil) {
         vc.removeFromSuperViewController(closure: closure)
     }
     
+    /**
+     Removes child view controller.
+     - Parameters:
+        - closure: Performs after viewController been removed from it's parent view controller.
+     */
     public func removeFromSuperViewController(closure: ((Void) -> Void)? = nil) {
         #if os(iOS) || os(tvOS)
             willMove(toParentViewController: nil)
