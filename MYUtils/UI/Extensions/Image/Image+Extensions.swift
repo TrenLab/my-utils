@@ -33,7 +33,7 @@ public enum MYImageOrientation: Int {
     case square
 }
 
-// MARK: - Image Orientation
+// MARK: - Orientation
 
 public extension MYImage {
     /**
@@ -71,7 +71,7 @@ public extension MYImage {
     }
 }
 
-// MARK: - Image Load
+// MARK: - Load
 
 public extension MYImage {
 
@@ -82,7 +82,7 @@ public extension MYImage {
         - completion: The completion closure to be executed when operation has been completed.
      */
     public static func from(URL url: URL, completion: MYImageDownloadCompletion? = nil) {
-        if let cachedImageData = ImageCache()[url.absoluteString] {
+        if let cachedImageData = cache[url.absoluteString] {
             completion?(MYImage(data: cachedImageData as! Data))
             return
         }
@@ -92,7 +92,7 @@ public extension MYImage {
             
             if let imgData = try? Data(contentsOf: url) {
                 img = MYImage(data: imgData)
-                ImageCache()[url.absoluteString] = imgData as AnyObject?
+                cache[url.absoluteString] = imgData as AnyObject?
             }
             
             DispatchQueue.main.async {
@@ -101,6 +101,23 @@ public extension MYImage {
         }
     }
 }
+
+// MARK: - Cache
+
+public extension MYImage {
+    /**
+     Image cache.
+     */
+    class var cache: Cache {
+        set {
+            ImageCache = newValue
+        } get {
+            return ImageCache
+        }
+    }
+}
+
+fileprivate var ImageCache = Cache.create(withName: "image")
 
 // MARK: - Draw
 
