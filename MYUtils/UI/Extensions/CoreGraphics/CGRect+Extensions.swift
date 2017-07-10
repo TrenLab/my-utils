@@ -138,16 +138,16 @@ public func /(lhs: CGSize, rhs: CGSize) -> CGSize {
 
 // MARK: - Calculations
 
-fileprivate typealias MYCGOperatorClosure = (CGFloat, CGFloat) -> CGFloat
+internal typealias MYCGOperatorClosure = (CGFloat, CGFloat) -> CGFloat
 
-fileprivate func rectCalculation(_ lhs: CGRect, _ rhs: CGRect, _ funct: MYCGOperatorClosure) -> CGRect {
+internal func rectCalculation(_ lhs: CGRect, _ rhs: CGRect, _ funct: MYCGOperatorClosure) -> CGRect {
     return CGRect(origin: pointCalculation(lhs.origin, rhs.origin, funct), size: sizeCalculation(lhs.size, rhs.size, funct))
 }
 
-fileprivate func pointCalculation(_ lhs: CGPoint,_ rhs: CGPoint,_ funct: MYCGOperatorClosure) -> CGPoint {
+internal func pointCalculation(_ lhs: CGPoint,_ rhs: CGPoint,_ funct: MYCGOperatorClosure) -> CGPoint {
     return CGPoint(x: funct(lhs.x, rhs.x), y: funct(lhs.y, rhs.y))
 }
 
-fileprivate func sizeCalculation(_ lhs: CGSize,_ rhs: CGSize, _ funct: MYCGOperatorClosure) -> CGSize {
+internal func sizeCalculation(_ lhs: CGSize,_ rhs: CGSize, _ funct: MYCGOperatorClosure) -> CGSize {
     return CGSize(width: funct(lhs.width, rhs.width), height: funct(lhs.height, rhs.height))
 }
