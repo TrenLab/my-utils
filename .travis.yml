@@ -9,10 +9,7 @@ env:
   - "FRAMEWORK_NAME=MYUtils"
   - "REPO_NAME=my-utils"
 
-matrix:
-  include:
-  - language: objective-c
-  - language: swift
+language: swift
 
 before_install:
 - rvm get head

@@ -75,7 +75,6 @@
 		4E4826281F012E1E0073E4B3 /* StoryboardSegueTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E48261A1F012E1E0073E4B3 /* StoryboardSegueTypes.swift */; };
 		4E4826291F012E1E0073E4B3 /* StoryboardSegueTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E48261A1F012E1E0073E4B3 /* StoryboardSegueTypes.swift */; };
 		4E9046871EE1A76000B950D5 /* CGRectExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0642311EE16FBC001B9784 /* CGRectExtensionsTests.swift */; };
-		4E9046991EE1A91C00B950D5 /* Info-iOSUITests.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E9046981EE1A91C00B950D5 /* Info-iOSUITests.plist */; };
 		4E9305981ED4633B0039510B /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E9305991ED463470039510B /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E93059A1ED463500039510B /* MYUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 91044B5C1EBA4096009824AD /* MYUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -848,7 +847,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9046991EE1A91C00B950D5 /* Info-iOSUITests.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1332,6 +1330,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1387,6 +1386,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
