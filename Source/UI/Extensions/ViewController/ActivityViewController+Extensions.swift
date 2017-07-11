@@ -6,10 +6,13 @@
 //  Copyright © 2016 Tren Lab. All rights reserved.
 //
 
-import UIKit
-
+#if os(iOS)
+    import UIKit
+#endif
+    
 // MARK: - LifeCycle
 
+#if os(iOS)
 public extension UIActivityViewController {
     /**
      Initializes and returns a new activity view controller object that acts on the specified data.
@@ -23,3 +26,4 @@ public extension UIActivityViewController {
         completionWithItemsHandler = closure
     }
 }
+#endif

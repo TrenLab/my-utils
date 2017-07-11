@@ -14,6 +14,7 @@
 
 // MARK: - PopStoryboardSegue
 
+#if os(iOS) || os(tvOS)
 /**
  Pops the top view controller from the navigation stack and updates the display.
  */
@@ -31,3 +32,4 @@ class PopStoryboardSegue: MYStoryboardSegueType {
         #endif
     }
 }
+#endif

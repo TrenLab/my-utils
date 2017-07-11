@@ -16,6 +16,7 @@
 
 // MARK: - DismissStoryboardSegue
 
+#if os(iOS) || os(tvOS) || os(OSX)
 /**
  Dismisses the source view controller that was presented modally by the destination view controller.
  */
@@ -31,3 +32,4 @@ open class DismissStoryboardSegue: MYStoryboardSegueType {
         #endif
     }
 }
+#endif

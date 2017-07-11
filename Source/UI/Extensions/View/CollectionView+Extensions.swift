@@ -51,6 +51,7 @@
 
 // MARK: - Collection Layout
 
+#if os(iOS) || os(tvOS) || os(OSX)
 @IBDesignable public extension MYCollectionViewType {
     /**
      Adjusts lauoyt item size corrensponding the specified number of cell per row.
@@ -85,3 +86,4 @@
         return collectionViewLayout as? MYCollectionViewFlowLayoutType
     }
 }
+#endif

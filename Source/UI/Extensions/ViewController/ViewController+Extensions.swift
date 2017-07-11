@@ -16,6 +16,7 @@
 
 // MARK: - Get Childs
 
+#if os(iOS) || os(tvOS) || os(OSX)
 public extension MYViewControllerType {
     /**
      Returns the last child view controller if it is exists. Otherwise returns `nil`.
@@ -87,3 +88,4 @@ public extension MYViewControllerType {
         closure?()
     }
 }
+#endif

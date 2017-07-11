@@ -35,6 +35,7 @@
 
 // MARK: - MYScrollViewPosition
 
+#if os(iOS) || os(tvOS) || os(OSX)
 /**
  Represents scroll view position.
  */
@@ -171,3 +172,4 @@ public extension MYScrollViewType {
         return CGSize(width: contentSize.width - frame.size.width, height: contentSize.height - frame.size.height)
     }
 }
+#endif

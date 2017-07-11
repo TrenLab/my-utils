@@ -16,6 +16,7 @@
 
 // MARK: - HideStoryboardSegue
 
+#if os(iOS) || os(tvOS) || os(OSX)
 /**
  Removes the destination view controller from the source view controller.
  */
@@ -31,3 +32,4 @@ class HideStoryboardSegue: MYStoryboardSegueType {
         #endif
     }
 }
+#endif

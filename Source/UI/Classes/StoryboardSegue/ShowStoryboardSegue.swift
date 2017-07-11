@@ -16,6 +16,7 @@
 
 // MARK: - ShowStoryboardSegue
 
+#if os(iOS) || os(tvOS) || os(OSX)
 /**
  Adds the destination view controller as a child to the source view controller.
  */
@@ -31,3 +32,4 @@ class ShowStoryboardSegue: MYStoryboardSegueType {
         #endif
     }
 }
+#endif
