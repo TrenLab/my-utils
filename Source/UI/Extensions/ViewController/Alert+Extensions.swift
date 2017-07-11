@@ -6,10 +6,15 @@
 //  Copyright © 2016 Tren Lab. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#elseif os(tvOS)
+    import UIKit
+#endif
 
 // MARK: - Show
 
+#if os(iOS) || os(tvOS)
 /**
  Presents `UIAlertController` with specified parameters.
  - Parameters:
@@ -59,3 +64,4 @@ public func UIAlertActionMakeCancel(title: String, handler:((_ object: AnyObject
 public func UIAlertActionMake(title: String, style: UIAlertActionStyle, handler:((_ object: AnyObject)->())?)  -> UIAlertAction {
     return UIAlertAction(title: title, style: style, handler: handler)
 }
+#endif

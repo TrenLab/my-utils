@@ -35,6 +35,7 @@
 
 // MARK: - Layer
 
+#if os(iOS) || os(tvOS) || os(OSX)
 @IBDesignable public extension MYViewType {
     /**
      The color of the layer’s border. Animatable.
@@ -97,3 +98,4 @@
         }
     }
 }
+#endif
