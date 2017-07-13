@@ -18,45 +18,45 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc = true
   spec.source = { 
-    :git => 'https://github.com/damonthecricket/my-utils.git',
+    :git => 'https://github.com/damonthecricket/my-json.git',
     :tag => spec.version
   }
   spec.pod_target_xcconfig = {
         'SWIFT_VERSION' => '3.0'
   }
-  spec.source_files = 'Source/*.{h,swift}'
+
   spec.subspec 'UI' do |ui|
     ui.subspec 'Classes' do |classes|
      classes.subspec 'StoryboardSegue' do |storyboard_segue|
-       storyboard_segue.source_files = 'Source/UI/Classes/StoryboardSegue/*.{h,swift}'
+       storyboard_segue.source_files = 'Source/UI/Classes/StoryboardSegue/*.swift'
        storyboard_segue.dependency 'MYUtils/UI/Extensions/ViewController'
      end
     end
 
    ui.subspec 'Extensions' do |ext|
      ext.subspec 'CoreGraphics' do |core_graphics|
-       core_graphics.source_files = 'Source/UI/Extensions/CoreGraphics/*.{h,swift}'
+       core_graphics.source_files = 'Source/UI/Extensions/CoreGraphics/*.swift'
        core_graphics.dependency 'MYUtils/Foundation/Extensions'
      end
 
      ext.subspec 'Image' do |image| 
-       image.source_files = 'Source/UI/Extensions/Image/*.{h,swift}'
+       image.source_files = 'Source/UI/Extensions/Image/*.swift'
        image.dependency 'MYUtils/Foundation/Classes'
      end
 
      ext.subspec 'View' do |view|
-       view.source_files = 'Source/UI/Extensions/View/*.{h,swift}'
+       view.source_files = 'Source/UI/Extensions/View/*.swift'
      end
 
      ext.subspec 'ViewController' do |view_cotroller|
-       view_cotroller.source_files = 'Source/UI/Extensions/ViewController/*.{h,swift}'
+       view_cotroller.source_files = 'Source/UI/Extensions/ViewController/*.swift'
      end
    end
  end
 
  spec.subspec 'Foundation' do |foundation|
    foundation.subspec 'Classes' do |classes|
-     classes.source_files = 'Source/Foundation/Classes/*.{h,swift}'
+     classes.source_files = 'Source/Foundation/Classes/*.swift'
      classes.dependency 'MYUtils/Foundation/Extensions'
    end
 
