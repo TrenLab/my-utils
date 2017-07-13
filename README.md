@@ -106,57 +106,56 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
    ```CGRect``` extensions provides easy way to perform arithmetic operations on the ```CGRect, CGPoint, CGSize``` 
    structures.
    ```swift
-      let firstRect  = CGRect(x: 10.0, y: 0.0, width: 100.0, height: 100.0)
-      let secondRect = CGRect(x: 10.0, y: 100.0, width: 200.0, height: 10.0)
+   let firstRect  = CGRect(x: 10.0, y: 0.0, width: 100.0, height: 100.0)
+   let secondRect = CGRect(x: 10.0, y: 100.0, width: 200.0, height: 10.0)
       
-      let sumResultRect = firstRect + secondRect
-      let minusResultRect = firstRect - secondRect
-      let multiplicationResultRect = firstRect * secondRect
-      let divisionResultRect = firstRect / secodeRect
+   let sumResultRect = firstRect + secondRect
+   let minusResultRect = firstRect - secondRect
+   let multiplicationResultRect = firstRect * secondRect
+   let divisionResultRect = firstRect / secodeRect
       
-      // sumResultRect will be equal to x: 20.0 y: 100.0 width: 300.0 height: 110.0 rect.
-      // minusResultRect will be equal to x: 0.0 y: -100.0 width: -100.0 height: 90.0 rect.
-      // multiplicationResultRect will be equal to x: 100.0 y: 0.0 width: 20 000.0 height: 1 000.0 rect.
-      // divisionResultRect will be equal to x: 1.0 y: 0.0 width: 0.5 height: 10.0 rect.
+   // sumResultRect will be equal to x: 20.0 y: 100.0 width: 300.0 height: 110.0 rect.
+   // minusResultRect will be equal to x: 0.0 y: -100.0 width: -100.0 height: 90.0 rect.
+   // multiplicationResultRect will be equal to x: 100.0 y: 0.0 width: 20 000.0 height: 1 000.0 rect.
+   // divisionResultRect will be equal to x: 1.0 y: 0.0 width: 0.5 height: 10.0 rect.
    ```
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
    ```CGFloat``` extensions includes opportunities to generate random numbers.
    ```swift
-      let randomNumberInRange = CGFloat.random(min: 0.0, max: 10.0)
-      let random = CGFloat.random
-      let randomSign = CGFloat.randomSign
+   let randomNumberInRange = CGFloat.random(min: 0.0, max: 10.0)
+   let random = CGFloat.random
+   let randomSign = CGFloat.randomSign
       
-      // randomNumberInRange will be equal to number in range between 0.0 and 10.0 inclusive.
-      // random will be equal to number in range between 0.0 and 1.0 inclusive.
-      // randomSign will be equal to number 1.0 or -1.0.
+   // randomNumberInRange will be equal to number in range between 0.0 and 10.0 inclusive.
+   // random will be equal to number in range between 0.0 and 1.0 inclusive.
+   // randomSign will be equal to number 1.0 or -1.0.
    ```
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
    
    ```Image``` extensions provides next opportunites:
    - Identify image orientation:
    ```swift
-      let image = <image initialization...>
-      switch image.orientation {
-         case .portret:
-            // When image has portret orientation.
-         case .album:
-            // When image has album orientation.            
-         case .square:
-            // When image has square form.                        
-      }
+   let image = <image initialization...>
+   switch image.orientation {
+      case .portret:
+      // When image has portret orientation.
+      case .album:
+      // When image has album orientation.            
+      case .square:
+      // When image has square form.                        
+   }
       
-      // Or use follow.
-      if image.isPortret {
-         // When image has portret orientation.
-      } else if image.isAlbum {
-         // When image has album orientation.         
-      } else if image.isSquare {
-         // When image has square form.                        
-      }
-      
+   // Or use follow.
+   if image.isPortret {
+      // When image has portret orientation.
+   } else if image.isAlbum {
+      // When image has album orientation.         
+   } else if image.isSquare {
+      // When image has square form.                        
+   }   
    ```
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
    - Load image from rest resource:
       ```swift
@@ -169,29 +168,30 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
    - Draw image:
-      ```swift
-      let size = <CGSize initialization...>
-      let image = MYImageDraw(size: size) {ctx in
+     ```swift
+     let size = <CGSize initialization...>
+     let image = MYImageDraw(size: size) {ctx in
          ctx.setFillColor(color.cgColor)
-      }
-      ```
+     }
+     ```
    
    - Image cache:
   ```MYImage.cache``` is used by ```MYImage.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` and
   ```MYImageView.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` methods to cache downloaded
   images.
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
    ```ImageView``` extensions provides next opportunites:
-      ```swift
-      let url = <URL initialization...>
-      let imageView = <UIImage initialization...>
-      imageView.imageFrom(URL: url) {image in
-         // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
-         // Oterwise, image equals to `nil`.
-      }
-      ```
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+   
+   ```swift
+   let url = <URL initialization...>
+   let imageView = <UIImage initialization...>
+   imageView.imageFrom(URL: url) {image in
+      // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
+      // Oterwise, image equals to `nil`.
+   }
+   ```   
+   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
    
    
