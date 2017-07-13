@@ -79,3 +79,28 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
  - Swift 3.
 
 ### Usage.
+
+#### UI.
+##### - Classes.
+   - ```DismissStoryboardSegue``` is intended to dismiss ViewController using Storyboard, not programmatically. All we need 
+   is control-click an appropriate element in the first ViewController and drag to the target ViewController (or to itself)   
+   that was presented via ``` func present(UIViewController, animated: Bool, completion: (() -> Void)? = nil) ``` method.    
+   Then make storyboard segue kind custom and assign ```DismissStoryboardSegue``` to its class in appropriate text field.
+   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+   
+   
+   - ```ShowStoryboardSegue``` is intended to add ViewController as a child ViewController using Storyboard. All we need is
+   control-click an appropriate element in the first ViewController and drag to the target ViewController. Then make 
+   storyboard segue kind custom and assign ```ShowStoryboardSegue``` to its class in appropriate text field.
+   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+   
+   - ```HideStoryboardSegue``` is intended to remove ViewController from its parent ViewController using Storyboard. All we 
+   need is control-click an appropriate element in the first ViewController and drag to the target ViewController. Then make 
+   storyboard segue kind custom and assign ```HideStoryboardSegue``` to its class in appropriate text field.
+   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+   
+   - ```PopStoryboardSegue``` is intended to pop ViewController from its UINavigationController stack using Storyboard.
+   All we need is control-click an appropriate element in the source ViewController and drag to itsel. Then make storyboard
+   segue kind custom and assign ```PopStoryboardSegue``` to its class in appropriate text field.
+   Available in iOS 8.0+  |  tvOS 9.0+.
+   
