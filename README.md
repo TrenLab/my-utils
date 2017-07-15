@@ -18,29 +18,29 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
 ### Features.
 
 1. [UI](#ui)
-   - [Classes](#ui_classes)
-      - [Storyboard Segues](###ui_storyboard_segues_classes)
-   - [Extensions](#ui_extensions)
-      - [CoreGraphics](#ui_core_graphics_extensions)
-      - [Image](#ui_image_extensions)
-      - [View](#ui_view_extensions)
-      - [ViewController](#ui_view_cotroller_extensions)
+   - [Classes]
+      - [Storyboard Segues]
+   - [Extensions]
+      - [CoreGraphics]
+      - [Image]
+      - [View]
+      - [ViewController]
 2. [Foundation](#foundation)
-   - [Classes](#foundation_classes)
-      - [Cache](#foundation_cache_classes)
-      - [Result](#foundation_result_classes)
-   - [Extensions](#foundation_extensions)
-      - [Array](#foundation_array_extensions)
-      - [Dictionary](#foundation_dictionary_extensions)
-      - [Double](#foundation_double_extensions)
-      - [Float](#foundation_float_extensions)
-      - [Int](#foundation_int_extensions)
-      - [NotificationCenter](#foundation_notification_center_extensions)
-      - [NSNumber](#foundation_nsnumber_extensions)
-      - [OperationQueue](#foundation_operation_queue_extensions)
-      - [String](#foundation_string_extensions)
-      - [Timer](#foundation_timer_extensions)
-      - [UserDefaults](#foundation_user_defaults_extensions)
+   - [Classes]
+      - [Cache]
+      - [Result]
+   - [Extensions]
+      - [Array]
+      - [Dictionary]
+      - [Double]
+      - [Float]
+      - [Int]
+      - [NotificationCenter]
+      - [NSNumber]
+      - [OperationQueue]
+      - [String]
+      - [Timer]
+      - [UserDefaults]
 
 ### Installation.
 - #### [CocoaPods](http://cocoapods.org/)
@@ -148,6 +148,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
    }
       
    // Or use follow.
+   
    if image.isPortret {
       // When image has portret orientation.
    } else if image.isAlbum {
@@ -161,7 +162,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   - Load image from rest resource:
   ```swift
   let url = <URL initialization...>
-  MYImage.from(URL: ) {image in
+  UIImage.from(URL: ) {image in
      // In case of success this method loads / returns cached and provides in closure an image.
      // Oterwise, an image equals to `nil`.
   }
@@ -222,6 +223,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   }
   
   // Or you can use next methods.
+  
   if scrollView.onTop {
      // When scroll content position on center.        
   } else if scrollView.onRight {
@@ -254,6 +256,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   }
   
   // Or you can use next methods.
+  
   if scrollView.isVertical {
       // When scroll direction is vertical.
   } else if scrollView.isHorizontal {
@@ -291,9 +294,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   let style = <UIAlertControllerStyle initialization...>
   let vc = <UIViewController initialization...>
   
-  UIAlertShow(title, message, actions, style, vc)
-  
-  // In code above, vc presents UIAlertController with specified attributes.
+  UIAlertShow(title, message, actions, style, vc)  // vc presents UIAlertController with specified attributes.
   ```
   Available in iOS 8.0+.
 
@@ -369,6 +370,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   
   childViewController.removeFromSuperViewController()
   ```
+#### Foundation:
 
   
 
