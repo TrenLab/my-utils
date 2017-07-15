@@ -19,7 +19,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
 
 1. [UI](#ui)
    - [Classes](#ui_classes)
-      - [Storyboard Segues](#ui_storyboard_segues_classes)
+      - [Storyboard Segues](###ui_storyboard_segues_classes)
    - [Extensions](#ui_extensions)
       - [CoreGraphics](#ui_core_graphics_extensions)
       - [Image](#ui_image_extensions)
