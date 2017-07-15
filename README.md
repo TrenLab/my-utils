@@ -269,6 +269,122 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
+  ```UIActivityViewController``` extensions provides next opportunities:
+  - Easy way to initialize ```UIActivityViewController```:
+  ```swift
+  let string = <String initialization...> 
+  let url = <URL initialization...>
+  
+  let activityViewController = UIActivityViewController(activityItems: [string, url], applicationActivities: nil) {        
+         activityType, completed, returnedItems, activityError in
+    // Completion code.
+  }
+  ```
+  Available in iOS 8.0+.
+  
+  ```UIAlertController``` extensions provides next opportunities:
+  - Easy way to present ```UIAlertController```:
+  ```swift
+  let title = <String initialization...>
+  let message = <String initialization...>
+  let actions = <UIAlertAction array initialization...>
+  let style = <UIAlertControllerStyle initialization...>
+  let vc = <UIViewController initialization...>
+  
+  UIAlertShow(title, message, actions, style, vc)
+  
+  // In code above, vc presents UIAlertController with specified attributes.
+  ```
+  Available in iOS 8.0+.
+
+  - Easy way to make ```UIAlertAction```:
+  ```swift
+  let action = UIAlertActionMake(title: "Ok", .default) {action in
+      // Completion code.
+  }
+  
+  let cancelAction = UIAlertActionMakeCancel(title: "Cancel", .cancel) {action in
+      // Completion code.
+  }
+  
+  let defaultAction = UIAlertActionMake(title: "Done") {action in
+      // Completion code.
+  }
+  ```
+  Available in iOS 8.0+  |  tvOS 9.0+.
+    
+  ```UINavigationController``` extensions provides next opportunities: [#ui_view_cotroller_extensions]
+  - Get root view controller:
+  ```swift
+  let navigatioController = <UINavigationController initialization...>
+  
+  let rootViewController = navigationController.rootViewController
+  ```
+  Available in iOS 8.0+  |  tvOS 9.0+.
+
+  ```ViewController``` extensions provides next opportunities:
+  - Get current child view controller:
+  ```swift
+  let viewController = <ViewController initialization...>
+  
+  let currentChildViewController = viewController.currentViewController
+  ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+  
+  - Get previous child view controller:
+  ```swift
+  let viewController = <ViewController initialization...>
+  
+  let currentChildViewController = viewController.previousViewController
+  ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+  
+  - Add view controller:
+  ```swift
+  let parentViewController = <ViewController initialization...>
+  let childViewController = <ViewController initialization...>
+  
+  parentViewController.addChild(viewController: childViewController) {
+      parentViewController.view.frame = CGRect(x: 0.0, y: 10.0, width: 100.0, height: 200.0)
+  }
+  ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+  
+  - Remove all child view controllers:
+  ```swift
+  let parentViewCotroller = <ViewController initialization...>
+  
+  let parentViewCotroller.removeChildViewControllers()
+  ```
+  
+  - Remove child view controller:
+  ```swift
+  let parentViewController = <ViewController initialization...>
+  let childViewController = <ViewController initialization...>
+  
+  parentViewController.removeChild(viewController: childViewController) {  
+  }
+   
+  // Or.
+  
+  childViewController.removeFromSuperViewController()
+  ```
+
+  
+
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
 
   
   
