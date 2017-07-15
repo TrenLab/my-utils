@@ -82,26 +82,27 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
 
 #### UI:
 ##### - Classes:
-   - ```DismissStoryboardSegue``` is intended to dismiss ViewController using Storyboard, not programmatically. All we need 
-   is control-click an appropriate element in the first ViewController and drag to the target ViewController (or to itself)   
-   that was presented via ``` func present(UIViewController, animated: Bool, completion: (() -> Void)? = nil) ``` method.    
-   Then make storyboard segue kind custom and assign ```DismissStoryboardSegue``` to its class in appropriate text field.
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+  - ```DismissStoryboardSegue``` is intended to dismiss ViewController using Storyboard, not programmatically. All we need 
+    is control-click an appropriate element in the first ViewController and drag to the target ViewController (or to itself)   
+    that was presented via ``` func present(UIViewController, animated: Bool, completion: (() -> Void)? = nil) ``` method.    
+    Then make storyboard segue kind custom and assign ```DismissStoryboardSegue``` to its class in appropriate text field.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
    
-   - ```ShowStoryboardSegue``` is intended to add ViewController as a child ViewController using Storyboard. All we need is
-   control-click an appropriate element in the first ViewController and drag to the target ViewController. Then make 
-   storyboard segue kind custom and assign ```ShowStoryboardSegue``` to its class in appropriate text field.
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+  - ```ShowStoryboardSegue``` is intended to add ViewController as a child ViewController using Storyboard. All we need is
+    control-click an appropriate element in the first ViewController and drag to the target ViewController. Then make 
+    storyboard segue kind custom and assign ```ShowStoryboardSegue``` to its class in appropriate text field.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
    
-   - ```HideStoryboardSegue``` is intended to remove ViewController from its parent ViewController using Storyboard. All we 
-   need is control-click an appropriate element in the first ViewController and drag to the target ViewController. Then make 
-   storyboard segue kind custom and assign ```HideStoryboardSegue``` to its class in appropriate text field.
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+  - ```HideStoryboardSegue``` is intended to remove ViewController from its parent ViewController using Storyboard. All we 
+    need is control-click an appropriate element in the first ViewController and drag to the target ViewController. Then   
+    make  storyboard segue kind custom and assign ```HideStoryboardSegue``` to its class in appropriate text field.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
    
    - ```PopStoryboardSegue``` is intended to pop ViewController from its UINavigationController stack using Storyboard.
    All we need is control-click an appropriate element in the source ViewController and drag to itsel. Then make storyboard
    segue kind custom and assign ```PopStoryboardSegue``` to its class in appropriate text field.
       Available in iOS 8.0+  |  tvOS 9.0+.
+      
 ##### - Extensions:
    ```CGRect``` extensions provides easy way to perform arithmetic operations on the ```CGRect, CGPoint, CGSize``` 
    structures.
@@ -157,43 +158,123 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
    ```
    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
-   - Load image from rest resource:
-      ```swift
-      let url = <URL initialization...>
-      MYImage.from(URL: ) {image in
-         // In case of success this method loads / returns cached and provides in closure an image.
-         // Oterwise, an image equals to `nil`.
-      }
-      ```
-      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+  - Load image from rest resource:
+  ```swift
+  let url = <URL initialization...>
+  MYImage.from(URL: ) {image in
+     // In case of success this method loads / returns cached and provides in closure an image.
+     // Oterwise, an image equals to `nil`.
+  }
+  ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
-   - Draw image:
-     ```swift
-     let size = <CGSize initialization...>
-     let image = MYImageDraw(size: size) {ctx in
-         ctx.setFillColor(color.cgColor)
-     }
-     ```
-   
-   - Image cache:
+  - Draw image:
+  ```swift
+  let size = <CGSize initialization...>
+  let image = MYImageDraw(size: size) {ctx in
+      ctx.setFillColor(color.cgColor)
+  }
+  ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+     
+  - Image cache:
   ```MYImage.cache``` is used by ```MYImage.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` and
   ```MYImageView.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` methods to cache downloaded
   images.
      Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
-   ```ImageView``` extensions provides next opportunites:
+  ```ImageView``` extensions provides next opportunites:
    
-   ```swift
-   let url = <URL initialization...>
-   let imageView = <UIImage initialization...>
-   imageView.imageFrom(URL: url) {image in
-      // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
-      // Oterwise, image equals to `nil`.
-   }
-   ```   
-   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+  ```swift
+  let url = <URL initialization...>
+  let imageView = <UIImage initialization...>
+  imageView.imageFrom(URL: url) {image in
+     // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
+     // Oterwise, image equals to `nil`.
+  }
+  ```   
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+   
+  ```CollectionView``` extensions provides next opportunity:
+  - Adjusting of number of rows in per row:
+  ```swift
+  let collectionView = <CollectionView initialization...>
+  collectionView.numberOfCellsPerRow = 3
+  // Now collectionView will layout three collection view cells in each row.
+  ```
+  Available in iOS 8.0+  |  macOS 10.11+  |  tvOS 9.0+.
+   
+  ```ScrollView``` extensions provodes next opportunites:
+  - Identify current scroll content position:
+  ```swift
+  let scrollView = <ScrollView initialization...>
+  switch scrollView.position {
+  case .top:
+     // When scroll content position on top.
+  case .right:
+     // When scroll content position on right.
+  case .bottom:
+     // When scroll content position on bottom.
+  case .left:
+     // When scroll content position on left.
+  case .center:
+     // When scroll content position on center.  
+  }
+  
+  // Or you can use next methods.
+  if scrollView.onTop {
+     // When scroll content position on center.        
+  } else if scrollView.onRight {
+     // When scroll content position on right.   
+  } else if scrollView.onBottom {
+     // When scroll content position on bottom.  
+  } else if scrollView.onLeft {
+     // When scroll content position on left.
+  } else if scrollView.onCenter {
+     // When scroll content position on center.
+  }
+  ```  
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+  
+  - Get content offset for macOS 10.11+:
+  ```swift
+  let scrollView = <ScrollView initialization...>
+  let contentOffset =  scrollView.contentOffset
+  ```
+  Available in macOS 10.11+.
 
-   
+  - Identify current scroll direction:
+  ```swift
+  let scrollView = <ScrollView initialization...>
+  switch scrollView.direction {
+  case .vertical:
+      // When scroll direction is vertical.
+  case .horizontal:
+      // When scroll direction is horizontal.
+  }
+  
+  // Or you can use next methods.
+  if scrollView.isVertical {
+      // When scroll direction is vertical.
+  } else if scrollView.isHorizontal {
+      // When scroll direction is horizontal.      
+  }
+  ```  
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+  
+  - Get actual scroll view content size:
+  ```swift
+  let scrollView = <ScrollView initialization...>
+  let contentSize = scrollView.contentSize
+  ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+  
+
+  
+  
+  
+
+  
    
 
    
