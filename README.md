@@ -86,22 +86,26 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
     is control-click an appropriate element in the first ViewController and drag to the target ViewController (or to itself)   
     that was presented via ``` func present(UIViewController, animated: Bool, completion: (() -> Void)? = nil) ``` method.    
     Then make storyboard segue kind custom and assign ```DismissStoryboardSegue``` to its class in appropriate text field.
+    
     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
    
   - ```ShowStoryboardSegue``` is intended to add ViewController as a child ViewController using Storyboard. All we need is
     control-click an appropriate element in the first ViewController and drag to the target ViewController. Then make 
     storyboard segue kind custom and assign ```ShowStoryboardSegue``` to its class in appropriate text field.
+    
     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
-   
+    
   - ```HideStoryboardSegue``` is intended to remove ViewController from its parent ViewController using Storyboard. All we 
     need is control-click an appropriate element in the first ViewController and drag to the target ViewController. Then   
     make  storyboard segue kind custom and assign ```HideStoryboardSegue``` to its class in appropriate text field.
+    
     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
-   
-   - ```PopStoryboardSegue``` is intended to pop ViewController from its UINavigationController stack using Storyboard.
-   All we need is control-click an appropriate element in the source ViewController and drag to itsel. Then make storyboard
-   segue kind custom and assign ```PopStoryboardSegue``` to its class in appropriate text field.
-      Available in iOS 8.0+  |  tvOS 9.0+.
+    
+  - ```PopStoryboardSegue``` is intended to pop ViewController from its UINavigationController stack using Storyboard.
+    All we need is control-click an appropriate element in the source ViewController and drag to itsel. Then make storyboard
+    segue kind custom and assign ```PopStoryboardSegue``` to its class in appropriate text field.
+    
+    Available in iOS 8.0+  |  tvOS 9.0+.
       
 ##### - Extensions:
    ```CGRect``` extensions provides easy way to perform arithmetic operations on the ```CGRect, CGPoint, CGSize``` 
@@ -182,7 +186,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   ```MYImage.cache``` is used by ```MYImage.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` and
   ```MYImageView.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` methods to cache downloaded
   images.
-     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+  
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
   ```ImageView``` extensions provides next opportunites:
    
@@ -356,6 +361,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   
   let parentViewCotroller.removeChildViewControllers()
   ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+
   
   - Remove child view controller:
   ```swift
@@ -369,6 +376,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   
   childViewController.removeFromSuperViewController()
   ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+
 #### Foundation:
 
 ##### - Classes:
