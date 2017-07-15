@@ -81,7 +81,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
 ### Usage.
 
 #### UI:
-##### - Classes: (#ui_storyboard_segues_classes)
+##### - Classes:
   - ```DismissStoryboardSegue``` is intended to dismiss ViewController using Storyboard, not programmatically. All we need 
     is control-click an appropriate element in the first ViewController and drag to the target ViewController (or to itself)   
     that was presented via ``` func present(UIViewController, animated: Bool, completion: (() -> Void)? = nil) ``` method.    
