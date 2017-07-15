@@ -18,29 +18,29 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
 ### Features.
 
 1. [UI](#ui)
-   - [Classes]
-      - [Storyboard Segues]
-   - [Extensions]
-      - [CoreGraphics]
-      - [Image]
-      - [View]
-      - [ViewController]
+   - Classes
+      - Storyboard Segues
+   - Extensions
+      - CoreGraphics
+      - Image
+      - View
+      - ViewController
 2. [Foundation](#foundation)
-   - [Classes]
-      - [Cache]
-      - [Result]
-   - [Extensions]
-      - [Array]
-      - [Dictionary]
-      - [Double]
-      - [Float]
-      - [Int]
-      - [NotificationCenter]
-      - [NSNumber]
-      - [OperationQueue]
-      - [String]
-      - [Timer]
-      - [UserDefaults]
+   - Classes
+      - Cache
+      - Result
+   - Extensions
+      - Array
+      - Dictionary
+      - Double
+      - Float
+      - Int
+      - NotificationCenter
+      - NSNumber
+      - OperationQueue
+      - String
+      - Timer
+      - UserDefaults
 
 ### Installation.
 - #### [CocoaPods](http://cocoapods.org/)
@@ -200,8 +200,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   - Adjusting of number of rows in per row:
   ```swift
   let collectionView = <CollectionView initialization...>
-  collectionView.numberOfCellsPerRow = 3
-  // Now collectionView will layout three collection view cells in each row.
+  collectionView.numberOfCellsPerRow = 3 // CollectionView will layout three collection view cells in each row.
   ```
   Available in iOS 8.0+  |  macOS 10.11+  |  tvOS 9.0+.
    
@@ -346,7 +345,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   let childViewController = <ViewController initialization...>
   
   parentViewController.addChild(viewController: childViewController) {
-      parentViewController.view.frame = CGRect(x: 0.0, y: 10.0, width: 100.0, height: 200.0)
+      childViewController.view.frame = CGRect(x: 0.0, y: 10.0, width: 100.0, height: 200.0)
   }
   ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
@@ -372,6 +371,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   ```
 #### Foundation:
 
+##### - Classes:
+  
   
 
 
