@@ -407,7 +407,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
     ```
     Or failure case:
     ```swift
-   let result = .failure(<error value>)
+      let result = .failure(<error value>)
       switch result {
          case .success(_):
          case .failure(let error):
