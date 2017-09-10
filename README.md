@@ -384,36 +384,39 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   - ```Cache``` is convenience wrapper of stanard Foundation ```NSCache``` class. ```Cache``` corresponds easy way to access
     to cached value through subscript:
     ```swift
-      let cache = <Cache intialization ...>
-      let value = cache["key"]
+    let cache = <Cache intialization ...>
+    let value = cache["key"]
     ```
     Or we can cache the value using same subscript:
     ```swift
-      let cache = <Cache intialization ...>
-      let anyObjectValue = <Any object value intialization ...>
-      cache["key"] = anyObjectValue as! AnyObject
+    let cache = <Cache intialization ...>
+    let anyObjectValue = <Any object value intialization ...>
+    cache["key"] = anyObjectValue as! AnyObject
     ```    
     Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
     
   - ```Result``` is the two value enum, intended to emulate two posible values to any operation - ```success``` or   
     ```failure```:
     ```swift
-      let result = .success(<success value>)
-      switch result {
-         case .success(let <success value>):
-            // Code to handle success case.
-         case .failure(_):
-      }
+    let result = .success(<success value>)
+    switch result {
+    case .success(let <success value>):
+      // Code to handle success case.
+    case .failure(_):
+    }
     ```
     Or failure case:
     ```swift
-      let result = .failure(<error value>)
-      switch result {
-         case .success(_):
-         case .failure(let error):
-            // Code to handle failure case.
-      }
+    let result = .failure(<error value>)
+    switch result {
+    case .success(_):
+    case .failure(let error):
+      // Code to handle failure case.
+    }
     ```
+
+##### - Extensions:
+   ```Array```
 
 
 
