@@ -188,17 +188,17 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   images.
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
   
-  ```ImageView``` extensions provides next opportunites:
+  ```ImageView``` extensions provides next opportunities:
       ```swift
       let url = <URL initialization...>
-      let imageView = <UIImage initialization...>
-      imageView.imageFrom(URL: url) {image in
-         // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
-         // Oterwise, image equals to `nil`.
+      let imageView = <Image initialization...>
+      imageView.imageFrom(URL: url) {image
+      // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
+      // Oterwise, image equals to nil.
       }
       ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
-   
+  
   ```CollectionView``` extensions provides next opportunity:
   - Adjusting of number of rows in per row:
       ```swift
@@ -422,6 +422,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        var fourthArray = <Array initialization ...>
        fourthArray += thirdArray
        ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+
    - Make an array containing the results of mapping the given closure over the sequence’s elements:
        ```swift
        let firstArray = [1, 2, 3]
@@ -430,6 +432,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        }
        // secondArray == [2, 4, 6]
        ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+       
    - Iterate through all elements in an array:
       ```swift
       let array = [1, 2, 3]
@@ -438,6 +442,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // element of an array
       }
       ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+
    - Remove specified element:
       ```swift
       var array = [1, 2, 3]
@@ -455,6 +461,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // True
        }
        ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+
    - Easy way to concatenate two dictionaries using ```+``` or ```+=``` operations:
        ```swift
        let firstDictionary = ["key1": "value1"]
@@ -466,6 +474,9 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        fourthDictionary += thirdDictionary
        // fourthDictionary == ["key1": "value1", "key2": "value2", "key3": "value3"]
        ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+       
+       
    - Make a dictionary containing the results of mapping the given closure over the sequence’s elements:
        ```swift
        let firstDictionary = ["key1": "value1"]
@@ -474,6 +485,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        }       
        // resultDictionary == ["result_key": "value1"]
        ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+
    - Iterate through all elements in a dictionary:
        ```swift
        let dictionary = ["key1": "value1"]
@@ -482,6 +495,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // value == "value1"
        }
        ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+      
    - Get all keys and values of a dictionary:
        ```swift
        let dictionary = ["key1": "value1", "key2": "value2"]
