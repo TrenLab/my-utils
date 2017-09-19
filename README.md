@@ -140,242 +140,241 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
    
    ```Image``` extensions provides next opportunites:
    - Identify image orientation:
-   ```swift
-   let image = <image initialization...>
-   switch image.orientation {
-      case .portret:
-      // When image has portret orientation.
-      case .album:
-      // When image has album orientation.            
-      case .square:
-      // When image has square form.                        
-   }
+      ```swift
+      let image = <image initialization...>
+      switch image.orientation {
+         case .portret:
+            // When image has portret orientation.
+         case .album:
+            // When image has album orientation.            
+         case .square:
+            // When image has square form.                        
+      }
       
-   // Or use follow.
+      // Or use follow.
    
-   if image.isPortret {
-      // When image has portret orientation.
-   } else if image.isAlbum {
-      // When image has album orientation.         
-   } else if image.isSquare {
-      // When image has square form.                        
-   }   
-   ```
+      if image.isPortret {
+         // When image has portret orientation.
+      } else if image.isAlbum {
+         // When image has album orientation.         
+      } else if image.isSquare {
+         // When image has square form.                        
+      }   
+      ```
    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
   - Load image from rest resource:
-  ```swift
-  let url = <URL initialization...>
-  UIImage.from(URL: ) {image in
-     // In case of success this method loads / returns cached and provides in closure an image.
-     // Oterwise, an image equals to `nil`.
-  }
-  ```
+      ```swift
+      let url = <URL initialization...>
+      UIImage.from(URL: url) {image in
+         // In case of success this method loads / returns cached and provides in closure an image.
+         // Oterwise, an image equals to `nil`.
+      }
+      ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
   - Draw image:
-  ```swift
-  let size = <CGSize initialization...>
-  let image = MYImageDraw(size: size) {ctx in
-      ctx.setFillColor(color.cgColor)
-  }
-  ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+      ```swift
+      let size = <CGSize initialization...>
+      let image = MYImageDraw(size: size) {ctx in
+         ctx.setFillColor(color.cgColor)
+      }
+      ```
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
      
   - Image cache:
   ```MYImage.cache``` is used by ```MYImage.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` and
   ```MYImageView.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` methods to cache downloaded
   images.
   
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
   ```ImageView``` extensions provides next opportunites:
-   
-  ```swift
-  let url = <URL initialization...>
-  let imageView = <UIImage initialization...>
-  imageView.imageFrom(URL: url) {image in
-     // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
-     // Oterwise, image equals to `nil`.
-  }
-  ```   
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+      ```swift
+      let url = <URL initialization...>
+      let imageView = <UIImage initialization...>
+      imageView.imageFrom(URL: url) {image in
+         // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
+         // Oterwise, image equals to `nil`.
+      }
+      ```
+     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
    
   ```CollectionView``` extensions provides next opportunity:
   - Adjusting of number of rows in per row:
-  ```swift
-  let collectionView = <CollectionView initialization...>
-  collectionView.numberOfCellsPerRow = 3 // CollectionView will layout three collection view cells in each row.
-  ```
+      ```swift
+      let collectionView = <CollectionView initialization...>
+      collectionView.numberOfCellsPerRow = 3 // CollectionView will layout three collection view cells in each row.
+      ```
   Available in iOS 8.0+  |  macOS 10.11+  |  tvOS 9.0+.
    
   ```ScrollView``` extensions provodes next opportunites:
   - Identify current scroll content position:
-  ```swift
-  let scrollView = <ScrollView initialization...>
-  switch scrollView.position {
-  case .top:
-     // When scroll content position on top.
-  case .right:
-     // When scroll content position on right.
-  case .bottom:
-     // When scroll content position on bottom.
-  case .left:
-     // When scroll content position on left.
-  case .center:
-     // When scroll content position on center.  
-  }
+      ```swift
+      let scrollView = <ScrollView initialization...>
+      switch scrollView.position {
+      case .top:
+         // When scroll content position on top.
+      case .right:
+         // When scroll content position on right.
+      case .bottom:
+         // When scroll content position on bottom.
+      case .left:
+         // When scroll content position on left.
+      case .center:
+         // When scroll content position on center.  
+      }
   
-  // Or you can use next methods.
+      // Or you can use next methods.
   
-  if scrollView.onTop {
-     // When scroll content position on center.        
-  } else if scrollView.onRight {
-     // When scroll content position on right.   
-  } else if scrollView.onBottom {
-     // When scroll content position on bottom.  
-  } else if scrollView.onLeft {
-     // When scroll content position on left.
-  } else if scrollView.onCenter {
-     // When scroll content position on center.
-  }
-  ```  
+      if scrollView.onTop {
+         // When scroll content position on center.        
+      } else if scrollView.onRight {
+         // When scroll content position on right.   
+      } else if scrollView.onBottom {
+         // When scroll content position on bottom.  
+      } else if scrollView.onLeft {
+         // When scroll content position on left.
+      } else if scrollView.onCenter {
+         // When scroll content position on center.
+      }
+      ```  
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
   
   - Get content offset for macOS 10.11+:
-  ```swift
-  let scrollView = <ScrollView initialization...>
-  let contentOffset =  scrollView.contentOffset
-  ```
+      ```swift
+      let scrollView = <ScrollView initialization...>
+      let contentOffset =  scrollView.contentOffset
+      ```
   Available in macOS 10.11+.
 
   - Identify current scroll direction:
-  ```swift
-  let scrollView = <ScrollView initialization...>
-  switch scrollView.direction {
-  case .vertical:
-      // When scroll direction is vertical.
-  case .horizontal:
-      // When scroll direction is horizontal.
-  }
+      ```swift
+      let scrollView = <ScrollView initialization...>
+      switch scrollView.direction {
+      case .vertical:
+         // When scroll direction is vertical.
+      case .horizontal:
+         // When scroll direction is horizontal.
+      }
   
-  // Or you can use next methods.
+      // Or you can use next methods.
   
-  if scrollView.isVertical {
-      // When scroll direction is vertical.
-  } else if scrollView.isHorizontal {
-      // When scroll direction is horizontal.      
-  }
-  ```  
+      if scrollView.isVertical {
+         // When scroll direction is vertical.
+      } else if scrollView.isHorizontal {
+         // When scroll direction is horizontal.      
+      }
+      ```  
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   - Get actual scroll view content size:
-  ```swift
-  let scrollView = <ScrollView initialization...>
-  let contentSize = scrollView.contentSize
-  ```
+      ```swift
+      let scrollView = <ScrollView initialization...>
+      let contentSize = scrollView.contentSize
+      ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   ```UIActivityViewController``` extensions provides next opportunities:
   - Easy way to initialize ```UIActivityViewController```:
-  ```swift
-  let string = <String initialization...> 
-  let url = <URL initialization...>
+      ```swift
+      let string = <String initialization...> 
+      let url = <URL initialization...>
   
-  let activityViewController = UIActivityViewController(activityItems: [string, url], applicationActivities: nil) {        
+      let activityViewController = UIActivityViewController(activityItems: [string, url], applicationActivities: nil) {        
          activityType, completed, returnedItems, activityError in
-    // Completion code.
-  }
-  ```
+         // Completion code.
+      }
+      ```
   Available in iOS 8.0+.
   
   ```UIAlertController``` extensions provides next opportunities:
   - Easy way to present ```UIAlertController```:
-  ```swift
-  let title = <String initialization...>
-  let message = <String initialization...>
-  let actions = <UIAlertAction array initialization...>
-  let style = <UIAlertControllerStyle initialization...>
-  let vc = <UIViewController initialization...>
+      ```swift
+      let title = <String initialization...>
+      let message = <String initialization...>
+      let actions = <UIAlertAction array initialization...>
+      let style = <UIAlertControllerStyle initialization...>
+      let vc = <UIViewController initialization...>
   
-  UIAlertShow(title, message, actions, style, vc)  // vc presents UIAlertController with specified attributes.
-  ```
+      UIAlertShow(title, message, actions, style, vc)  // vc presents UIAlertController with specified attributes.
+      ```
   Available in iOS 8.0+.
 
   - Easy way to make ```UIAlertAction```:
-  ```swift
-  let action = UIAlertActionMake(title: "Ok", .default) {action in
-      // Completion code.
-  }
+      ```swift
+      let action = UIAlertActionMake(title: "Ok", .default) {action in
+         // Completion code.
+      }
   
-  let cancelAction = UIAlertActionMakeCancel(title: "Cancel", .cancel) {action in
-      // Completion code.
-  }
+      let cancelAction = UIAlertActionMakeCancel(title: "Cancel", .cancel) {action in
+         // Completion code.
+      }
   
-  let defaultAction = UIAlertActionMake(title: "Done") {action in
-      // Completion code.
-  }
-  ```
+      let defaultAction = UIAlertActionMake(title: "Done") {action in
+         // Completion code.
+      }
+      ```
   Available in iOS 8.0+  |  tvOS 9.0+.
     
   ```UINavigationController``` extensions provides next opportunities: [#ui_view_cotroller_extensions]
   - Get root view controller:
-  ```swift
-  let navigatioController = <UINavigationController initialization...>
+      ```swift
+      let navigatioController = <UINavigationController initialization...>
   
-  let rootViewController = navigationController.rootViewController
-  ```
+      let rootViewController = navigationController.rootViewController
+      ```
   Available in iOS 8.0+  |  tvOS 9.0+.
 
   ```ViewController``` extensions provides next opportunities:
   - Get current child view controller:
-  ```swift
-  let viewController = <ViewController initialization...>
+      ```swift
+      let viewController = <ViewController initialization...>
   
-  let currentChildViewController = viewController.currentViewController
-  ```
+      let currentChildViewController = viewController.currentViewController
+      ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   - Get previous child view controller:
-  ```swift
-  let viewController = <ViewController initialization...>
+      ```swift
+      let viewController = <ViewController initialization...>
   
-  let currentChildViewController = viewController.previousViewController
-  ```
+      let currentChildViewController = viewController.previousViewController
+      ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   - Add view controller:
-  ```swift
-  let parentViewController = <ViewController initialization...>
-  let childViewController = <ViewController initialization...>
+      ```swift
+      let parentViewController = <ViewController initialization...>
+      let childViewController = <ViewController initialization...>
   
-  parentViewController.addChild(viewController: childViewController) {
-      childViewController.view.frame = CGRect(x: 0.0, y: 10.0, width: 100.0, height: 200.0)
-  }
-  ```
+      parentViewController.addChild(viewController: childViewController) {
+         childViewController.view.frame = CGRect(x: 0.0, y: 10.0, width: 100.0, height: 200.0)
+      }
+      ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   - Remove all child view controllers:
-  ```swift
-  let parentViewCotroller = <ViewController initialization...>
+      ```swift
+      let parentViewCotroller = <ViewController initialization...>
   
-  let parentViewCotroller.removeChildViewControllers()
-  ```
+      let parentViewCotroller.removeChildViewControllers()
+      ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
 
   
   - Remove child view controller:
-  ```swift
-  let parentViewController = <ViewController initialization...>
-  let childViewController = <ViewController initialization...>
+      ```swift
+      let parentViewController = <ViewController initialization...>
+      let childViewController = <ViewController initialization...>
   
-  parentViewController.removeChild(viewController: childViewController) {  
-  }
+      parentViewController.removeChild(viewController: childViewController) {  
+      }
    
-  // Or.
+      // Or.
   
-  childViewController.removeFromSuperViewController()
-  ```
+      childViewController.removeFromSuperViewController()
+      ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
 
 #### Foundation:
@@ -383,45 +382,131 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
 ##### - Classes:
   - ```Cache``` is convenience wrapper of stanard Foundation ```NSCache``` class. ```Cache``` corresponds easy way to access
     to cached value through subscript:
-    ```swift
-    let cache = <Cache intialization ...>
-    let value = cache["key"]
-    ```
+         ```swift
+         let cache = <Cache intialization ...>
+         let value = cache["key"]
+         ```
     Or we can cache the value using same subscript:
-    ```swift
-    let cache = <Cache intialization ...>
-    let anyObjectValue = <Any object value intialization ...>
-    cache["key"] = anyObjectValue as! AnyObject
-    ```    
-    Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+      ```swift
+      let cache = <Cache intialization ...>
+      let anyObjectValue = <Any object value intialization ...>
+      cache["key"] = anyObjectValue as! AnyObject
+      ```    
+  Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
     
   - ```Result``` is the two value enum, intended to emulate two posible values to any operation - ```success``` or   
     ```failure```:
-    ```swift
-    let result = .success(<success value>)
-    switch result {
-    case .success(let <success value>):
-      // Code to handle success case.
-    case .failure(_):
-    }
-    ```
+      ```swift
+      let result = .success(<success value>)
+      switch result {
+      case .success(let <success value>):
+         // Code to handle success case.
+      case .failure(_):
+      }
+      ```
     Or failure case:
-    ```swift
-    let result = .failure(<error value>)
-    switch result {
-    case .success(_):
-    case .failure(let error):
-      // Code to handle failure case.
-    }
-    ```
+      ```swift
+      let result = .failure(<error value>)
+      switch result {
+      case .success(_):
+      case .failure(let error):
+         // Code to handle failure case.
+      }
+      ```
+  Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
 
 ##### - Extensions:
-   ```Array```
+   ```Array``` extensions provides next opportunites:
+   - Easy way to concatenate two arrays using ```+``` or ```+=``` operations:
+       ```swift
+       let firstArray = <Array initialization ...>
+       let secondArray = <Array initialization ...>
+       let thirdArray = firstArray + secondArray
+       var fourthArray = <Array initialization ...>
+       fourthArray += thirdArray
+       ```
+   - Make an array containing the results of mapping the given closure over the sequence’s elements:
+       ```swift
+       let firstArray = [1, 2, 3]
+       let secondArray = firstArray.make {idx, firstArrayElement in
+            return firstArrayElement*2
+       }
+       // secondArray == [2, 4, 6]
+       ```
+   - Iterate through all elements in an array:
+       ```swift
+       let array = [1, 2, 3]
+       array.enumerate {idx, element in
+         // idx is index of element in an array.
+         // element of an array.
+       }
+       ```
+       
+   - Remove specified element of an array:
+       ```swift
+       var array = [1, 2, 3]
+       array.remove(element: 2)
+       // array == [1, 3]
+       ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
 
+   ```Dictionary``` extensions provides next opportunites:
+   - Compare two dictionaries:
+       ```swift
+       let firstDictionary = ["key": "value"]
+       let secondDictionary = ["key": "value"]
+       if firstDictionary == secondDictionary {
+         // True
+       }
+       ```
+   - Easy way to concatenate two dictionaries using ```+``` or ```+=``` operations:
+       ```swift
+       let firstDictionary = ["key1": "value1"]
+       let secondDictionary = ["key2": "value2"]
+       let thirdDictionary = firstDictionary + secondDictionary
+       // thirdDictionary == ["key1": "value1", "key2": "value2"]
+       
+       var fourthDictionary = ["key3": "value3"]
+       fourthDictionary += thirdDictionary
+       // fourthDictionary == ["key1": "value1", "key2": "value2", "key3": "value3"]
+       ```
+   - Make a dictionary containing the results of mapping the given closure over the sequence’s elements:
+       ```swift
+       let firstDictionary = ["key1": "value1"]
+       let resultDictionary = firstDictionary.make {key, value in
+         retrun ["result_key": value]
+       }       
+       // resultDictionary == ["result_key": "value1"]
+       ```
+   - Iterate through all elements in a dictionary:
+       ```swift
+       let dictionary = ["key1": "value1"]
+       dictionary.enumerate {key, value in
+         // key == "key1"
+         // value == "value1"
+       }
+       ```
+   - Get all keys and values of a dictionary:
+       ```swift
+       let dictionary = ["key1": "value1", "key2": "value2"]
+       let keys = dictionary.keys
+       let values = dictionary.values
+       // keys == ["key1", "key2"]
+       // values == ["value1", "value2"]
+       ```
+   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
 
-
-  
-
+       
+  ```Double``` extensions includes opportunities to generate random numbers:
+      ```swift
+      let randomNumberInRange = CGFloat.random(min: 0.0, max: 10.0)
+      let random = CGFloat.random
+      let randomSign = CGFloat.randomSign
+      
+      // randomNumberInRange will be equal to number in range between 0.0 and 10.0 inclusive.
+      // random will be equal to number in range between 0.0 and 1.0 inclusive.
+      // randomSign will be equal to number 1.0 or -1.0.
+      ```
 
   
   
