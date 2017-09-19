@@ -186,9 +186,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   ```MYImage.cache``` is used by ```MYImage.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` and
   ```MYImageView.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` methods to cache downloaded
   images.
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
   
-    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
-
   ```ImageView``` extensions provides next opportunites:
       ```swift
       let url = <URL initialization...>
@@ -198,7 +197,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // Oterwise, image equals to `nil`.
       }
       ```
-     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
    
   ```CollectionView``` extensions provides next opportunity:
   - Adjusting of number of rows in per row:
@@ -370,9 +369,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   
       parentViewController.removeChild(viewController: childViewController) {  
       }
-   
       // Or.
-  
       childViewController.removeFromSuperViewController()
       ```
   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
@@ -382,10 +379,10 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
 ##### - Classes:
   - ```Cache``` is convenience wrapper of stanard Foundation ```NSCache``` class. ```Cache``` corresponds easy way to access
     to cached value through subscript:
-         ```swift
-         let cache = <Cache intialization ...>
-         let value = cache["key"]
-         ```
+      ```swift
+      let cache = <Cache intialization ...>
+      let value = cache["key"]
+      ```
     Or we can cache the value using same subscript:
       ```swift
       let cache = <Cache intialization ...>
@@ -395,7 +392,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
     
   - ```Result``` is the two value enum, intended to emulate two posible values to any operation - ```success``` or   
-    ```failure```:
+    ```failure``` case:
       ```swift
       let result = .success(<success value>)
       switch result {
@@ -404,7 +401,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       case .failure(_):
       }
       ```
-    Or failure case:
+    Or failure ```case```:
       ```swift
       let result = .failure(<error value>)
       switch result {
@@ -429,25 +426,24 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        ```swift
        let firstArray = [1, 2, 3]
        let secondArray = firstArray.make {idx, firstArrayElement in
-            return firstArrayElement*2
+         return firstArrayElement*2
        }
        // secondArray == [2, 4, 6]
        ```
    - Iterate through all elements in an array:
-       ```swift
-       let array = [1, 2, 3]
-       array.enumerate {idx, element in
-         // idx is index of element in an array.
-         // element of an array.
-       }
-       ```
-       
-   - Remove specified element of an array:
-       ```swift
-       var array = [1, 2, 3]
-       array.remove(element: 2)
-       // array == [1, 3]
-       ```
+      ```swift
+      let array = [1, 2, 3]
+      array.enumerate {idx, element in 
+         // idx is index of element in an array
+         // element of an array
+      }
+      ```
+   - Remove specified element:
+      ```swift
+      var array = [1, 2, 3]
+      array.remove(element: 2)
+      // array == [1, 3]
+      ```   
    Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
 
    ```Dictionary``` extensions provides next opportunites:
@@ -498,15 +494,16 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
 
        
   ```Double``` extensions includes opportunities to generate random numbers:
-      ```swift
-      let randomNumberInRange = CGFloat.random(min: 0.0, max: 10.0)
-      let random = CGFloat.random
-      let randomSign = CGFloat.randomSign
+  
+  ```swift
+  let randomNumberInRange = CGFloat.random(min: 0.0, max: 10.0)
+  let random = CGFloat.random
+  let randomSign = CGFloat.randomSign
       
-      // randomNumberInRange will be equal to number in range between 0.0 and 10.0 inclusive.
-      // random will be equal to number in range between 0.0 and 1.0 inclusive.
-      // randomSign will be equal to number 1.0 or -1.0.
-      ```
+  // randomNumberInRange will be equal to number in range between 0.0 and 10.0 inclusive.
+  // random will be equal to number in range between 0.0 and 1.0 inclusive.
+  // randomSign will be equal to number 1.0 or -1.0.
+  ```
 
   
   
