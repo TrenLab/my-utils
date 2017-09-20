@@ -171,7 +171,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // Oterwise, an image equals to `nil`.
       }
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
   - Draw image:
       ```swift
@@ -197,7 +197,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       // Oterwise, image equals to nil.
       }
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
   
   ```CollectionView``` extensions provides next opportunity:
   - Adjusting of number of rows in per row:
@@ -205,7 +205,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       let collectionView = <CollectionView initialization...>
       collectionView.numberOfCellsPerRow = 3 // CollectionView will layout three collection view cells in each row.
       ```
-  Available in iOS 8.0+  |  macOS 10.11+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.11+  |  tvOS 9.0+.
    
   ```ScrollView``` extensions provodes next opportunites:
   - Identify current scroll content position:
@@ -238,14 +238,14 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // When scroll content position on center.
       }
       ```  
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
   
   - Get content offset for macOS 10.11+:
       ```swift
       let scrollView = <ScrollView initialization...>
       let contentOffset =  scrollView.contentOffset
       ```
-  Available in macOS 10.11+.
+    Available in macOS 10.11+.
 
   - Identify current scroll direction:
       ```swift
@@ -265,14 +265,14 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // When scroll direction is horizontal.      
       }
       ```  
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   - Get actual scroll view content size:
       ```swift
       let scrollView = <ScrollView initialization...>
       let contentSize = scrollView.contentSize
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   ```UIActivityViewController``` extensions provides next opportunities:
   - Easy way to initialize ```UIActivityViewController```:
@@ -285,7 +285,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // Completion code.
       }
       ```
-  Available in iOS 8.0+.
+    Available in iOS 8.0+.
   
   ```UIAlertController``` extensions provides next opportunities:
   - Easy way to present ```UIAlertController```:
@@ -298,7 +298,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   
       UIAlertShow(title, message, actions, style, vc)  // vc presents UIAlertController with specified attributes.
       ```
-  Available in iOS 8.0+.
+    Available in iOS 8.0+.
 
   - Easy way to make ```UIAlertAction```:
       ```swift
@@ -314,7 +314,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // Completion code.
       }
       ```
-  Available in iOS 8.0+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  tvOS 9.0+.
     
   ```UINavigationController``` extensions provides next opportunities: [#ui_view_cotroller_extensions]
   - Get root view controller:
@@ -474,7 +474,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        fourthDictionary += thirdDictionary
        // fourthDictionary == ["key1": "value1", "key2": "value2", "key3": "value3"]
        ```
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
        
        
    - Make a dictionary containing the results of mapping the given closure over the sequence’s elements:
@@ -495,7 +495,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // value == "value1"
        }
        ```
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
       
    - Get all keys and values of a dictionary:
        ```swift
@@ -505,23 +505,185 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        // keys == ["key1", "key2"]
        // values == ["value1", "value2"]
        ```
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
 
-       
-  ```Double``` extensions includes opportunities to generate random numbers:
-  
+  ```Double``` extensions provides opportunity to generate random double numbers:
   ```swift
-  let randomNumberInRange = CGFloat.random(min: 0.0, max: 10.0)
-  let random = CGFloat.random
-  let randomSign = CGFloat.randomSign
+  let randomNumberInRange = Double.random(min: 0.0, max: 10.0)
+  let random = Double.random
+  let randomSign = Double.randomSign
       
   // randomNumberInRange will be equal to number in range between 0.0 and 10.0 inclusive.
   // random will be equal to number in range between 0.0 and 1.0 inclusive.
   // randomSign will be equal to number 1.0 or -1.0.
   ```
+  Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+
+  ```Float``` extensions provides opportunity to generate random float numbers:
+  ```swift
+  let randomNumberInRange = Float.random(min: 0.0, max: 10.0)
+  let random = Float.random
+  let randomSign = Float.randomSign
+      
+  // randomNumberInRange will be equal to number in range between 0.0 and 10.0 inclusive.
+  // random will be equal to number in range between 0.0 and 1.0 inclusive.
+  // randomSign will be equal to number 1.0 or -1.0.
+  ```
+  Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+
+  ```Int``` extensions provides opportunity to generate random int numbers:
+  ```swift
+  let randomNumberInRange = Float.random(min: 0.0, max: 10.0)
+  let random = Float.random
+  let randomSign = Float.randomSign
+      
+  // randomNumberInRange will be equal to number in range between 0.0 and 10.0 inclusive.
+  // random will be equal to number in range between 0.0 and 1.0 inclusive.
+  // randomSign will be equal to number 1.0 or -1.0.
+  ```
+  Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+
+  ```NotificationCenter``` extensions provides opportunity to add an entry to the receiver’s dispatch table with a block   
+   to add to the current queue:
+  ```swift
+  let token = NotificationCenter.default.addObserver(forName: NotificationName) {notification -> Void in
+      // Performs on the current queue. When specified notification performs.
+  }
+  NotificationCenter.default.removeObserver(token)
+  ``` 
+  Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+  
+  ```NSNumber``` extensions provides opportunity to check, whether stored value is bool or not:
+  ```swift
+  let number = NSNumber(value: true)
+  if number.isBool {
+      // true
+  }
+  ```
+  Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+  
+  ```OperationQueue``` extensions provides next opportunities:
+  - Convenience way to perform code synchronously / asynchronous on the main queue:
+      ```swift
+      PerformOnMainThreadSync {
+         // Code to perform synchronously on the main queue.
+      }
+      
+      PerformOnMainThreadAsync {
+         // Code to perform asynchronous on the main queue.
+      }
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+
+  - Convenience way to perform code synchronously / asynchronous on the background queue:
+      ```swift
+      PerformOnBackgroundThreadSync {
+         // Code to perform synchronously on the background queue.
+      }
+      
+      PerformOnBackgroundThreadAsync {
+         // Code to perform asynchronous on the background queue.
+      }
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    
+  ```String``` extensions provides next opportunities:
+  - Convenience way to convert string object to ```Int```, ```UInt``` or ```NSString```:
+      ```swift
+      let intString = "-10"
+      let intValue = intString.int!
+      // intValue == -10
+      
+      let uintString = "123"
+      let uintValue = uintString.uint
+      // uintValue == 123
+      
+      let string = "qwerty"
+      let nsstring = string.ns_string
+      // nsstring.isEqual(to: "qwerty") 
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    
+  - Generate random string:
+      ```swift
+      let randomStringWithStandardAlphabet = String.random(wihtLength: 7)
+      // randomStringWithStandardAlphabet.characters.count == 7
+      // randomStringWithStandardAlphabet contains characters only from 
+      // "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" string
+      
+      let randomStringWithSpecifiedAlphabet = String.random(wihtLength: 10, fromLetters: "123456789")
+      // randomStringWithSpecifiedAlphabet.characters.count == 10
+      // randomStringWithSpecifiedAlphabet contains characters only from "123456789"
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    
+  - Convenience way to get string length:
+      ```swift
+      let string = "qwerty"
+      let length = string.length
+      // length == 6
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+
+  - Convenience way to get url encode / decode string:
+      ```swift
+      let string = "Lorem ipsum dolor sit amet, "
+      let urlEncodedString = string.URLEncodedString
+      // urlEncodedString == "Lorem%20ipsum%20dolor%20sit%20amet,%20"
+      
+      let urlDecodedString = urlEncodedString.URLDecodedString
+      // urlDecodedString == "Lorem ipsum dolor sit amet, "
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    
+  ```Timer``` extensions provides next opportunities:
+  - Convenience way to schedule timer:
+      ```swift
+      _ = Timer.schedule(delay: 5.0) {timer in
+         // Performs only once after 5.0 seconds delay
+      }
+      
+      _ = Timer.schedule(repeatInterval: 2.0) {timer in
+         // Performs every 2.0 seconds.
+      }
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+  
+  ```UserDefaults``` provides next opportunities:
+  - Store NSCoding objects:
+      ```swift
+      let object = <NSCoding object initialization ...>
+      UserDefaults.standard.set(object, forKey: "key")
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    
+  - Sets / returns the value using subscript:
+      ```swift
+      let value = "value"
+      UserDefaults.standard["key"] = value
+      
+      let storedValue = UserDefaults.standard["key"]
+      // value == storedValue
+      ```
+    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+
+
+   
 
   
   
+ 
+   
+  
+      
+  
+
+
+
+
+  
+  
+
   
   
   
