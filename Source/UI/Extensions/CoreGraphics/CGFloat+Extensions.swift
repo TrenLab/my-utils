@@ -28,7 +28,7 @@ public extension CGFloat {
     public static var random: CGFloat {
         return CGFloat(Float.random)
     }
-    
+
     /**
      Returns the random sign
      */
