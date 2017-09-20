@@ -152,7 +152,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       }
       
       // Or use follow.
-   
+      
       if image.isPortret {
          // When image has portret orientation.
       } else if image.isAlbum {
@@ -161,7 +161,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // When image has square form.                        
       }   
       ```
-   Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
 
   - Load image from rest resource:
       ```swift
@@ -185,22 +185,22 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   - Image cache:
   ```MYImage.cache``` is used by ```MYImage.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` and
   ```MYImageView.imageFrom(URL url: URL, completion: MYImageDownloadCompletion? = nil)``` methods to cache downloaded
-  images.
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+     images.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
   
   ```ImageView``` extensions provides next opportunities:
-      ```swift
-      let url = <URL initialization...>
-      let imageView = <Image initialization...>
-      imageView.imageFrom(URL: url) {image
-      // In case of success this method loads / returns cached, sets to reciever and provides in closure an image.
+  ```swift
+  let url = <URL initialization...>
+  let imageView = <Image initialization...>
+  imageView.imageFrom(URL: url) {image
+      // In case of success this method loads or returns cached, sets to reciever and provides in closure an image.
       // Oterwise, image equals to nil.
-      }
-      ```
-     Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
+  }
+  ```
+  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+  |  watchOS 2.0+.
   
   ```CollectionView``` extensions provides next opportunity:
-  - Adjusting of number of rows in per row:
+  - Adjusting of number of columns:
       ```swift
       let collectionView = <CollectionView initialization...>
       collectionView.numberOfCellsPerRow = 3 // CollectionView will layout three collection view cells in each row.
@@ -279,7 +279,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       ```swift
       let string = <String initialization...> 
       let url = <URL initialization...>
-  
+    
       let activityViewController = UIActivityViewController(activityItems: [string, url], applicationActivities: nil) {        
          activityType, completed, returnedItems, activityError in
          // Completion code.
@@ -295,7 +295,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       let actions = <UIAlertAction array initialization...>
       let style = <UIAlertControllerStyle initialization...>
       let vc = <UIViewController initialization...>
-  
+    
       UIAlertShow(title, message, actions, style, vc)  // vc presents UIAlertController with specified attributes.
       ```
     Available in iOS 8.0+.
@@ -320,19 +320,19 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   - Get root view controller:
       ```swift
       let navigatioController = <UINavigationController initialization...>
-  
+    
       let rootViewController = navigationController.rootViewController
       ```
-  Available in iOS 8.0+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  tvOS 9.0+.
 
   ```ViewController``` extensions provides next opportunities:
   - Get current child view controller:
       ```swift
       let viewController = <ViewController initialization...>
-  
+    
       let currentChildViewController = viewController.currentViewController
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   - Get previous child view controller:
       ```swift
@@ -340,7 +340,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   
       let currentChildViewController = viewController.previousViewController
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   - Add view controller:
       ```swift
@@ -351,7 +351,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          childViewController.view.frame = CGRect(x: 0.0, y: 10.0, width: 100.0, height: 200.0)
       }
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
   
   - Remove all child view controllers:
       ```swift
@@ -359,20 +359,20 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   
       let parentViewCotroller.removeChildViewControllers()
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
 
   
   - Remove child view controller:
       ```swift
       let parentViewController = <ViewController initialization...>
       let childViewController = <ViewController initialization...>
-  
+    
       parentViewController.removeChild(viewController: childViewController) {  
       }
       // Or.
       childViewController.removeFromSuperViewController()
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  tvOS 9.0+.
 
 #### Foundation:
 
@@ -389,7 +389,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       let anyObjectValue = <Any object value intialization ...>
       cache["key"] = anyObjectValue as! AnyObject
       ```    
-  Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
     
   - ```Result``` is the two value enum, intended to emulate two posible values to any operation - ```success``` or   
     ```failure``` case:
@@ -410,7 +410,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // Code to handle failure case.
       }
       ```
-  Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
 ##### - Extensions:
    ```Array``` extensions provides next opportunites:
@@ -422,7 +422,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        var fourthArray = <Array initialization ...>
        fourthArray += thirdArray
        ```
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
    - Make an array containing the results of mapping the given closure over the sequence’s elements:
        ```swift
@@ -432,7 +432,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        }
        // secondArray == [2, 4, 6]
        ```
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
        
    - Iterate through all elements in an array:
       ```swift
@@ -442,7 +442,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // element of an array
       }
       ```
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
    - Remove specified element:
       ```swift
@@ -450,7 +450,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       array.remove(element: 2)
       // array == [1, 3]
       ```   
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
    ```Dictionary``` extensions provides next opportunites:
    - Compare two dictionaries:
@@ -461,7 +461,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // True
        }
        ```
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
    - Easy way to concatenate two dictionaries using ```+``` or ```+=``` operations:
        ```swift
@@ -474,7 +474,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        fourthDictionary += thirdDictionary
        // fourthDictionary == ["key1": "value1", "key2": "value2", "key3": "value3"]
        ```
-     Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
        
        
    - Make a dictionary containing the results of mapping the given closure over the sequence’s elements:
@@ -485,7 +485,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        }       
        // resultDictionary == ["result_key": "value1"]
        ```
-   Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
    - Iterate through all elements in a dictionary:
        ```swift
@@ -495,7 +495,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // value == "value1"
        }
        ```
-     Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
       
    - Get all keys and values of a dictionary:
        ```swift
@@ -505,7 +505,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
        // keys == ["key1", "key2"]
        // values == ["value1", "value2"]
        ```
-     Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+     Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
   ```Double``` extensions provides opportunity to generate random double numbers:
   ```swift
@@ -517,7 +517,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   // random will be equal to number in range between 0.0 and 1.0 inclusive.
   // randomSign will be equal to number 1.0 or -1.0.
   ```
-  Available in iOS 8.0+  |  macOS 10.10+  | watchOS 2.0+ | tvOS 9.0+.
+  Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
   ```Float``` extensions provides opportunity to generate random float numbers:
   ```swift
@@ -529,7 +529,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   // random will be equal to number in range between 0.0 and 1.0 inclusive.
   // randomSign will be equal to number 1.0 or -1.0.
   ```
-  Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+  Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
   ```Int``` extensions provides opportunity to generate random int numbers:
   ```swift
@@ -541,7 +541,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   // random will be equal to number in range between 0.0 and 1.0 inclusive.
   // randomSign will be equal to number 1.0 or -1.0.
   ```
-  Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+  Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
   ```NotificationCenter``` extensions provides opportunity to add an entry to the receiver’s dispatch table with a block   
    to add to the current queue:
@@ -551,7 +551,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
   }
   NotificationCenter.default.removeObserver(token)
   ``` 
-  Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+  Available in iOS 8.0+  | macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
   
   ```NSNumber``` extensions provides opportunity to check, whether stored value is bool or not:
   ```swift
@@ -560,7 +560,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       // true
   }
   ```
-  Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+  Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
   
   ```OperationQueue``` extensions provides next opportunities:
   - Convenience way to perform code synchronously / asynchronous on the main queue:
@@ -573,7 +573,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // Code to perform asynchronous on the main queue.
       }
       ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
   - Convenience way to perform code synchronously / asynchronous on the background queue:
       ```swift
@@ -585,12 +585,12 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // Code to perform asynchronous on the background queue.
       }
       ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
     
   ```String``` extensions provides next opportunities:
   - Convenience way to convert string object to ```Int```, ```UInt``` or ```NSString```:
       ```swift
-      let intString = "-10"
+      let intString = "-10"
       let intValue = intString.int!
       // intValue == -10
       
@@ -601,8 +601,8 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       let string = "qwerty"
       let nsstring = string.ns_string
       // nsstring.isEqual(to: "qwerty") 
-      ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+      ```
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
     
   - Generate random string:
       ```swift
@@ -615,7 +615,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       // randomStringWithSpecifiedAlphabet.characters.count == 10
       // randomStringWithSpecifiedAlphabet contains characters only from "123456789"
       ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
     
   - Convenience way to get string length:
       ```swift
@@ -623,7 +623,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       let length = string.length
       // length == 6
       ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
   - Convenience way to get url encode / decode string:
       ```swift
@@ -634,7 +634,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       let urlDecodedString = urlEncodedString.URLDecodedString
       // urlDecodedString == "Lorem ipsum dolor sit amet, "
       ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
     
   ```Timer``` extensions provides next opportunities:
   - Convenience way to schedule timer:
@@ -647,7 +647,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
          // Performs every 2.0 seconds.
       }
       ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
   
   ```UserDefaults``` provides next opportunities:
   - Store NSCoding objects:
@@ -655,7 +655,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       let object = <NSCoding object initialization ...>
       UserDefaults.standard.set(object, forKey: "key")
       ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
     
   - Sets / returns the value using subscript:
       ```swift
@@ -665,7 +665,7 @@ MYUtils is a simple Swift library, that extends Cocoa frameworks.
       let storedValue = UserDefaults.standard["key"]
       // value == storedValue
       ```
-    Available in iOS 8.0+ | macOS 10.10+ | watchOS 2.0+ | tvOS 9.0+.
+    Available in iOS 8.0+  |  macOS 10.10+  |  watchOS 2.0+  |  tvOS 9.0+.
 
 
    
