@@ -27,6 +27,8 @@
      */
     public typealias MYStoryboardSegueType = UIStoryboardSegue
 #elseif os(OSX)
+    
+    
     /**
      Platform independet StroryboardSegue type.
      */
