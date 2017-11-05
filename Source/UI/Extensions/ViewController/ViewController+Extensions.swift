@@ -42,7 +42,7 @@ public extension MYViewControllerType {
         - viewController: The view controller to be added as a child.
         - closure: Performs after viewController been added to receiver as child view controller.
      */
-    public func addChild(viewController vc: MYViewControllerType, closure: ((Void) -> Void)? = nil) {
+    public func addChild(viewController vc: MYViewControllerType, closure: (() -> Void)? = nil) {
         addChildViewController(vc)
         vc.view.frame = view.bounds
         
@@ -69,7 +69,7 @@ public extension MYViewControllerType {
         - viewController: The view controller to be removed from it's parent view controller.
         - closure: Performs after viewController been removed from it's parent view controller.
      */
-    public func removeChild(viewController vc: MYViewControllerType, closure: ((Void) -> Void)? = nil) {
+    public func removeChild(viewController vc: MYViewControllerType, closure: (() -> Void)? = nil) {
         vc.removeFromSuperViewController(closure: closure)
     }
     
@@ -78,7 +78,7 @@ public extension MYViewControllerType {
      - Parameters:
         - closure: Performs after viewController been removed from it's parent view controller.
      */
-    public func removeFromSuperViewController(closure: ((Void) -> Void)? = nil) {
+    public func removeFromSuperViewController(closure: (() -> Void)? = nil) {
         #if os(iOS) || os(tvOS)
             willMove(toParentViewController: nil)
         #endif

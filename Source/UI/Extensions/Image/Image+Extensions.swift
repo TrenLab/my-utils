@@ -146,13 +146,13 @@ public func MYImageDraw(size: CGSize, draw: ((CGContext) -> Void)? = nil) -> MYI
                                         samplesPerPixel: 4,
                                         hasAlpha: true,
                                         isPlanar: false,
-                                        colorSpaceName: NSCalibratedRGBColorSpace,
+                                        colorSpaceName: NSColorSpaceName.calibratedRGB,
                                         bytesPerRow: 0,
                                         bitsPerPixel: 0)
         
         image.addRepresentation(rep!)
         image.lockFocus()
-        let ctx = NSGraphicsContext.current()?.cgContext
+        let ctx = NSGraphicsContext.current?.cgContext
         draw?(ctx!)
         image.unlockFocus()
         return image
