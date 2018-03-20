@@ -22,7 +22,11 @@ install:
 notifications:
   email:
     on_success: never
+<<<<<<< HEAD
     on_failure: always
+=======
+    on_failure: never
+>>>>>>> develop
 
 script:
 - travis_retry xcodebuild -project "${FRAMEWORK_NAME}.xcodeproj" -target "${FRAMEWORK_NAME}-iOS"   -destination "platform=iOS Simulator,name=iPhone 6,OS=10.0"
