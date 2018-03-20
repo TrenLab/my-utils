@@ -19,6 +19,11 @@ install:
 - brew outdated carthage || brew upgrade carthage
 - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+
 script:
 - travis_retry xcodebuild -project "${FRAMEWORK_NAME}.xcodeproj" -target "${FRAMEWORK_NAME}-iOS"   -destination "platform=iOS Simulator,name=iPhone 6,OS=10.0"
 - travis_retry xcodebuild -project "${FRAMEWORK_NAME}.xcodeproj" -target "${FRAMEWORK_NAME}-macOS"
